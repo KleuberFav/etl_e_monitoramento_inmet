@@ -5,7 +5,7 @@ Repositório com códigos para extração, tratamento e carga de dados meteorol�
 ## Índice
 - [Sobre](#sobre)
 - [Instalação](#instalação)
-- [Autor](#Autor)
+- [Autor](#autor)
 
 
 ## Sobre
@@ -69,13 +69,18 @@ Esta DAG foi utilizada para gerenciar a ingestão na camada Gold. Nesse caso, a 
 
 - **Agregação dos dados**:
   - A agregação dos dados é feita usando a soma da precipitação, agrupando por safra, onde UF="PA" e Estação = "BElÉM"
+  - O valor da precipitação mensal é adicionada em um arquivo que tem a série temporal completa
   - É feita o cálculo das métricas (RMSE, MAPE e MAE), comparando os dados previstos para essa safra com a precipitação mensal calculada.
-  - OBs: A obtenção dos dados previstos foi feita em outro projeto, usando o mesmo LakeHouse, a partir de um modelo de séries temporais do tipo SARIMA
+  - Obs: A obtenção dos dados previstos foi feita em outro projeto, usando o mesmo LakeHouse, a partir de um modelo de séries temporais do tipo SARIMA
   - Plugin usado: [gold_ts_plugin](https://github.com/KleuberFav/etl_e_monitoramento_inmet/blob/master/plugins/gold_ts_plugin.py).
 
 - **Notificações**:
   - Se o processo for realizado com sucesso, todas as métricas são enviadas por email.
   - Em caso de erro, um email de alerta é enviado.
+
+<img src="https://github.com/KleuberFav/etl_e_monitoramento_inmet/blob/master/artefatos/ts_sucesso.png?raw=true" width="1000"/>
+
+<img src="https://github.com/KleuberFav/etl_e_monitoramento_inmet/blob/master/artefatos/ts_erro.png?raw=true" width="1000"/>
 
 ## Instalação
 
