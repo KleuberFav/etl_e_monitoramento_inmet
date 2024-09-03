@@ -1,0 +1,133 @@
+[2024-08-28T17:09:36.490+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-28T17:08:52.305419+00:00 [queued]>
+[2024-08-28T17:09:36.497+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-28T17:08:52.305419+00:00 [queued]>
+[2024-08-28T17:09:36.497+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-28T17:09:36.497+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-28T17:09:36.497+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-28T17:09:36.509+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): run_sarima_forecast> on 2024-08-28 17:08:52.305419+00:00
+[2024-08-28T17:09:36.518+0000] {standard_task_runner.py:55} INFO - Started process 29675 to run task
+[2024-08-28T17:09:36.520+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'sarima_forecast_dag', 'run_sarima_forecast', 'manual__2024-08-28T17:08:52.305419+00:00', '--job-id', '12269', '--raw', '--subdir', 'DAGS_FOLDER/dag_forecast_ts_rainfall.py', '--cfg-path', '/tmp/tmplip7dd7q']
+[2024-08-28T17:09:36.521+0000] {standard_task_runner.py:83} INFO - Job 12269: Subtask run_sarima_forecast
+[2024-08-28T17:09:36.566+0000] {task_command.py:388} INFO - Running <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-28T17:08:52.305419+00:00 [running]> on host 4958d38180c6
+[2024-08-28T17:09:36.620+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=sarima_forecast_dag
+AIRFLOW_CTX_TASK_ID=run_sarima_forecast
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-28T17:08:52.305419+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-28T17:08:52.305419+00:00
+[2024-08-28T17:09:36.640+0000] {forecast_ts_rainfall_plugin.py:24} INFO - Modelo carregado: <statsmodels.tsa.statespace.sarimax.SARIMAX object at 0x7dc554851710>
+[2024-08-28T17:09:36.650+0000] {forecast_ts_rainfall_plugin.py:19} INFO - Série temporal carregada:             PRECIPITACAO_MENSAL
+DATA                           
+2020-01-01                455.8
+2020-02-01                553.8
+2020-03-01                570.4
+2020-04-01                444.0
+2020-05-01                457.2
+2020-06-01                248.8
+2020-07-01                151.6
+2020-08-01                110.8
+2020-09-01                151.6
+2020-10-01                295.0
+2020-11-01                414.8
+2020-12-01                226.8
+2021-01-01                357.4
+2021-02-01                635.2
+2021-03-01                469.2
+2021-04-01                479.0
+2021-05-01                497.8
+2021-06-01                191.0
+2021-07-01                222.8
+2021-08-01                273.4
+2021-09-01                254.0
+2021-10-01                298.8
+2021-11-01                328.2
+2021-12-01                293.4
+2022-01-01                317.4
+2022-02-01                287.8
+2022-03-01                516.4
+2022-04-01                512.6
+2022-05-01                462.4
+2022-06-01                216.8
+2022-07-01                115.4
+2022-08-01                184.6
+2022-09-01                210.0
+2022-10-01                190.2
+2022-11-01                369.6
+2022-12-01                338.2
+2023-01-01                355.6
+2023-02-01                391.6
+2023-03-01                545.6
+2023-04-01                291.6
+2023-05-01                352.6
+2023-06-01                212.8
+2023-07-01                101.8
+2023-08-01                 26.0
+2023-09-01                 39.6
+2023-10-01                 20.6
+2023-11-01                 73.8
+2023-12-01                219.6
+2024-01-01                538.0
+2024-02-01                379.0
+2024-03-01                540.8
+2024-04-01                462.8
+2024-05-01                348.4
+2024-06-01                214.8
+[2024-08-28T17:09:36.655+0000] {forecast_ts_rainfall_plugin.py:42} INFO - Janela de dados:             PRECIPITACAO_MENSAL
+DATA                           
+2020-07-01                151.6
+2020-08-01                110.8
+2020-09-01                151.6
+2020-10-01                295.0
+2020-11-01                414.8
+2020-12-01                226.8
+2021-01-01                357.4
+2021-02-01                635.2
+2021-03-01                469.2
+2021-04-01                479.0
+2021-05-01                497.8
+2021-06-01                191.0
+2021-07-01                222.8
+2021-08-01                273.4
+2021-09-01                254.0
+2021-10-01                298.8
+2021-11-01                328.2
+2021-12-01                293.4
+2022-01-01                317.4
+2022-02-01                287.8
+2022-03-01                516.4
+2022-04-01                512.6
+2022-05-01                462.4
+2022-06-01                216.8
+2022-07-01                115.4
+2022-08-01                184.6
+2022-09-01                210.0
+2022-10-01                190.2
+2022-11-01                369.6
+2022-12-01                338.2
+2023-01-01                355.6
+2023-02-01                391.6
+2023-03-01                545.6
+2023-04-01                291.6
+2023-05-01                352.6
+2023-06-01                212.8
+2023-07-01                101.8
+2023-08-01                 26.0
+2023-09-01                 39.6
+2023-10-01                 20.6
+2023-11-01                 73.8
+2023-12-01                219.6
+2024-01-01                538.0
+2024-02-01                379.0
+2024-03-01                540.8
+2024-04-01                462.8
+2024-05-01                348.4
+2024-06-01                214.8
+[2024-08-28T17:09:37.049+0000] {forecast_ts_rainfall_plugin.py:55} INFO - Média das previsões: 2024-01-01    285.536807
+Freq: MS, dtype: float64
+[2024-08-28T17:09:37.050+0000] {forecast_ts_rainfall_plugin.py:59} INFO - Data das previsões: 2024-07-01 00:00:00
+[2024-08-28T17:09:37.053+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-08-28T17:09:37.064+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=sarima_forecast_dag, task_id=run_sarima_forecast, execution_date=20240828T170852, start_date=20240828T170936, end_date=20240828T170937
+[2024-08-28T17:09:37.092+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-08-28T17:09:37.104+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

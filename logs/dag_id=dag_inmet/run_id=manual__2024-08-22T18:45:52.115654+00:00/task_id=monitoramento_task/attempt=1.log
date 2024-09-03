@@ -1,0 +1,32 @@
+[2024-08-22T19:04:06.075+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.monitoramento_task manual__2024-08-22T18:45:52.115654+00:00 [queued]>
+[2024-08-22T19:04:06.087+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.monitoramento_task manual__2024-08-22T18:45:52.115654+00:00 [queued]>
+[2024-08-22T19:04:06.087+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-22T19:04:06.087+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-22T19:04:06.087+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-22T19:04:06.109+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): monitoramento_task> on 2024-08-22 18:45:52.115654+00:00
+[2024-08-22T19:04:06.125+0000] {standard_task_runner.py:55} INFO - Started process 13452 to run task
+[2024-08-22T19:04:06.130+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'monitoramento_task', 'manual__2024-08-22T18:45:52.115654+00:00', '--job-id', '11317', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmpa5tngvav']
+[2024-08-22T19:04:06.134+0000] {standard_task_runner.py:83} INFO - Job 11317: Subtask monitoramento_task
+[2024-08-22T19:04:06.183+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.monitoramento_task manual__2024-08-22T18:45:52.115654+00:00 [running]> on host 990c8473e03a
+[2024-08-22T19:04:06.240+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=monitoramento_task
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-22T18:45:52.115654+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-22T18:45:52.115654+00:00
+[2024-08-22T19:04:08.530+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/pyspark/context.py:317: FutureWarning: Python 3.7 support is deprecated in Spark 3.4.
+  warnings.warn("Python 3.7 support is deprecated in Spark 3.4.", FutureWarning)
+
+[2024-08-22T19:04:08.625+0000] {dag_inmet.py:140} INFO - SparkSession criado com sucesso.
+[2024-08-22T19:04:15.093+0000] {monitoramento_plugin.py:174} INFO - Volumetria da Safra Atual: 421104
+[2024-08-22T19:04:15.093+0000] {monitoramento_plugin.py:175} INFO - Volumetria Esperada da Safra Atual: 421104
+[2024-08-22T19:04:15.093+0000] {monitoramento_plugin.py:176} INFO - Quantidade de Estações Monitoradas da Safra Atual: 566
+[2024-08-22T19:04:15.094+0000] {monitoramento_plugin.py:178} INFO - Quantidade de Regiões Monitoradas da Safra Atual: 5
+[2024-08-22T19:04:15.094+0000] {monitoramento_plugin.py:179} INFO - Quantidade de UF Monitoradas da Safra Atual: 27
+[2024-08-22T19:04:15.534+0000] {python.py:177} INFO - Done. Returned value was: {'vol_safra': 421104, 'vol_esperada': 421104, 'qtd_estacao': 566, 'qtd_regiao': 5, 'qtd_uf': 27}
+[2024-08-22T19:04:15.553+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=dag_inmet, task_id=monitoramento_task, execution_date=20240822T184552, start_date=20240822T190406, end_date=20240822T190415
+[2024-08-22T19:04:15.586+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-08-22T19:04:15.618+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

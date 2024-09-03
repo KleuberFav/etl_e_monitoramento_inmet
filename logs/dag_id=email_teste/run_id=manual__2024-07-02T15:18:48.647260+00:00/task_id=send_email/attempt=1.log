@@ -1,0 +1,28 @@
+[2024-07-02T15:18:59.040+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: email_teste.send_email manual__2024-07-02T15:18:48.647260+00:00 [queued]>
+[2024-07-02T15:18:59.047+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: email_teste.send_email manual__2024-07-02T15:18:48.647260+00:00 [queued]>
+[2024-07-02T15:18:59.047+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-02T15:18:59.047+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-07-02T15:18:59.048+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-02T15:18:59.060+0000] {taskinstance.py:1300} INFO - Executing <Task(EmailOperator): send_email> on 2024-07-02 15:18:48.647260+00:00
+[2024-07-02T15:18:59.066+0000] {standard_task_runner.py:55} INFO - Started process 132 to run task
+[2024-07-02T15:18:59.067+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'email_teste', 'send_email', 'manual__2024-07-02T15:18:48.647260+00:00', '--job-id', '387', '--raw', '--subdir', 'DAGS_FOLDER/email.py', '--cfg-path', '/tmp/tmp093ijb7m']
+[2024-07-02T15:18:59.068+0000] {standard_task_runner.py:83} INFO - Job 387: Subtask send_email
+[2024-07-02T15:18:59.109+0000] {task_command.py:388} INFO - Running <TaskInstance: email_teste.send_email manual__2024-07-02T15:18:48.647260+00:00 [running]> on host 47ea7c264468
+[2024-07-02T15:18:59.163+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=testeskleuber@gmail.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=email_teste
+AIRFLOW_CTX_TASK_ID=send_email
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-02T15:18:48.647260+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-02T15:18:48.647260+00:00
+[2024-07-02T15:18:59.170+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/email.py:152: RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+  send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+
+[2024-07-02T15:18:59.170+0000] {email.py:268} INFO - Email alerting: attempt 1
+[2024-07-02T15:19:01.301+0000] {email.py:280} INFO - Sent an alert email to ['testeskleuber@gmail.com']
+[2024-07-02T15:19:03.517+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=email_teste, task_id=send_email, execution_date=20240702T151848, start_date=20240702T151859, end_date=20240702T151903
+[2024-07-02T15:19:03.535+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-07-02T15:19:03.548+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

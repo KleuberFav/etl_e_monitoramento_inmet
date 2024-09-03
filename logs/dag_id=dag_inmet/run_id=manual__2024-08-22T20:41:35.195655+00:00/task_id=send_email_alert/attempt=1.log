@@ -1,0 +1,27 @@
+[2024-08-27T13:53:34.712+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.send_email_alert manual__2024-08-22T20:41:35.195655+00:00 [queued]>
+[2024-08-27T13:53:34.720+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.send_email_alert manual__2024-08-22T20:41:35.195655+00:00 [queued]>
+[2024-08-27T13:53:34.720+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-27T13:53:34.721+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-27T13:53:34.721+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-27T13:53:34.734+0000] {taskinstance.py:1300} INFO - Executing <Task(EmailOperator): send_email_alert> on 2024-08-22 20:41:35.195655+00:00
+[2024-08-27T13:53:34.740+0000] {standard_task_runner.py:55} INFO - Started process 183 to run task
+[2024-08-27T13:53:34.742+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'send_email_alert', 'manual__2024-08-22T20:41:35.195655+00:00', '--job-id', '11741', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmp98qr_kqh']
+[2024-08-27T13:53:34.743+0000] {standard_task_runner.py:83} INFO - Job 11741: Subtask send_email_alert
+[2024-08-27T13:53:34.784+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.send_email_alert manual__2024-08-22T20:41:35.195655+00:00 [running]> on host d388acb47904
+[2024-08-27T13:53:34.844+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=send_email_alert
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-22T20:41:35.195655+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-22T20:41:35.195655+00:00
+[2024-08-27T13:53:34.851+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/email.py:152: RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+  send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+
+[2024-08-27T13:53:34.851+0000] {email.py:268} INFO - Email alerting: attempt 1
+[2024-08-27T13:53:36.976+0000] {email.py:280} INFO - Sent an alert email to ['kleuber94@gmail.com', 'vferreiramesquita@gmail.com']
+[2024-08-27T13:53:39.958+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=dag_inmet, task_id=send_email_alert, execution_date=20240822T204135, start_date=20240827T135334, end_date=20240827T135339
+[2024-08-27T13:53:40.002+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-08-27T13:53:40.015+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

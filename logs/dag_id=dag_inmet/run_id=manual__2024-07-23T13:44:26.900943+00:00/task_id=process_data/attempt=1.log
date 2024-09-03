@@ -1,0 +1,42 @@
+[2024-07-23T13:45:05.118+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-07-23T13:44:26.900943+00:00 [queued]>
+[2024-07-23T13:45:05.125+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-07-23T13:44:26.900943+00:00 [queued]>
+[2024-07-23T13:45:05.125+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-23T13:45:05.126+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-07-23T13:45:05.126+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-23T13:45:05.136+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_data> on 2024-07-23 13:44:26.900943+00:00
+[2024-07-23T13:45:05.141+0000] {standard_task_runner.py:55} INFO - Started process 204 to run task
+[2024-07-23T13:45:05.143+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'process_data', 'manual__2024-07-23T13:44:26.900943+00:00', '--job-id', '939', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmpafzbodnf']
+[2024-07-23T13:45:05.145+0000] {standard_task_runner.py:83} INFO - Job 939: Subtask process_data
+[2024-07-23T13:45:05.284+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.process_data manual__2024-07-23T13:44:26.900943+00:00 [running]> on host 1200c6f26e8a
+[2024-07-23T13:45:05.330+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=process_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-23T13:44:26.900943+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-23T13:44:26.900943+00:00
+[2024-07-23T13:45:05.456+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_inmet.py", line 48, in task_process_data
+    .config("spark.task.cpus", "1")
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/sql/session.py", line 477, in getOrCreate
+    sc = SparkContext.getOrCreate(sparkConf)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/context.py", line 512, in getOrCreate
+    SparkContext(conf=conf or SparkConf())
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/context.py", line 198, in __init__
+    SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/context.py", line 432, in _ensure_initialized
+    SparkContext._gateway = gateway or launch_gateway(conf)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/java_gateway.py", line 106, in launch_gateway
+    raise RuntimeError("Java gateway process exited before sending its port number")
+RuntimeError: Java gateway process exited before sending its port number
+[2024-07-23T13:45:05.480+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=dag_inmet, task_id=process_data, execution_date=20240723T134426, start_date=20240723T134505, end_date=20240723T134505
+[2024-07-23T13:45:05.514+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 939 for task process_data (Java gateway process exited before sending its port number; 204)
+[2024-07-23T13:45:05.556+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-07-23T13:45:05.576+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

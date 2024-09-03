@@ -1,0 +1,74 @@
+[2024-08-22T20:42:00.600+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-08-22T20:41:35.195655+00:00 [queued]>
+[2024-08-22T20:42:00.609+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-08-22T20:41:35.195655+00:00 [queued]>
+[2024-08-22T20:42:00.609+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-22T20:42:00.609+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-22T20:42:00.609+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-22T20:42:00.620+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_data> on 2024-08-22 20:41:35.195655+00:00
+[2024-08-22T20:42:00.627+0000] {standard_task_runner.py:55} INFO - Started process 146 to run task
+[2024-08-22T20:42:00.630+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'process_data', 'manual__2024-08-22T20:41:35.195655+00:00', '--job-id', '11628', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmp4o4lj6xf']
+[2024-08-22T20:42:00.632+0000] {standard_task_runner.py:83} INFO - Job 11628: Subtask process_data
+[2024-08-22T20:42:00.684+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.process_data manual__2024-08-22T20:41:35.195655+00:00 [running]> on host 8670393ebbfb
+[2024-08-22T20:42:00.750+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=process_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-22T20:41:35.195655+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-22T20:41:35.195655+00:00
+[2024-08-22T20:42:03.831+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/pyspark/context.py:317: FutureWarning: Python 3.7 support is deprecated in Spark 3.4.
+  warnings.warn("Python 3.7 support is deprecated in Spark 3.4.", FutureWarning)
+
+[2024-08-22T20:42:03.963+0000] {dag_inmet.py:100} INFO - SparkSession criado com sucesso.
+[2024-08-22T20:42:03.973+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A001_BRASILIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:11.655+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:12.993+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A042_BRAZLANDIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:15.794+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:16.352+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A045_AGUAS EMENDADAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:18.543+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:18.900+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A046_GAMA (PONTE ALTA)_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:21.041+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:21.441+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A047_PARANOA (COOPA-DF)_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:23.743+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:24.083+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A002_GOIANIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:26.346+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:26.768+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A003_MORRINHOS_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:29.244+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:29.555+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A005_PORANGATU_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:31.583+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:31.872+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A011_SAO SIMAO_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:33.131+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:33.391+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A012_LUZIANIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:35.375+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:35.659+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A013_ARAGARCAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:36.973+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:37.178+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A014_GOIAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:38.902+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:39.158+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A015_ITAPACI_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:41.351+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:41.601+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A016_JATAI_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:43.575+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:43.819+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A017_POSSE_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:45.914+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:46.139+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A022_GOIANESIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:48.235+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:48.466+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A023_CAIAPONIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:50.538+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:50.741+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A024_ALTO PARAISO DE GOIAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:53.125+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:53.378+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A025_RIO VERDE_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:55.468+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:55.654+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A026_MINEIROS_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:57.546+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:42:57.758+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A027_PARAUNA_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:42:59.879+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:43:00.081+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A028_IPORA_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:43:01.377+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:43:01.564+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A029_EDEIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:43:03.595+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:43:03.775+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A031_SAO MIGUEL DO ARAGUAIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:43:05.725+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:43:05.940+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A032_MONTE ALEGRE DE GOIAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-22T20:43:07.838+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-22T20:43:08.023+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A033_PIRES DO RIO_01-01-2024_A_31-07-2024.CSV

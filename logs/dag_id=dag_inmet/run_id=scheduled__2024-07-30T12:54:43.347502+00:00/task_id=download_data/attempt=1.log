@@ -1,0 +1,84 @@
+[2024-07-31T13:33:42.583+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.download_data scheduled__2024-07-30T12:54:43.347502+00:00 [queued]>
+[2024-07-31T13:33:42.600+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.download_data scheduled__2024-07-30T12:54:43.347502+00:00 [queued]>
+[2024-07-31T13:33:42.600+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-31T13:33:42.600+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-07-31T13:33:42.600+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-31T13:33:42.630+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): download_data> on 2024-07-30 12:54:43.347502+00:00
+[2024-07-31T13:33:42.643+0000] {standard_task_runner.py:55} INFO - Started process 27778 to run task
+[2024-07-31T13:33:42.645+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'download_data', 'scheduled__2024-07-30T12:54:43.347502+00:00', '--job-id', '2912', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmpcuskii1_']
+[2024-07-31T13:33:42.647+0000] {standard_task_runner.py:83} INFO - Job 2912: Subtask download_data
+[2024-07-31T13:33:42.710+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.download_data scheduled__2024-07-30T12:54:43.347502+00:00 [running]> on host 85c1c905ac53
+[2024-07-31T13:33:42.795+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=download_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-30T12:54:43.347502+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-07-30T12:54:43.347502+00:00
+[2024-07-31T13:33:42.803+0000] {dag_inmet.py:53} ERROR - Erro ao baixar e salvar o arquivo: HTTPSConnectionPool(host='portal.inmet.gov.br', port=443): Max retries exceeded with url: /dadoshistoricos (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ea9c73fd590>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+[2024-07-31T13:33:42.803+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7ea9c73fd590>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 499, in send
+    timeout=timeout,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='portal.inmet.gov.br', port=443): Max retries exceeded with url: /dadoshistoricos (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ea9c73fd590>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_inmet.py", line 49, in task_download_data
+    url = bronze.download_data()
+  File "/opt/airflow/plugins/bronze_plugin.py", line 12, in wrapper
+    resultado = metodo(*args, **kwargs)
+  File "/opt/airflow/plugins/bronze_plugin.py", line 40, in download_data
+    r = requests.get(base_url, headers=headers)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='portal.inmet.gov.br', port=443): Max retries exceeded with url: /dadoshistoricos (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ea9c73fd590>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+[2024-07-31T13:33:42.819+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_inmet, task_id=download_data, execution_date=20240730T125443, start_date=20240731T133342, end_date=20240731T133342
+[2024-07-31T13:33:42.838+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 2912 for task download_data (HTTPSConnectionPool(host='portal.inmet.gov.br', port=443): Max retries exceeded with url: /dadoshistoricos (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ea9c73fd590>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')); 27778)
+[2024-07-31T13:33:42.857+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-07-31T13:33:42.894+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,45 @@
+[2024-08-06T13:59:34.883+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-08-06T13:58:22.205365+00:00 [queued]>
+[2024-08-06T13:59:34.891+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-08-06T13:58:22.205365+00:00 [queued]>
+[2024-08-06T13:59:34.891+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-06T13:59:34.892+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-06T13:59:34.892+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-06T13:59:34.902+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_data> on 2024-08-06 13:58:22.205365+00:00
+[2024-08-06T13:59:34.907+0000] {standard_task_runner.py:55} INFO - Started process 14645 to run task
+[2024-08-06T13:59:34.909+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'process_data', 'manual__2024-08-06T13:58:22.205365+00:00', '--job-id', '4331', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmptjkcxczi']
+[2024-08-06T13:59:34.911+0000] {standard_task_runner.py:83} INFO - Job 4331: Subtask process_data
+[2024-08-06T13:59:34.950+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.process_data manual__2024-08-06T13:58:22.205365+00:00 [running]> on host 0165c32c74c8
+[2024-08-06T13:59:35.001+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=process_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-06T13:58:22.205365+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-06T13:58:22.205365+00:00
+[2024-08-06T13:59:37.248+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/pyspark/context.py:317: FutureWarning: Python 3.7 support is deprecated in Spark 3.4.
+  warnings.warn("Python 3.7 support is deprecated in Spark 3.4.", FutureWarning)
+
+[2024-08-06T13:59:37.345+0000] {dag_inmet.py:78} INFO - SparkSession criado com sucesso.
+[2024-08-06T13:59:37.346+0000] {dag_inmet.py:85} ERROR - Erro no processamento dos dados: File is not a zip file
+[2024-08-06T13:59:37.752+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_inmet.py", line 81, in task_process_data
+    silver.process_csv_files(filename, spark)
+  File "/opt/airflow/plugins/silver_plugin.py", line 20, in wrapper
+    resultado = metodo(*args, **kwargs)
+  File "/opt/airflow/plugins/silver_plugin.py", line 130, in process_csv_files
+    with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+  File "/usr/local/lib/python3.7/zipfile.py", line 1258, in __init__
+    self._RealGetContents()
+  File "/usr/local/lib/python3.7/zipfile.py", line 1325, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2024-08-06T13:59:37.760+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_inmet, task_id=process_data, execution_date=20240806T135822, start_date=20240806T135934, end_date=20240806T135937
+[2024-08-06T13:59:37.775+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 4331 for task process_data (File is not a zip file; 14645)
+[2024-08-06T13:59:37.808+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-08-06T13:59:37.827+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

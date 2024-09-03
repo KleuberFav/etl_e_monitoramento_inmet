@@ -1,0 +1,39 @@
+[2024-07-30T13:42:16.790+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-07-30T13:41:38.631322+00:00 [queued]>
+[2024-07-30T13:42:16.798+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-07-30T13:41:38.631322+00:00 [queued]>
+[2024-07-30T13:42:16.798+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-30T13:42:16.798+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-07-30T13:42:16.798+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-30T13:42:16.809+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_data> on 2024-07-30 13:41:38.631322+00:00
+[2024-07-30T13:42:16.814+0000] {standard_task_runner.py:55} INFO - Started process 262 to run task
+[2024-07-30T13:42:16.815+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'process_data', 'manual__2024-07-30T13:41:38.631322+00:00', '--job-id', '2391', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmpnpzohumk']
+[2024-07-30T13:42:16.817+0000] {standard_task_runner.py:83} INFO - Job 2391: Subtask process_data
+[2024-07-30T13:42:16.855+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.process_data manual__2024-07-30T13:41:38.631322+00:00 [running]> on host 0cd5600066af
+[2024-07-30T13:42:16.906+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=process_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-30T13:41:38.631322+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-30T13:41:38.631322+00:00
+[2024-07-30T13:42:19.139+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/pyspark/context.py:317: FutureWarning: Python 3.7 support is deprecated in Spark 3.4.
+  warnings.warn("Python 3.7 support is deprecated in Spark 3.4.", FutureWarning)
+
+[2024-07-30T13:42:19.232+0000] {dag_inmet.py:71} INFO - SparkSession criado com sucesso.
+[2024-07-30T13:42:19.233+0000] {dag_inmet.py:77} ERROR - Erro no processamento dos dados: name 'time' is not defined
+[2024-07-30T13:42:19.640+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_inmet.py", line 74, in task_process_data
+    df_filtered = silver.process_csv_files(filename, spark)
+  File "/opt/airflow/plugins/silver_plugin.py", line 10, in wrapper
+    inicio = time.time()
+NameError: name 'time' is not defined
+[2024-07-30T13:42:19.654+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_inmet, task_id=process_data, execution_date=20240730T134138, start_date=20240730T134216, end_date=20240730T134219
+[2024-07-30T13:42:19.664+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 2391 for task process_data (name 'time' is not defined; 262)
+[2024-07-30T13:42:19.674+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-07-30T13:42:19.688+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

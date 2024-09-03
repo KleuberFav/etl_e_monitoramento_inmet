@@ -1,0 +1,34 @@
+[2024-08-22T13:47:30.201+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-22T13:47:01.029294+00:00 [queued]>
+[2024-08-22T13:47:30.209+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-22T13:47:01.029294+00:00 [queued]>
+[2024-08-22T13:47:30.209+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-22T13:47:30.209+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-22T13:47:30.209+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-22T13:47:30.220+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): run_sarima_forecast> on 2024-08-22 13:47:01.029294+00:00
+[2024-08-22T13:47:30.227+0000] {standard_task_runner.py:55} INFO - Started process 283 to run task
+[2024-08-22T13:47:30.228+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'sarima_forecast_dag', 'run_sarima_forecast', 'manual__2024-08-22T13:47:01.029294+00:00', '--job-id', '10587', '--raw', '--subdir', 'DAGS_FOLDER/dag_forecast_ts_rainfall.py', '--cfg-path', '/tmp/tmp3dy1trg9']
+[2024-08-22T13:47:30.230+0000] {standard_task_runner.py:83} INFO - Job 10587: Subtask run_sarima_forecast
+[2024-08-22T13:47:30.268+0000] {task_command.py:388} INFO - Running <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-22T13:47:01.029294+00:00 [running]> on host fce01a1c61da
+[2024-08-22T13:47:30.316+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=sarima_forecast_dag
+AIRFLOW_CTX_TASK_ID=run_sarima_forecast
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-22T13:47:01.029294+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-22T13:47:01.029294+00:00
+[2024-08-22T13:47:30.317+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_forecast_ts_rainfall.py", line 14, in run_sarima_forecast
+    sarima_plugin.load_model()
+  File "/opt/airflow/plugins/forecast_ts_rainfall_plugin.py", line 15, in load_model
+    self.sarima_model = pickle.load(file)
+ModuleNotFoundError: No module named 'statsmodels'
+[2024-08-22T13:47:30.323+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=sarima_forecast_dag, task_id=run_sarima_forecast, execution_date=20240822T134701, start_date=20240822T134730, end_date=20240822T134730
+[2024-08-22T13:47:30.331+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 10587 for task run_sarima_forecast (No module named 'statsmodels'; 283)
+[2024-08-22T13:47:30.360+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-08-22T13:47:30.373+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

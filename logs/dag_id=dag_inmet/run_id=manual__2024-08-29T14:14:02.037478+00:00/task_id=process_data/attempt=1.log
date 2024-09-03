@@ -1,0 +1,562 @@
+[2024-08-29T14:15:36.127+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-08-29T14:14:02.037478+00:00 [queued]>
+[2024-08-29T14:15:36.134+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-08-29T14:14:02.037478+00:00 [queued]>
+[2024-08-29T14:15:36.134+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-29T14:15:36.135+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-29T14:15:36.135+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-29T14:15:36.145+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_data> on 2024-08-29 14:14:02.037478+00:00
+[2024-08-29T14:15:36.153+0000] {standard_task_runner.py:55} INFO - Started process 1210 to run task
+[2024-08-29T14:15:36.155+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'process_data', 'manual__2024-08-29T14:14:02.037478+00:00', '--job-id', '13002', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmp9oscglpa']
+[2024-08-29T14:15:36.156+0000] {standard_task_runner.py:83} INFO - Job 13002: Subtask process_data
+[2024-08-29T14:15:36.198+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.process_data manual__2024-08-29T14:14:02.037478+00:00 [running]> on host 495d425f6ed3
+[2024-08-29T14:15:36.252+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=process_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-29T14:14:02.037478+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-29T14:14:02.037478+00:00
+[2024-08-29T14:15:38.312+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/pyspark/context.py:317: FutureWarning: Python 3.7 support is deprecated in Spark 3.4.
+  warnings.warn("Python 3.7 support is deprecated in Spark 3.4.", FutureWarning)
+
+[2024-08-29T14:15:38.405+0000] {dag_inmet.py:104} INFO - SparkSession criado com sucesso.
+[2024-08-29T14:15:38.413+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A001_BRASILIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:15:44.075+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:15:45.115+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A042_BRAZLANDIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:15:46.966+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:15:47.275+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A045_AGUAS EMENDADAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:15:49.064+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:15:49.337+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A046_GAMA (PONTE ALTA)_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:15:51.091+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:15:51.350+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A047_PARANOA (COOPA-DF)_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:15:53.149+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:15:53.503+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A002_GOIANIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:15:55.253+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:15:55.501+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A003_MORRINHOS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:15:57.273+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:15:57.499+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A005_PORANGATU_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:15:59.153+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:15:59.369+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A011_SAO SIMAO_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:00.354+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:00.562+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A012_LUZIANIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:02.208+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:02.400+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A013_ARAGARCAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:03.440+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:03.622+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A014_GOIAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:05.092+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:05.370+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A015_ITAPACI_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:07.134+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:07.327+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A016_JATAI_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:08.951+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:09.124+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A017_POSSE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:10.709+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:10.902+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A022_GOIANESIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:12.500+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:12.685+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A023_CAIAPONIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:14.297+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:14.467+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A024_ALTO PARAISO DE GOIAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:15.964+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:16.136+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A025_RIO VERDE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:17.805+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:18.006+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A026_MINEIROS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:19.591+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:19.768+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A027_PARAUNA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:21.366+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:21.551+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A028_IPORA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:22.481+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:22.634+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A029_EDEIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:24.166+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:24.320+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A031_SAO MIGUEL DO ARAGUAIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:25.689+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:25.844+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A032_MONTE ALEGRE DE GOIAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:27.317+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:27.473+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A033_PIRES DO RIO_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:29.315+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:29.478+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A034_CATALAO_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:31.062+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:31.242+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A035_ITUMBIARA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:32.739+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:32.901+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A036_CRISTALINA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:34.483+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:34.659+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A037_SILVANIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:36.168+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:36.325+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A056_CRISTALINA (FAZENDA SANTA MONICA)_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:37.934+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:38.106+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A702_CAMPO GRANDE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:39.759+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:39.974+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A703_PONTA PORA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:41.811+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:41.985+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A704_TRES LAGOAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:43.595+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:43.766+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A709_IVINHEMA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:45.356+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:45.519+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A710_PARANAIBA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:47.073+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:47.245+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A717_NHUMIRIM_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:48.851+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:49.011+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A719_AQUIDAUANA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:50.583+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:50.742+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A720_COXIM_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:52.472+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:52.639+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A721_DOURADOS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:54.268+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:54.420+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A722_MIRANDA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:55.950+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:56.108+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A723_PORTO MURTINHO_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:57.329+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:57.477+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A724_CORUMBA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:16:58.906+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:16:59.064+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A730_CHAPADAO DO SUL_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:00.597+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:00.745+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A731_MARACAJU_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:02.267+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:02.414+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A732_SAO GABRIEL DO OESTE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:04.139+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:04.318+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A742_CASSILANDIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:05.938+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:06.094+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A743_RIO BRILHANTE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:07.647+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:07.798+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A749_JUTI_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:09.389+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:09.537+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A750_AMAMBAI_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:11.031+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:11.195+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A751_SETE QUEDAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:12.723+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:12.885+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A752_ITAQUIRAI_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:14.405+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:14.563+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A754_SIDROLANDIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:16.255+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:16.471+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A756_AGUA CLARA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:18.052+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:18.219+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A758_JARDIM_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:19.611+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:19.757+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A759_BATAGUASSU_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:21.341+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:21.493+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A760_COSTA RICA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:23.108+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:23.256+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A761_SONORA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:24.754+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:24.899+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A901_CUIABA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:26.418+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:26.569+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A902_TANGARA DA SERRA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:28.378+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:28.538+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A903_S.J. DO RIO CLARO_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:30.122+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:30.268+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A904_SORRISO_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:31.850+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:32.006+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A905_CAMPO NOVO DOS PARECIS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:33.359+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:33.504+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A906_GUARANTA DO NORTE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:35.068+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:35.217+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A907_RONDONOPOLIS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:36.186+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:36.334+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A908_AGUA BOA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:37.984+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:38.141+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A909_ALTO ARAGUAIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:39.780+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:39.980+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A910_APIACAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:41.005+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:41.119+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A911_SAPEZAL_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:42.663+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:42.828+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A912_CAMPO VERDE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:44.368+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:44.535+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A913_COMODORO_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:46.140+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:46.288+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A914_JUARA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:47.120+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:47.255+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A915_PARANATINGA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:49.125+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:49.303+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A916_QUERENCIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:51.173+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:51.301+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A917_SINOP_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:53.112+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:53.260+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A919_COTRIGUACU_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:54.731+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:54.880+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A920_JUINA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:56.490+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:56.647+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A921_SAO FELIX  DO ARAGUAIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:57.414+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:57.557+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A922_VILA BELA DA SANTISSIMA TRINDADE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:17:59.258+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:17:59.417+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A923_PRIMAVERA DO LESTE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:00.655+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:00.834+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A924_ALTA FLORESTA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:02.503+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:02.636+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A926_CARLINDA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:04.405+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:04.564+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A927_BRASNORTE (NOVO MUNDO)_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:05.880+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:06.038+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A928_NOVA MARINGA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:07.661+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:07.830+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A929_NOVA UBIRATA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:08.713+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:08.874+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A930_GAUCHA DO NORTE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:10.333+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:10.489+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A931_SANTO ANTONIO DO LESTE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:11.979+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:12.134+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A932_GUIRATINGA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:13.697+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:13.855+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A933_ITIQUIRA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:14.968+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:15.127+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A934_ALTO TAQUARI_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:16.803+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:16.969+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A935_PORTO ESTRELA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:18.104+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:18.231+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A936_SALTO DO CEU_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:19.805+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:19.926+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A937_PONTES E LACERDA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:21.244+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:21.411+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A942_SAO JOSE DO XINGU_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:22.684+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:22.848+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A943_SERRA NOVA DOURADA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:23.671+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:23.809+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A944_ROSARIO OESTE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:25.442+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:25.605+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AC_A102_PARQUE ESTADUAL CHANDLESS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:26.426+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:26.561+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AC_A104_RIO BRANCO_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:28.265+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:28.427+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AC_A108_CRUZEIRO DO SUL_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:29.871+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:30.018+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AC_A136_PORTO WALTER_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:30.833+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:30.973+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AC_A137_MARECHAL THAUMATURGO_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:31.775+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:31.939+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AC_A138_FEIJO_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:33.497+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:33.665+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AC_A140_EPITACIOLANDIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:34.974+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:35.131+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A101_MANAUS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:36.729+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:36.914+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A109_EIRUNEPE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:37.700+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:37.845+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A110_BOCA DO ACRE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:39.429+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:39.618+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A111_LABREA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:41.162+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:41.300+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A112_HUMAITA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:42.935+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:43.076+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A113_APUI_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:43.934+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:44.080+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A117_COARI_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:45.296+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:45.431+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A119_MANACAPURU_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:46.684+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:46.821+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A120_AUTAZES_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:48.248+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:48.391+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A121_ITACOATIARA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:49.868+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:50.001+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A122_MAUES_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:51.098+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:51.255+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A123_PARINTINS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:53.099+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:53.267+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A124_URUCARA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:54.923+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:55.054+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A125_RIO URUBU_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:56.761+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:56.912+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A126_PRESIDENTE FIGUEIREDO_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:57.732+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:57.892+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A128_BARCELOS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:18:59.624+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:18:59.747+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A133_MANICORE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:01.454+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:01.609+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A134_S. G. DA CACHOEIRA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:03.112+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:03.280+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A144_NOVO ARIPUANA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:04.761+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:04.902+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AP_A242_OIAPOQUE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:06.502+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:06.646+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AP_A244_PORTO GRANDE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:08.131+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:08.269+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AP_A249_MACAPA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:09.643+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:09.798+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AP_A251_ITAUBAL_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:11.341+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:11.494+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_AL_A303_MACEIO_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:13.266+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:13.381+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_AL_A323_PAO DE ACUCAR_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:14.802+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:14.952+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_AL_A327_PALMEIRA DOS INDIOS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:16.543+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:16.700+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_AL_A353_ARAPIRACA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:18.007+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:18.165+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_AL_A355_CORURIPE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:19.781+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:19.926+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_AL_A356_SAO LUIS DO QUITUNDE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:21.450+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:21.596+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_AL_A371_PIRANHAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:23.189+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:23.389+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A401_SALVADOR_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:25.083+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:25.234+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A402_BARREIRAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:26.755+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:26.952+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A404_LUIZ EDUARDO MAGALHAES_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:28.425+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:28.566+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A405_CARAVELAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:29.984+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:30.096+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A406_CRUZ DAS ALMAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:31.216+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:31.355+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A407_ITIRUCU_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:32.403+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:32.536+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A408_ITABERABA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:33.819+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:33.959+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A410_ILHEUS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:35.741+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:35.890+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A412_MACAJUBA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:36.861+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:36.996+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A413_FEIRA DE SANTANA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:38.647+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:38.850+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A414_VITORIA DA CONQUISTA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:40.408+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:40.554+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A415_SANTA RITA DE CASSIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:41.521+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:41.644+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A416_CORRENTINA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:43.061+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:43.220+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A418_BOM JESUS DA LAPA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:44.470+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:44.613+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A422_ABROLHOS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:45.392+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:45.533+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A423_REMANSO_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:47.138+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:47.284+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A424_IRECE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:48.618+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:48.770+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A425_LENCOIS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:50.308+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:50.500+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A426_GUANAMBI_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:51.774+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:51.923+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A427_PORTO SEGURO_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:52.833+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:52.973+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A428_SENHOR DO BONFIM_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:54.513+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:54.657+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A429_BARRA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:55.997+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:56.143+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A430_PIATA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:57.751+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:57.897+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A431_CONDE_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:19:59.643+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:19:59.791+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A432_BURITIRAMA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:20:01.146+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:20:01.303+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A433_BRUMADO_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:20:03.005+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:20:03.155+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A434_AMARGOSA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:20:04.900+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:20:05.033+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A436_QUEIMADAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:20:05.861+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:20:06.011+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A437_UNA_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:20:07.735+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-29T14:20:07.886+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A438_MARAU_01-01-2024_A_31-07-2024.CSV
+[2024-08-29T14:20:08.457+0000] {local_task_job.py:273} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-08-29T14:20:08.459+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 1210. PIDs of all processes in the group: [1211, 1210]
+[2024-08-29T14:20:08.459+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 1210
+[2024-08-29T14:20:08.459+0000] {taskinstance.py:1479} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-08-29T14:20:08.487+0000] {dag_inmet.py:119} ERROR - Erro no processamento dos dados: Task received SIGTERM signal
+[2024-08-29T14:20:08.949+0000] {clientserver.py:538} INFO - Error while receiving.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+[2024-08-29T14:20:08.949+0000] {clientserver.py:538} INFO - Error while receiving.
+Traceback (most recent call last):
+  File "/opt/airflow/dags/dag_inmet.py", line 107, in task_process_data
+    silver.process_csv_files(filename, spark)
+  File "/opt/airflow/plugins/silver_plugin.py", line 20, in wrapper
+    resultado = metodo(*args, **kwargs)
+  File "/opt/airflow/plugins/silver_plugin.py", line 135, in process_csv_files
+    df = self.process_csv_file(tmp_dir, nome_arquivo_zip, spark) # Faz as primeiras transformações no arquivo
+  File "/opt/airflow/plugins/silver_plugin.py", line 66, in process_csv_file
+    encoding = self.detect_encoding(file_path)
+  File "/opt/airflow/plugins/silver_plugin.py", line 61, in detect_encoding
+    return chardet.detect(f.read())['encoding']
+  File "/home/airflow/.local/lib/python3.7/site-packages/chardet/__init__.py", line 41, in detect
+    detector.feed(byte_str)
+  File "/home/airflow/.local/lib/python3.7/site-packages/chardet/universaldetector.py", line 211, in feed
+    if prober.feed(byte_str) == ProbingState.FOUND_IT:
+  File "/home/airflow/.local/lib/python3.7/site-packages/chardet/charsetgroupprober.py", line 71, in feed
+    state = prober.feed(byte_str)
+  File "/home/airflow/.local/lib/python3.7/site-packages/chardet/sjisprober.py", line 68, in feed
+    char_len = self.coding_sm.get_current_charlen()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1481, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[2024-08-29T14:20:08.950+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.951+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.951+0000] {java_gateway.py:1056} ERROR - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 540, in send_command
+    "Error while sending or receiving", e, proto.ERROR_ON_RECEIVE)
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+[2024-08-29T14:20:08.951+0000] {java_gateway.py:1056} ERROR - Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/airflow/dags/dag_inmet.py", line 107, in task_process_data
+    silver.process_csv_files(filename, spark)
+  File "/opt/airflow/plugins/silver_plugin.py", line 20, in wrapper
+    resultado = metodo(*args, **kwargs)
+  File "/opt/airflow/plugins/silver_plugin.py", line 135, in process_csv_files
+    df = self.process_csv_file(tmp_dir, nome_arquivo_zip, spark) # Faz as primeiras transformações no arquivo
+  File "/opt/airflow/plugins/silver_plugin.py", line 66, in process_csv_file
+    encoding = self.detect_encoding(file_path)
+  File "/opt/airflow/plugins/silver_plugin.py", line 61, in detect_encoding
+    return chardet.detect(f.read())['encoding']
+  File "/home/airflow/.local/lib/python3.7/site-packages/chardet/__init__.py", line 41, in detect
+    detector.feed(byte_str)
+  File "/home/airflow/.local/lib/python3.7/site-packages/chardet/universaldetector.py", line 211, in feed
+    if prober.feed(byte_str) == ProbingState.FOUND_IT:
+  File "/home/airflow/.local/lib/python3.7/site-packages/chardet/charsetgroupprober.py", line 71, in feed
+    state = prober.feed(byte_str)
+  File "/home/airflow/.local/lib/python3.7/site-packages/chardet/sjisprober.py", line 68, in feed
+    char_len = self.coding_sm.get_current_charlen()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1481, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 540, in send_command
+    "Error while sending or receiving", e, proto.ERROR_ON_RECEIVE)
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+[2024-08-29T14:20:08.952+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.952+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.952+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/dag_inmet.py", line 107, in task_process_data
+    silver.process_csv_files(filename, spark)
+  File "/opt/airflow/plugins/silver_plugin.py", line 20, in wrapper
+    resultado = metodo(*args, **kwargs)
+  File "/opt/airflow/plugins/silver_plugin.py", line 135, in process_csv_files
+    df = self.process_csv_file(tmp_dir, nome_arquivo_zip, spark) # Faz as primeiras transformações no arquivo
+  File "/opt/airflow/plugins/silver_plugin.py", line 66, in process_csv_file
+    encoding = self.detect_encoding(file_path)
+  File "/opt/airflow/plugins/silver_plugin.py", line 61, in detect_encoding
+    return chardet.detect(f.read())['encoding']
+  File "/home/airflow/.local/lib/python3.7/site-packages/chardet/__init__.py", line 41, in detect
+    detector.feed(byte_str)
+  File "/home/airflow/.local/lib/python3.7/site-packages/chardet/universaldetector.py", line 211, in feed
+    if prober.feed(byte_str) == ProbingState.FOUND_IT:
+  File "/home/airflow/.local/lib/python3.7/site-packages/chardet/charsetgroupprober.py", line 71, in feed
+    state = prober.feed(byte_str)
+  File "/home/airflow/.local/lib/python3.7/site-packages/chardet/sjisprober.py", line 68, in feed
+    char_len = self.coding_sm.get_current_charlen()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1481, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_inmet.py", line 123, in task_process_data
+    spark.stop()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/sql/session.py", line 1602, in stop
+    self._jvm.SparkSession.clearDefaultSession()
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1725, in __getattr__
+    raise Py4JError(message)
+py4j.protocol.Py4JError: SparkSession does not exist in the JVM
+[2024-08-29T14:20:08.953+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.954+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.954+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.954+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.954+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.954+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.954+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.954+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.954+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.955+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.955+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.955+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.955+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.955+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.955+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.955+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.955+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.955+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.955+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.955+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.956+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.957+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.957+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.957+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.957+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.957+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.957+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.957+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.957+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.957+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.957+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.957+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.957+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.958+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.959+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_inmet, task_id=process_data, execution_date=20240829T141402, start_date=20240829T141536, end_date=20240829T142008
+[2024-08-29T14:20:08.960+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.960+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.960+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.960+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.960+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.960+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.960+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.960+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.963+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.963+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.963+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.964+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.964+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.964+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.966+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.966+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.966+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.966+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.966+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.966+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.966+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.966+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.967+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.967+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.967+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.967+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.967+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.967+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.967+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.968+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.968+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.969+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.969+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.969+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.969+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.969+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.970+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 13002 for task process_data (SparkSession does not exist in the JVM; 1210)
+[2024-08-29T14:20:08.970+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-29T14:20:08.992+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=1210, status='terminated', exitcode=1, started='14:15:35') (1210) terminated with exit code 1
+[2024-08-29T14:20:08.993+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=1211, status='terminated', started='14:15:35') (1211) terminated with exit code None

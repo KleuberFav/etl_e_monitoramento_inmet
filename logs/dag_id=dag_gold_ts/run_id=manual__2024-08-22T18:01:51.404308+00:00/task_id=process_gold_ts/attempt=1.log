@@ -1,0 +1,27 @@
+[2024-08-22T18:02:50.699+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_gold_ts.process_gold_ts manual__2024-08-22T18:01:51.404308+00:00 [queued]>
+[2024-08-22T18:02:50.706+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_gold_ts.process_gold_ts manual__2024-08-22T18:01:51.404308+00:00 [queued]>
+[2024-08-22T18:02:50.706+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-22T18:02:50.706+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-22T18:02:50.706+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-22T18:02:50.717+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_gold_ts> on 2024-08-22 18:01:51.404308+00:00
+[2024-08-22T18:02:50.723+0000] {standard_task_runner.py:55} INFO - Started process 2203 to run task
+[2024-08-22T18:02:50.726+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_gold_ts', 'process_gold_ts', 'manual__2024-08-22T18:01:51.404308+00:00', '--job-id', '11218', '--raw', '--subdir', 'DAGS_FOLDER/dag_ts_inmet.py', '--cfg-path', '/tmp/tmp7sphki0b']
+[2024-08-22T18:02:50.727+0000] {standard_task_runner.py:83} INFO - Job 11218: Subtask process_gold_ts
+[2024-08-22T18:02:50.771+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_gold_ts.process_gold_ts manual__2024-08-22T18:01:51.404308+00:00 [running]> on host 8f16cc1bd84f
+[2024-08-22T18:02:50.836+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_gold_ts
+AIRFLOW_CTX_TASK_ID=process_gold_ts
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-22T18:01:51.404308+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-22T18:01:51.404308+00:00
+[2024-08-22T18:02:53.133+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/pyspark/context.py:317: FutureWarning: Python 3.7 support is deprecated in Spark 3.4.
+  warnings.warn("Python 3.7 support is deprecated in Spark 3.4.", FutureWarning)
+
+[2024-08-22T18:02:57.981+0000] {logging_mixin.py:137} INFO - Tempo de execução de ts_gold: 4.7502 segundos
+[2024-08-22T18:02:58.137+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-08-22T18:02:58.146+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=dag_gold_ts, task_id=process_gold_ts, execution_date=20240822T180151, start_date=20240822T180250, end_date=20240822T180258
+[2024-08-22T18:02:58.201+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-08-22T18:02:58.249+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

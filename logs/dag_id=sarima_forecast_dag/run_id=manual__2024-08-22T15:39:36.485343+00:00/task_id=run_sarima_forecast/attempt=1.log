@@ -1,0 +1,43 @@
+[2024-08-22T15:40:36.563+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-22T15:39:36.485343+00:00 [queued]>
+[2024-08-22T15:40:36.570+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-22T15:39:36.485343+00:00 [queued]>
+[2024-08-22T15:40:36.570+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-22T15:40:36.570+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-22T15:40:36.570+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-22T15:40:36.581+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): run_sarima_forecast> on 2024-08-22 15:39:36.485343+00:00
+[2024-08-22T15:40:36.587+0000] {standard_task_runner.py:55} INFO - Started process 5916 to run task
+[2024-08-22T15:40:36.589+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'sarima_forecast_dag', 'run_sarima_forecast', 'manual__2024-08-22T15:39:36.485343+00:00', '--job-id', '10825', '--raw', '--subdir', 'DAGS_FOLDER/dag_forecast_ts_rainfall.py', '--cfg-path', '/tmp/tmpxc5vncv8']
+[2024-08-22T15:40:36.591+0000] {standard_task_runner.py:83} INFO - Job 10825: Subtask run_sarima_forecast
+[2024-08-22T15:40:36.632+0000] {task_command.py:388} INFO - Running <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-22T15:39:36.485343+00:00 [running]> on host f64a695c5a62
+[2024-08-22T15:40:36.681+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=sarima_forecast_dag
+AIRFLOW_CTX_TASK_ID=run_sarima_forecast
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-22T15:39:36.485343+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-22T15:39:36.485343+00:00
+[2024-08-22T15:40:36.913+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/statsmodels/tsa/statespace/sarimax.py:868: UserWarning: Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.
+  ' zeros.' % warning_description)
+
+[2024-08-22T15:40:36.961+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_forecast_ts_rainfall.py", line 23, in run_sarima_forecast
+    previsoes_df.to_csv('/home/kleuber/LAKE/gold/rainfall/artifacts/forecast_output.csv', index=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 3482, in to_csv
+    storage_options=storage_options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/formats/format.py", line 1105, in to_csv
+    csv_formatter.save()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/formats/csvs.py", line 243, in save
+    storage_options=self.storage_options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/home/kleuber/LAKE/gold/rainfall/artifacts/forecast_output.csv'
+[2024-08-22T15:40:36.980+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=sarima_forecast_dag, task_id=run_sarima_forecast, execution_date=20240822T153936, start_date=20240822T154036, end_date=20240822T154036
+[2024-08-22T15:40:37.004+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 10825 for task run_sarima_forecast ([Errno 2] No such file or directory: '/home/kleuber/LAKE/gold/rainfall/artifacts/forecast_output.csv'; 5916)
+[2024-08-22T15:40:37.041+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-08-22T15:40:37.055+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

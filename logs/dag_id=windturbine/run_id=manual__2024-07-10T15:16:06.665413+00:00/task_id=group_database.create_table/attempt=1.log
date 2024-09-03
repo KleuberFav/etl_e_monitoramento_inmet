@@ -1,0 +1,36 @@
+[2024-07-10T15:17:09.722+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: windturbine.group_database.create_table manual__2024-07-10T15:16:06.665413+00:00 [queued]>
+[2024-07-10T15:17:09.731+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: windturbine.group_database.create_table manual__2024-07-10T15:16:06.665413+00:00 [queued]>
+[2024-07-10T15:17:09.732+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-10T15:17:09.732+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-07-10T15:17:09.732+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-10T15:17:09.750+0000] {taskinstance.py:1300} INFO - Executing <Task(PostgresOperator): group_database.create_table> on 2024-07-10 15:16:06.665413+00:00
+[2024-07-10T15:17:09.758+0000] {standard_task_runner.py:55} INFO - Started process 1048 to run task
+[2024-07-10T15:17:09.760+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'windturbine', 'group_database.create_table', 'manual__2024-07-10T15:16:06.665413+00:00', '--job-id', '804', '--raw', '--subdir', 'DAGS_FOLDER/windturbine.py', '--cfg-path', '/tmp/tmpx0uiy5bf']
+[2024-07-10T15:17:09.770+0000] {standard_task_runner.py:83} INFO - Job 804: Subtask group_database.create_table
+[2024-07-10T15:17:09.839+0000] {task_command.py:388} INFO - Running <TaskInstance: windturbine.group_database.create_table manual__2024-07-10T15:16:06.665413+00:00 [running]> on host 2051c12a5a3c
+[2024-07-10T15:17:09.922+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=windturbine
+AIRFLOW_CTX_TASK_ID=group_database.create_table
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-10T15:16:06.665413+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-10T15:16:06.665413+00:00
+[2024-07-10T15:17:09.922+0000] {sql.py:254} INFO - Executing: 
+                                create table if not exists
+                                sensors (idtemp varchar, powerfactor varchar,
+                                hydraulicpressure varchar, temperature varchar,
+                                timestamp varchar)
+                                
+[2024-07-10T15:17:09.931+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2024-07-10T15:17:10.127+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2024-07-10T15:17:10.129+0000] {sql.py:375} INFO - Running statement: 
+                                create table if not exists
+                                sensors (idtemp varchar, powerfactor varchar,
+                                hydraulicpressure varchar, temperature varchar,
+                                timestamp varchar)
+                                , parameters: None
+[2024-07-10T15:17:10.139+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=windturbine, task_id=group_database.create_table, execution_date=20240710T151606, start_date=20240710T151709, end_date=20240710T151710
+[2024-07-10T15:17:10.176+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-07-10T15:17:10.196+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

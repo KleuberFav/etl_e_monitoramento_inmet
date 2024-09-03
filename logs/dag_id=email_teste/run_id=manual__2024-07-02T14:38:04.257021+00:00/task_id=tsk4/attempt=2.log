@@ -1,0 +1,90 @@
+[2024-07-02T14:38:21.607+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: email_teste.tsk4 manual__2024-07-02T14:38:04.257021+00:00 [queued]>
+[2024-07-02T14:38:21.615+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: email_teste.tsk4 manual__2024-07-02T14:38:04.257021+00:00 [queued]>
+[2024-07-02T14:38:21.616+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-02T14:38:21.616+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2024-07-02T14:38:21.616+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-02T14:38:21.626+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): tsk4> on 2024-07-02 14:38:04.257021+00:00
+[2024-07-02T14:38:21.631+0000] {standard_task_runner.py:55} INFO - Started process 472 to run task
+[2024-07-02T14:38:21.633+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'email_teste', 'tsk4', 'manual__2024-07-02T14:38:04.257021+00:00', '--job-id', '315', '--raw', '--subdir', 'DAGS_FOLDER/email.py', '--cfg-path', '/tmp/tmpmr9xinia']
+[2024-07-02T14:38:21.633+0000] {standard_task_runner.py:83} INFO - Job 315: Subtask tsk4
+[2024-07-02T14:38:21.672+0000] {task_command.py:388} INFO - Running <TaskInstance: email_teste.tsk4 manual__2024-07-02T14:38:04.257021+00:00 [running]> on host 159511bdf5fe
+[2024-07-02T14:38:21.722+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=testeskleuber@gmail.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=email_teste
+AIRFLOW_CTX_TASK_ID=tsk4
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-02T14:38:04.257021+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-02T14:38:04.257021+00:00
+[2024-07-02T14:38:21.722+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2024-07-02T14:38:21.723+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'exit 1']
+[2024-07-02T14:38:21.733+0000] {subprocess.py:86} INFO - Output:
+[2024-07-02T14:38:21.735+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-07-02T14:38:21.743+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-07-02T14:38:21.746+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=email_teste, task_id=tsk4, execution_date=20240702T143804, start_date=20240702T143821, end_date=20240702T143821
+[2024-07-02T14:38:21.758+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/email.py:152: RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+  send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+
+[2024-07-02T14:38:21.759+0000] {email.py:268} INFO - Email alerting: attempt 1
+[2024-07-02T14:38:26.364+0000] {email.py:268} INFO - Email alerting: attempt 1
+[2024-07-02T14:38:29.316+0000] {taskinstance.py:1831} ERROR - Failed to send email to: ['testeskleuber@gmail.com']
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1374, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1520, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1581, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 2231, in email_alert
+    send_email(task.email, subject, html_content)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 91, in send_email
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 152, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 279, in send_mime_email
+    smtp_conn.login(smtp_user, smtp_password)
+  File "/usr/local/lib/python3.7/smtplib.py", line 735, in login
+    raise last_exception
+  File "/usr/local/lib/python3.7/smtplib.py", line 726, in login
+    initial_response_ok=initial_response_ok)
+  File "/usr/local/lib/python3.7/smtplib.py", line 647, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-72c6b39809fsm6715385a12.52 - gsmtp')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1829, in handle_failure
+    self.email_alert(error, task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 2233, in email_alert
+    send_email(task.email, subject, html_content_err)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 91, in send_email
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 152, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 279, in send_mime_email
+    smtp_conn.login(smtp_user, smtp_password)
+  File "/usr/local/lib/python3.7/smtplib.py", line 735, in login
+    raise last_exception
+  File "/usr/local/lib/python3.7/smtplib.py", line 726, in login
+    initial_response_ok=initial_response_ok)
+  File "/usr/local/lib/python3.7/smtplib.py", line 647, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-70801e63218sm8878932b3a.11 - gsmtp')
+[2024-07-02T14:38:29.332+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 315 for task tsk4 (Bash command failed. The command returned a non-zero exit code 1.; 472)
+[2024-07-02T14:38:29.377+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-07-02T14:38:29.391+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

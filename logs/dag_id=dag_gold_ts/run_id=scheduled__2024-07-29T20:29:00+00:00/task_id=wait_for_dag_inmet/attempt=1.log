@@ -1,0 +1,24 @@
+[2024-08-29T20:29:20.976+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_gold_ts.wait_for_dag_inmet scheduled__2024-07-29T20:29:00+00:00 [queued]>
+[2024-08-29T20:29:20.983+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_gold_ts.wait_for_dag_inmet scheduled__2024-07-29T20:29:00+00:00 [queued]>
+[2024-08-29T20:29:20.984+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-29T20:29:20.984+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-29T20:29:20.984+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-29T20:29:21.000+0000] {taskinstance.py:1300} INFO - Executing <Task(ExternalTaskSensor): wait_for_dag_inmet> on 2024-07-29 20:29:00+00:00
+[2024-08-29T20:29:21.009+0000] {standard_task_runner.py:55} INFO - Started process 388 to run task
+[2024-08-29T20:29:21.011+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_gold_ts', 'wait_for_dag_inmet', 'scheduled__2024-07-29T20:29:00+00:00', '--job-id', '13461', '--raw', '--subdir', 'DAGS_FOLDER/dag_ts_inmet.py', '--cfg-path', '/tmp/tmpdhslqfq2']
+[2024-08-29T20:29:21.012+0000] {standard_task_runner.py:83} INFO - Job 13461: Subtask wait_for_dag_inmet
+[2024-08-29T20:29:21.062+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_gold_ts.wait_for_dag_inmet scheduled__2024-07-29T20:29:00+00:00 [running]> on host 9245b3dbdda8
+[2024-08-29T20:29:21.127+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_gold_ts
+AIRFLOW_CTX_TASK_ID=wait_for_dag_inmet
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-29T20:29:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-07-29T20:29:00+00:00
+[2024-08-29T20:54:19.505+0000] {local_task_job.py:273} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-08-29T20:54:19.506+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 388. PIDs of all processes in the group: [388]
+[2024-08-29T20:54:19.507+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 388
+[2024-08-29T20:54:19.507+0000] {taskinstance.py:1479} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-08-29T20:54:19.533+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=388, status='terminated', exitcode=0, started='20:29:20') (388) terminated with exit code 0

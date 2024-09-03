@@ -1,0 +1,36 @@
+[2024-08-28T14:42:06.558+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-28T14:42:01.919133+00:00 [queued]>
+[2024-08-28T14:42:06.568+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-28T14:42:01.919133+00:00 [queued]>
+[2024-08-28T14:42:06.569+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-28T14:42:06.569+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-28T14:42:06.569+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-28T14:42:06.585+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): run_sarima_forecast> on 2024-08-28 14:42:01.919133+00:00
+[2024-08-28T14:42:06.594+0000] {standard_task_runner.py:55} INFO - Started process 15698 to run task
+[2024-08-28T14:42:06.595+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'sarima_forecast_dag', 'run_sarima_forecast', 'manual__2024-08-28T14:42:01.919133+00:00', '--job-id', '12121', '--raw', '--subdir', 'DAGS_FOLDER/dag_forecast_ts_rainfall.py', '--cfg-path', '/tmp/tmp8snaf1m5']
+[2024-08-28T14:42:06.597+0000] {standard_task_runner.py:83} INFO - Job 12121: Subtask run_sarima_forecast
+[2024-08-28T14:42:06.644+0000] {task_command.py:388} INFO - Running <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-28T14:42:01.919133+00:00 [running]> on host 4958d38180c6
+[2024-08-28T14:42:06.705+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=sarima_forecast_dag
+AIRFLOW_CTX_TASK_ID=run_sarima_forecast
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-28T14:42:01.919133+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-28T14:42:01.919133+00:00
+[2024-08-28T14:42:06.705+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_forecast_ts_rainfall.py", line 15, in run_sarima_forecast
+    sarima_plugin.load_model()
+  File "/opt/airflow/plugins/forecast_ts_rainfall_plugin.py", line 14, in load_model
+    self.sarima_model = load(self.model_path)
+  File "/home/airflow/.local/lib/python3.7/site-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/kleuber/Documentos/projeto_airflow/data/gold/rainfall_ts/artifacts/sarima_model_v_062024.joblib'
+[2024-08-28T14:42:06.712+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=sarima_forecast_dag, task_id=run_sarima_forecast, execution_date=20240828T144201, start_date=20240828T144206, end_date=20240828T144206
+[2024-08-28T14:42:06.721+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 12121 for task run_sarima_forecast ([Errno 2] No such file or directory: '/home/kleuber/Documentos/projeto_airflow/data/gold/rainfall_ts/artifacts/sarima_model_v_062024.joblib'; 15698)
+[2024-08-28T14:42:06.767+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-08-28T14:42:06.782+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

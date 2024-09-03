@@ -1,0 +1,258 @@
+[2024-08-28T13:59:08.455+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-08-28T13:58:40.544815+00:00 [queued]>
+[2024-08-28T13:59:08.463+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-08-28T13:58:40.544815+00:00 [queued]>
+[2024-08-28T13:59:08.463+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-28T13:59:08.463+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-28T13:59:08.463+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-28T13:59:08.474+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_data> on 2024-08-28 13:58:40.544815+00:00
+[2024-08-28T13:59:08.480+0000] {standard_task_runner.py:55} INFO - Started process 186 to run task
+[2024-08-28T13:59:08.482+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'process_data', 'manual__2024-08-28T13:58:40.544815+00:00', '--job-id', '12013', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmp9srfv785']
+[2024-08-28T13:59:08.483+0000] {standard_task_runner.py:83} INFO - Job 12013: Subtask process_data
+[2024-08-28T13:59:08.524+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.process_data manual__2024-08-28T13:58:40.544815+00:00 [running]> on host 8c6d307777bf
+[2024-08-28T13:59:08.579+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=process_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-28T13:58:40.544815+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-28T13:58:40.544815+00:00
+[2024-08-28T13:59:11.345+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/pyspark/context.py:317: FutureWarning: Python 3.7 support is deprecated in Spark 3.4.
+  warnings.warn("Python 3.7 support is deprecated in Spark 3.4.", FutureWarning)
+
+[2024-08-28T13:59:11.466+0000] {dag_inmet.py:100} INFO - SparkSession criado com sucesso.
+[2024-08-28T13:59:11.475+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A001_BRASILIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-28T13:59:17.790+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-28T13:59:18.907+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A042_BRAZLANDIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-28T13:59:20.886+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-28T13:59:21.272+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A045_AGUAS EMENDADAS_01-01-2024_A_31-07-2024.CSV
+[2024-08-28T13:59:23.318+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-28T13:59:23.653+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A046_GAMA (PONTE ALTA)_01-01-2024_A_31-07-2024.CSV
+[2024-08-28T13:59:25.721+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-28T13:59:26.014+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A047_PARANOA (COOPA-DF)_01-01-2024_A_31-07-2024.CSV
+[2024-08-28T13:59:28.278+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-28T13:59:28.563+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A002_GOIANIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-28T13:59:30.656+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-28T13:59:30.927+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A003_MORRINHOS_01-01-2024_A_31-07-2024.CSV
+[2024-08-28T13:59:32.876+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-28T13:59:33.145+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A005_PORANGATU_01-01-2024_A_31-07-2024.CSV
+[2024-08-28T13:59:35.116+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-28T13:59:35.327+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A011_SAO SIMAO_01-01-2024_A_31-07-2024.CSV
+[2024-08-28T13:59:36.522+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-28T13:59:36.723+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A012_LUZIANIA_01-01-2024_A_31-07-2024.CSV
+[2024-08-28T13:59:38.621+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2024-07
+[2024-08-28T13:59:38.753+0000] {local_task_job.py:273} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-08-28T13:59:38.755+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 186. PIDs of all processes in the group: [187, 186]
+[2024-08-28T13:59:38.759+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 186
+[2024-08-28T13:59:38.760+0000] {taskinstance.py:1479} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-08-28T13:59:38.760+0000] {clientserver.py:538} INFO - Error while receiving.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1481, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2024-08-28T13:59:38.761+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:38.761+0000] {java_gateway.py:1056} ERROR - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1481, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 540, in send_command
+    "Error while sending or receiving", e, proto.ERROR_ON_RECEIVE)
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+[2024-08-28T13:59:38.762+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:38.768+0000] {dag_inmet.py:115} ERROR - Erro no processamento dos dados: An error occurred while calling o758.parquet
+[2024-08-28T13:59:39.220+0000] {clientserver.py:538} INFO - Error while receiving.
+Traceback (most recent call last):
+  File "/opt/airflow/dags/dag_inmet.py", line 103, in task_process_data
+    silver.process_csv_files(filename, spark)
+  File "/opt/airflow/plugins/silver_plugin.py", line 20, in wrapper
+    resultado = metodo(*args, **kwargs)
+  File "/opt/airflow/plugins/silver_plugin.py", line 156, in process_csv_files
+    df_filtered.write.mode("append").parquet(parquet_dir) # Escrevendo os arquivos por ano e mês
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/sql/readwriter.py", line 1656, in parquet
+    self._jwrite.parquet(path)
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1323, in __call__
+    answer, self.gateway_client, self.target_id, self.name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/errors/exceptions/captured.py", line 169, in deco
+    return f(*a, **kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/protocol.py", line 336, in get_return_value
+    format(target_id, ".", name))
+py4j.protocol.Py4JError: An error occurred while calling o758.parquet
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+[2024-08-28T13:59:39.220+0000] {clientserver.py:538} INFO - Error while receiving.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+[2024-08-28T13:59:39.227+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.227+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.227+0000] {java_gateway.py:1056} ERROR - Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/airflow/dags/dag_inmet.py", line 103, in task_process_data
+    silver.process_csv_files(filename, spark)
+  File "/opt/airflow/plugins/silver_plugin.py", line 20, in wrapper
+    resultado = metodo(*args, **kwargs)
+  File "/opt/airflow/plugins/silver_plugin.py", line 156, in process_csv_files
+    df_filtered.write.mode("append").parquet(parquet_dir) # Escrevendo os arquivos por ano e mês
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/sql/readwriter.py", line 1656, in parquet
+    self._jwrite.parquet(path)
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1323, in __call__
+    answer, self.gateway_client, self.target_id, self.name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/errors/exceptions/captured.py", line 169, in deco
+    return f(*a, **kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/protocol.py", line 336, in get_return_value
+    format(target_id, ".", name))
+py4j.protocol.Py4JError: An error occurred while calling o758.parquet
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 540, in send_command
+    "Error while sending or receiving", e, proto.ERROR_ON_RECEIVE)
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+[2024-08-28T13:59:39.227+0000] {java_gateway.py:1056} ERROR - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 540, in send_command
+    "Error while sending or receiving", e, proto.ERROR_ON_RECEIVE)
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+[2024-08-28T13:59:39.228+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.228+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.228+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/dag_inmet.py", line 103, in task_process_data
+    silver.process_csv_files(filename, spark)
+  File "/opt/airflow/plugins/silver_plugin.py", line 20, in wrapper
+    resultado = metodo(*args, **kwargs)
+  File "/opt/airflow/plugins/silver_plugin.py", line 156, in process_csv_files
+    df_filtered.write.mode("append").parquet(parquet_dir) # Escrevendo os arquivos por ano e mês
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/sql/readwriter.py", line 1656, in parquet
+    self._jwrite.parquet(path)
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1323, in __call__
+    answer, self.gateway_client, self.target_id, self.name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/errors/exceptions/captured.py", line 169, in deco
+    return f(*a, **kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/protocol.py", line 336, in get_return_value
+    format(target_id, ".", name))
+py4j.protocol.Py4JError: An error occurred while calling o758.parquet
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_inmet.py", line 119, in task_process_data
+    spark.stop()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/sql/session.py", line 1602, in stop
+    self._jvm.SparkSession.clearDefaultSession()
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1725, in __getattr__
+    raise Py4JError(message)
+py4j.protocol.Py4JError: SparkSession does not exist in the JVM
+[2024-08-28T13:59:39.228+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.229+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.230+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.230+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.230+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.230+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.230+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.230+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.230+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.230+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.231+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.231+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.231+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.231+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.231+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.231+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.231+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.231+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.231+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.232+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.232+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.233+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.233+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.233+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.233+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.233+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.233+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.233+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.233+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.233+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.233+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.233+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.234+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_inmet, task_id=process_data, execution_date=20240828T135840, start_date=20240828T135908, end_date=20240828T135939
+[2024-08-28T13:59:39.235+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.236+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.236+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.236+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.236+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.236+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.236+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.236+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.236+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.239+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.239+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.239+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.241+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.241+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.241+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.241+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.242+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.242+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.242+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.243+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.243+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.243+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.244+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.244+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.245+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.245+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.245+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.245+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.245+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.245+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.246+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.246+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.246+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 12013 for task process_data (SparkSession does not exist in the JVM; 186)
+[2024-08-28T13:59:39.247+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-08-28T13:59:39.253+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=187, status='terminated', started='13:59:08') (187) terminated with exit code None
+[2024-08-28T13:59:39.256+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=186, status='terminated', exitcode=1, started='13:59:07') (186) terminated with exit code 1

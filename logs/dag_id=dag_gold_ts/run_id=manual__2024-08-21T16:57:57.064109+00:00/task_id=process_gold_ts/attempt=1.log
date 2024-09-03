@@ -1,0 +1,93 @@
+[2024-08-21T16:58:38.795+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_gold_ts.process_gold_ts manual__2024-08-21T16:57:57.064109+00:00 [queued]>
+[2024-08-21T16:58:38.802+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_gold_ts.process_gold_ts manual__2024-08-21T16:57:57.064109+00:00 [queued]>
+[2024-08-21T16:58:38.802+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-21T16:58:38.802+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-21T16:58:38.802+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-21T16:58:38.813+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_gold_ts> on 2024-08-21 16:57:57.064109+00:00
+[2024-08-21T16:58:38.819+0000] {standard_task_runner.py:55} INFO - Started process 1668 to run task
+[2024-08-21T16:58:38.821+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_gold_ts', 'process_gold_ts', 'manual__2024-08-21T16:57:57.064109+00:00', '--job-id', '9987', '--raw', '--subdir', 'DAGS_FOLDER/dag_ts_inmet.py', '--cfg-path', '/tmp/tmp2b9ctpkx']
+[2024-08-21T16:58:38.822+0000] {standard_task_runner.py:83} INFO - Job 9987: Subtask process_gold_ts
+[2024-08-21T16:58:38.864+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_gold_ts.process_gold_ts manual__2024-08-21T16:57:57.064109+00:00 [running]> on host 63d1cc5d0723
+[2024-08-21T16:58:38.912+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_gold_ts
+AIRFLOW_CTX_TASK_ID=process_gold_ts
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-21T16:57:57.064109+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-21T16:57:57.064109+00:00
+[2024-08-21T16:58:41.108+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/pyspark/context.py:317: FutureWarning: Python 3.7 support is deprecated in Spark 3.4.
+  warnings.warn("Python 3.7 support is deprecated in Spark 3.4.", FutureWarning)
+
+[2024-08-21T16:58:46.246+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/dateutil/parser/_parser.py", line 649, in parse
+    ret = self._build_naive(res, default)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dateutil/parser/_parser.py", line 1235, in _build_naive
+    naive = default.replace(**repl)
+ValueError: month must be in 1..12
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "pandas/_libs/tslib.pyx", line 534, in pandas._libs.tslib.array_to_datetime
+  File "pandas/_libs/tslibs/parsing.pyx", line 257, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "/home/airflow/.local/lib/python3.7/site-packages/dateutil/parser/_parser.py", line 1368, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dateutil/parser/_parser.py", line 651, in parse
+    six.raise_from(ParserError(str(e) + ": %s", timestr), e)
+  File "<string>", line 3, in raise_from
+dateutil.parser._parser.ParserError: month must be in 1..12: 202406
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pandas/_libs/tslib.pyx", line 545, in pandas._libs.tslib.array_to_datetime
+TypeError: invalid string coercion to datetime
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/dateutil/parser/_parser.py", line 649, in parse
+    ret = self._build_naive(res, default)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dateutil/parser/_parser.py", line 1235, in _build_naive
+    naive = default.replace(**repl)
+ValueError: month must be in 1..12
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_ts_inmet.py", line 44, in run_gold_ts
+    gold_ts.ts_gold(spark)
+  File "/opt/airflow/plugins/gold_ts_plugin.py", line 12, in wrapper
+    resultado = metodo(*args, **kwargs)
+  File "/opt/airflow/plugins/gold_ts_plugin.py", line 87, in ts_gold
+    df3.index = pd.to_datetime(df3.index)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/tools/datetimes.py", line 896, in to_datetime
+    result = convert_listlike(arg, format, name=arg.name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/tools/datetimes.py", line 408, in _convert_listlike_datetimes
+    allow_object=True,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/datetimes.py", line 2198, in objects_to_datetime64ns
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/datetimes.py", line 2187, in objects_to_datetime64ns
+    allow_mixed=allow_mixed,
+  File "pandas/_libs/tslib.pyx", line 379, in pandas._libs.tslib.array_to_datetime
+  File "pandas/_libs/tslib.pyx", line 611, in pandas._libs.tslib.array_to_datetime
+  File "pandas/_libs/tslib.pyx", line 749, in pandas._libs.tslib._array_to_datetime_object
+  File "pandas/_libs/tslib.pyx", line 740, in pandas._libs.tslib._array_to_datetime_object
+  File "pandas/_libs/tslibs/parsing.pyx", line 257, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "/home/airflow/.local/lib/python3.7/site-packages/dateutil/parser/_parser.py", line 1368, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dateutil/parser/_parser.py", line 651, in parse
+    six.raise_from(ParserError(str(e) + ": %s", timestr), e)
+  File "<string>", line 3, in raise_from
+dateutil.parser._parser.ParserError: month must be in 1..12: 202406
+[2024-08-21T16:58:46.255+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_gold_ts, task_id=process_gold_ts, execution_date=20240821T165757, start_date=20240821T165838, end_date=20240821T165846
+[2024-08-21T16:58:46.266+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 9987 for task process_gold_ts (month must be in 1..12: 202406; 1668)
+[2024-08-21T16:58:46.298+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-08-21T16:58:46.311+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

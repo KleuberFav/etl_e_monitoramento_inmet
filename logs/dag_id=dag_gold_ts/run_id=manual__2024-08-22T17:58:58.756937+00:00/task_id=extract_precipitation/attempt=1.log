@@ -1,0 +1,48 @@
+[2024-08-22T18:00:36.264+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_gold_ts.extract_precipitation manual__2024-08-22T17:58:58.756937+00:00 [queued]>
+[2024-08-22T18:00:36.272+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_gold_ts.extract_precipitation manual__2024-08-22T17:58:58.756937+00:00 [queued]>
+[2024-08-22T18:00:36.273+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-22T18:00:36.273+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-22T18:00:36.273+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-22T18:00:36.284+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): extract_precipitation> on 2024-08-22 17:58:58.756937+00:00
+[2024-08-22T18:00:36.289+0000] {standard_task_runner.py:55} INFO - Started process 1977 to run task
+[2024-08-22T18:00:36.291+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_gold_ts', 'extract_precipitation', 'manual__2024-08-22T17:58:58.756937+00:00', '--job-id', '11214', '--raw', '--subdir', 'DAGS_FOLDER/dag_ts_inmet.py', '--cfg-path', '/tmp/tmp4883_4n0']
+[2024-08-22T18:00:36.293+0000] {standard_task_runner.py:83} INFO - Job 11214: Subtask extract_precipitation
+[2024-08-22T18:00:36.346+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_gold_ts.extract_precipitation manual__2024-08-22T17:58:58.756937+00:00 [running]> on host 8f16cc1bd84f
+[2024-08-22T18:00:36.397+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_gold_ts
+AIRFLOW_CTX_TASK_ID=extract_precipitation
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-22T17:58:58.756937+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-22T17:58:58.756937+00:00
+[2024-08-22T18:00:36.398+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_ts_inmet.py", line 43, in extract_last_precipitation
+    df = pd.read_csv(pdf_path)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/gold/gold_ts/serie_temporal.csv'
+[2024-08-22T18:00:36.405+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_gold_ts, task_id=extract_precipitation, execution_date=20240822T175858, start_date=20240822T180036, end_date=20240822T180036
+[2024-08-22T18:00:36.414+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 11214 for task extract_precipitation ([Errno 2] No such file or directory: '/opt/airflow/data/gold/gold_ts/serie_temporal.csv'; 1977)
+[2024-08-22T18:00:36.423+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-08-22T18:00:36.445+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,54 @@
+[2024-07-10T15:12:53.242+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: windturbine.group_database.insert_data manual__2024-07-10T15:11:56.827820+00:00 [queued]>
+[2024-07-10T15:12:53.251+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: windturbine.group_database.insert_data manual__2024-07-10T15:11:56.827820+00:00 [queued]>
+[2024-07-10T15:12:53.251+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-10T15:12:53.251+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2024-07-10T15:12:53.251+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-10T15:12:53.262+0000] {taskinstance.py:1300} INFO - Executing <Task(PostgresOperator): group_database.insert_data> on 2024-07-10 15:11:56.827820+00:00
+[2024-07-10T15:12:53.269+0000] {standard_task_runner.py:55} INFO - Started process 599 to run task
+[2024-07-10T15:12:53.271+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'windturbine', 'group_database.insert_data', 'manual__2024-07-10T15:11:56.827820+00:00', '--job-id', '800', '--raw', '--subdir', 'DAGS_FOLDER/windturbine.py', '--cfg-path', '/tmp/tmphadcx63z']
+[2024-07-10T15:12:53.272+0000] {standard_task_runner.py:83} INFO - Job 800: Subtask group_database.insert_data
+[2024-07-10T15:12:53.317+0000] {task_command.py:388} INFO - Running <TaskInstance: windturbine.group_database.insert_data manual__2024-07-10T15:11:56.827820+00:00 [running]> on host 2051c12a5a3c
+[2024-07-10T15:12:53.371+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=testeskleuber@gmail.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=windturbine
+AIRFLOW_CTX_TASK_ID=group_database.insert_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-10T15:11:56.827820+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-10T15:11:56.827820+00:00
+[2024-07-10T15:12:53.371+0000] {sql.py:254} INFO - Executing: 
+                                INSERT INTO sensors (id_temp, powerfactor, hydraulicpressure, temperature, timestamp)
+                                VALUES (%s, %s, %s, %s, %s);
+                                
+[2024-07-10T15:12:53.378+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2024-07-10T15:12:53.565+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2024-07-10T15:12:53.567+0000] {sql.py:375} INFO - Running statement: 
+                                INSERT INTO sensors (id_temp, powerfactor, hydraulicpressure, temperature, timestamp)
+                                VALUES (%s, %s, %s, %s, %s);
+                                , parameters: ('{{ ti.xcom_pull(task_ids="get_data", key="id_temp) }}', '{{ ti.xcom_pull(task_ids="get_data", key="powerfactor) }}', '{{ ti.xcom_pull(task_ids="get_data", key="hydraulicpressure) }}', '{{ ti.xcom_pull(task_ids="get_data", key="temperature) }}', '{{ ti.xcom_pull(task_ids="get_data", key="timestamp) }}')
+[2024-07-10T15:12:53.568+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 266, in execute
+    **extra_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 349, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 378, in _run_command
+    cur.execute(sql_statement, parameters)
+psycopg2.errors.UndefinedColumn: column "id_temp" of relation "sensors" does not exist
+LINE 2: ...                             INSERT INTO sensors (id_temp, p...
+                                                             ^
+
+[2024-07-10T15:12:53.574+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=windturbine, task_id=group_database.insert_data, execution_date=20240710T151156, start_date=20240710T151253, end_date=20240710T151253
+[2024-07-10T15:12:53.584+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/email.py:152: RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+  send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+
+[2024-07-10T15:12:53.585+0000] {email.py:268} INFO - Email alerting: attempt 1
+[2024-07-10T15:12:56.593+0000] {email.py:280} INFO - Sent an alert email to ['testeskleuber@gmail.com']
+[2024-07-10T15:12:59.379+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 800 for task group_database.insert_data (column "id_temp" of relation "sensors" does not exist
+LINE 2: ...                             INSERT INTO sensors (id_temp, p...
+                                                             ^
+; 599)
+[2024-07-10T15:12:59.425+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-07-10T15:12:59.455+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,47 @@
+[2024-08-08T16:41:26.710+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.monitoramento_task manual__2024-08-08T16:15:44.606863+00:00 [queued]>
+[2024-08-08T16:41:26.718+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.monitoramento_task manual__2024-08-08T16:15:44.606863+00:00 [queued]>
+[2024-08-08T16:41:26.719+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-08T16:41:26.719+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-08T16:41:26.719+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-08T16:41:26.735+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): monitoramento_task> on 2024-08-08 16:15:44.606863+00:00
+[2024-08-08T16:41:26.741+0000] {standard_task_runner.py:55} INFO - Started process 154811 to run task
+[2024-08-08T16:41:26.743+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'monitoramento_task', 'manual__2024-08-08T16:15:44.606863+00:00', '--job-id', '6024', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmpjywh2evv']
+[2024-08-08T16:41:26.744+0000] {standard_task_runner.py:83} INFO - Job 6024: Subtask monitoramento_task
+[2024-08-08T16:41:26.787+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.monitoramento_task manual__2024-08-08T16:15:44.606863+00:00 [running]> on host da0057b0268c
+[2024-08-08T16:41:26.835+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=monitoramento_task
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-08T16:15:44.606863+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-08T16:15:44.606863+00:00
+[2024-08-08T16:41:28.988+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/pyspark/context.py:317: FutureWarning: Python 3.7 support is deprecated in Spark 3.4.
+  warnings.warn("Python 3.7 support is deprecated in Spark 3.4.", FutureWarning)
+
+[2024-08-08T16:41:29.082+0000] {dag_inmet.py:140} INFO - SparkSession criado com sucesso.
+[2024-08-08T16:41:29.919+0000] {dag_inmet.py:157} ERROR - Erro no monitoramento: [PATH_NOT_FOUND] Path does not exist: file:/opt/***/data/silver/rainfall/EXTRACT_YEAR=2021/EXTRACT_MONTH=10.
+[2024-08-08T16:41:29.987+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_inmet.py", line 143, in task_monitoramento
+    results = monitoramento.execute_monitoramento(regiao=['REGIAO'], uf=['UF'], colunas=['UF', 'ESTACAO'], spark=spark)
+  File "/opt/airflow/plugins/monitoramento_plugin.py", line 166, in execute_monitoramento
+    df_safra_atual = self.ler_dataframe_parquet(spark, pasta_atual)
+  File "/opt/airflow/plugins/monitoramento_plugin.py", line 65, in ler_dataframe_parquet
+    df = spark.read.parquet(pasta)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/sql/readwriter.py", line 531, in parquet
+    return self._df(self._jreader.parquet(_to_seq(self._spark._sc, paths)))
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1323, in __call__
+    answer, self.gateway_client, self.target_id, self.name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/errors/exceptions/captured.py", line 175, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.AnalysisException: [PATH_NOT_FOUND] Path does not exist: file:/opt/airflow/data/silver/rainfall/EXTRACT_YEAR=2021/EXTRACT_MONTH=10.
+[2024-08-08T16:41:29.996+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_inmet, task_id=monitoramento_task, execution_date=20240808T161544, start_date=20240808T164126, end_date=20240808T164129
+[2024-08-08T16:41:30.014+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 6024 for task monitoramento_task ([PATH_NOT_FOUND] Path does not exist: file:/opt/airflow/data/silver/rainfall/EXTRACT_YEAR=2021/EXTRACT_MONTH=10.; 154811)
+[2024-08-08T16:41:30.082+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-08-08T16:41:30.122+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

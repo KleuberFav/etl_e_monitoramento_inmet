@@ -1,0 +1,27 @@
+[2024-07-30T15:21:18.132+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-07-30T15:19:37.369953+00:00 [queued]>
+[2024-07-30T15:21:18.142+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-07-30T15:19:37.369953+00:00 [queued]>
+[2024-07-30T15:21:18.142+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-30T15:21:18.142+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-07-30T15:21:18.142+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-30T15:21:18.153+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_data> on 2024-07-30 15:19:37.369953+00:00
+[2024-07-30T15:21:18.159+0000] {standard_task_runner.py:55} INFO - Started process 4866 to run task
+[2024-07-30T15:21:18.161+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'process_data', 'manual__2024-07-30T15:19:37.369953+00:00', '--job-id', '2637', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmp8nxr0qfw']
+[2024-07-30T15:21:18.163+0000] {standard_task_runner.py:83} INFO - Job 2637: Subtask process_data
+[2024-07-30T15:21:18.209+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.process_data manual__2024-07-30T15:19:37.369953+00:00 [running]> on host de721ab37e41
+[2024-07-30T15:21:18.265+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=process_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-30T15:19:37.369953+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-30T15:19:37.369953+00:00
+[2024-07-30T15:21:20.567+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/pyspark/context.py:317: FutureWarning: Python 3.7 support is deprecated in Spark 3.4.
+  warnings.warn("Python 3.7 support is deprecated in Spark 3.4.", FutureWarning)
+
+[2024-07-30T15:21:20.689+0000] {dag_inmet.py:72} INFO - SparkSession criado com sucesso.
+[2024-07-30T15:21:21.070+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-07-30T15:21:21.103+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=dag_inmet, task_id=process_data, execution_date=20240730T151937, start_date=20240730T152118, end_date=20240730T152121
+[2024-07-30T15:21:21.180+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-07-30T15:21:21.193+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

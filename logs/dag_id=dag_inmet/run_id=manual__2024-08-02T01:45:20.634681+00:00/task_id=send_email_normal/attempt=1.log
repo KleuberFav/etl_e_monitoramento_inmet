@@ -1,0 +1,42 @@
+[2024-08-02T02:03:07.979+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.send_email_normal manual__2024-08-02T01:45:20.634681+00:00 [queued]>
+[2024-08-02T02:03:07.988+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.send_email_normal manual__2024-08-02T01:45:20.634681+00:00 [queued]>
+[2024-08-02T02:03:07.988+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-02T02:03:07.989+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-02T02:03:07.989+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-02T02:03:08.000+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): send_email_normal> on 2024-08-02 01:45:20.634681+00:00
+[2024-08-02T02:03:08.007+0000] {standard_task_runner.py:55} INFO - Started process 28227 to run task
+[2024-08-02T02:03:08.009+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'send_email_normal', 'manual__2024-08-02T01:45:20.634681+00:00', '--job-id', '3775', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmpm2cdhzxg']
+[2024-08-02T02:03:08.010+0000] {standard_task_runner.py:83} INFO - Job 3775: Subtask send_email_normal
+[2024-08-02T02:03:08.054+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.send_email_normal manual__2024-08-02T01:45:20.634681+00:00 [running]> on host 340b192d5d68
+[2024-08-02T02:03:08.110+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=send_email_normal
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-02T01:45:20.634681+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-02T01:45:20.634681+00:00
+[2024-08-02T02:03:08.128+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_inmet.py", line 139, in send_email_with_results
+    dag=dag,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 394, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/email.py", line 64, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 394, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 760, in __init__
+    task_group.add(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/task_group.py", line 220, in add
+    raise DuplicateTaskIdFound(f"{node_type} id '{key}' has already been added to the DAG")
+airflow.exceptions.DuplicateTaskIdFound: Task id 'send_email_normal' has already been added to the DAG
+[2024-08-02T02:03:08.131+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_inmet, task_id=send_email_normal, execution_date=20240802T014520, start_date=20240802T020307, end_date=20240802T020308
+[2024-08-02T02:03:08.140+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 3775 for task send_email_normal (Task id 'send_email_normal' has already been added to the DAG; 28227)
+[2024-08-02T02:03:08.180+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-08-02T02:03:08.195+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

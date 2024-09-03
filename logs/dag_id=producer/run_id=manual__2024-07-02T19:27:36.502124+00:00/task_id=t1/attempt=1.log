@@ -1,0 +1,26 @@
+[2024-07-02T19:27:38.805+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: producer.t1 manual__2024-07-02T19:27:36.502124+00:00 [queued]>
+[2024-07-02T19:27:38.812+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: producer.t1 manual__2024-07-02T19:27:36.502124+00:00 [queued]>
+[2024-07-02T19:27:38.812+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-02T19:27:38.812+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-07-02T19:27:38.812+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-02T19:27:38.824+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): t1> on 2024-07-02 19:27:36.502124+00:00
+[2024-07-02T19:27:38.830+0000] {standard_task_runner.py:55} INFO - Started process 910 to run task
+[2024-07-02T19:27:38.832+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'producer', 't1', 'manual__2024-07-02T19:27:36.502124+00:00', '--job-id', '761', '--raw', '--subdir', 'DAGS_FOLDER/producer.py', '--cfg-path', '/tmp/tmppqb767uk']
+[2024-07-02T19:27:38.833+0000] {standard_task_runner.py:83} INFO - Job 761: Subtask t1
+[2024-07-02T19:27:38.879+0000] {task_command.py:388} INFO - Running <TaskInstance: producer.t1 manual__2024-07-02T19:27:36.502124+00:00 [running]> on host 6932124ae65a
+[2024-07-02T19:27:38.937+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=producer
+AIRFLOW_CTX_TASK_ID=t1
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-02T19:27:36.502124+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-02T19:27:36.502124+00:00
+[2024-07-02T19:27:38.950+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-07-02T19:27:38.951+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/models/baseoperator.py:1376: RemovedInAirflow3Warning: Passing 'execution_date' to 'TaskInstance.xcom_push()' is deprecated.
+  context["ti"].xcom_push(key=key, value=value, execution_date=execution_date)
+
+[2024-07-02T19:27:38.969+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=producer, task_id=t1, execution_date=20240702T192736, start_date=20240702T192738, end_date=20240702T192738
+[2024-07-02T19:27:39.003+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-07-02T19:27:39.017+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

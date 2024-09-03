@@ -1,0 +1,32 @@
+[2024-07-23T13:18:55.383+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-07-23T13:13:11.962118+00:00 [queued]>
+[2024-07-23T13:18:55.390+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-07-23T13:13:11.962118+00:00 [queued]>
+[2024-07-23T13:18:55.390+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-23T13:18:55.391+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2024-07-23T13:18:55.391+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-23T13:18:55.402+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_data> on 2024-07-23 13:13:11.962118+00:00
+[2024-07-23T13:18:55.407+0000] {standard_task_runner.py:55} INFO - Started process 707 to run task
+[2024-07-23T13:18:55.409+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'process_data', 'manual__2024-07-23T13:13:11.962118+00:00', '--job-id', '744', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmpsr8vnwu9']
+[2024-07-23T13:18:55.411+0000] {standard_task_runner.py:83} INFO - Job 744: Subtask process_data
+[2024-07-23T13:18:55.559+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.process_data manual__2024-07-23T13:13:11.962118+00:00 [running]> on host 6793e0b99493
+[2024-07-23T13:18:55.605+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=process_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-23T13:13:11.962118+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-23T13:13:11.962118+00:00
+[2024-07-23T13:18:55.614+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_inmet.py", line 35, in task_process_data
+    spark = kwargs['spark']  # Supondo que você passe um contexto Spark aqui
+KeyError: 'spark'
+[2024-07-23T13:18:55.619+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_inmet, task_id=process_data, execution_date=20240723T131311, start_date=20240723T131855, end_date=20240723T131855
+[2024-07-23T13:18:55.626+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 744 for task process_data ('spark'; 707)
+[2024-07-23T13:18:55.661+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-07-23T13:18:55.673+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,23 @@
+[2024-08-22T18:03:58.054+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_gold_ts.extract_precipitation manual__2024-08-22T18:01:51.404308+00:00 [queued]>
+[2024-08-22T18:03:58.065+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_gold_ts.extract_precipitation manual__2024-08-22T18:01:51.404308+00:00 [queued]>
+[2024-08-22T18:03:58.066+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-22T18:03:58.066+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-22T18:03:58.066+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-22T18:03:58.077+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): extract_precipitation> on 2024-08-22 18:01:51.404308+00:00
+[2024-08-22T18:03:58.083+0000] {standard_task_runner.py:55} INFO - Started process 2506 to run task
+[2024-08-22T18:03:58.085+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_gold_ts', 'extract_precipitation', 'manual__2024-08-22T18:01:51.404308+00:00', '--job-id', '11220', '--raw', '--subdir', 'DAGS_FOLDER/dag_ts_inmet.py', '--cfg-path', '/tmp/tmpr3m4688z']
+[2024-08-22T18:03:58.086+0000] {standard_task_runner.py:83} INFO - Job 11220: Subtask extract_precipitation
+[2024-08-22T18:03:58.127+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_gold_ts.extract_precipitation manual__2024-08-22T18:01:51.404308+00:00 [running]> on host 8f16cc1bd84f
+[2024-08-22T18:03:58.177+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_gold_ts
+AIRFLOW_CTX_TASK_ID=extract_precipitation
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-22T18:01:51.404308+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-22T18:01:51.404308+00:00
+[2024-08-22T18:03:58.191+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-08-22T18:03:58.198+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=dag_gold_ts, task_id=extract_precipitation, execution_date=20240822T180151, start_date=20240822T180358, end_date=20240822T180358
+[2024-08-22T18:03:58.217+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-08-22T18:03:58.240+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

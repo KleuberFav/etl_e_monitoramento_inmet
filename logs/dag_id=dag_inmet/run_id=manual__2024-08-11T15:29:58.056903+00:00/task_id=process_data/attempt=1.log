@@ -1,0 +1,1207 @@
+[2024-08-11T15:31:47.277+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-08-11T15:29:58.056903+00:00 [queued]>
+[2024-08-11T15:31:47.286+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-08-11T15:29:58.056903+00:00 [queued]>
+[2024-08-11T15:31:47.286+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-11T15:31:47.286+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-11T15:31:47.286+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-11T15:31:47.296+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_data> on 2024-08-11 15:29:58.056903+00:00
+[2024-08-11T15:31:47.302+0000] {standard_task_runner.py:55} INFO - Started process 48948 to run task
+[2024-08-11T15:31:47.304+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'process_data', 'manual__2024-08-11T15:29:58.056903+00:00', '--job-id', '6760', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmpbtbr34zf']
+[2024-08-11T15:31:47.305+0000] {standard_task_runner.py:83} INFO - Job 6760: Subtask process_data
+[2024-08-11T15:31:47.346+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.process_data manual__2024-08-11T15:29:58.056903+00:00 [running]> on host 4d826fde42d2
+[2024-08-11T15:31:47.399+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=process_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-11T15:29:58.056903+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-11T15:29:58.056903+00:00
+[2024-08-11T15:31:49.602+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/pyspark/context.py:317: FutureWarning: Python 3.7 support is deprecated in Spark 3.4.
+  warnings.warn("Python 3.7 support is deprecated in Spark 3.4.", FutureWarning)
+
+[2024-08-11T15:31:49.693+0000] {dag_inmet.py:100} INFO - SparkSession criado com sucesso.
+[2024-08-11T15:31:49.704+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A001_BRASILIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:31:56.237+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:31:57.326+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A042_BRAZLANDIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:00.458+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:00.805+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A045_AGUAS EMENDADAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:03.685+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:04.041+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A046_GAMA (PONTE ALTA)_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:06.829+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:07.104+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_DF_A047_PARANOA (COOPA-DF)_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:10.006+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:10.418+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A002_GOIANIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:13.253+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:13.530+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A003_MORRINHOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:16.271+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:16.544+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A005_PORANGATU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:18.652+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:18.876+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A011_SAO SIMAO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:20.929+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:21.180+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A012_LUZIANIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:23.800+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:24.022+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A013_ARAGARCAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:26.584+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:26.793+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A014_GOIAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:29.463+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:29.669+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A015_ITAPACI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:32.273+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:32.491+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A016_JATAI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:35.361+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:35.556+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A017_POSSE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:37.980+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:38.187+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A022_GOIANESIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:40.271+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:40.486+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A023_CAIAPONIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:43.097+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:43.330+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A024_ALTO PARAISO DE GOIAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:45.986+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:46.236+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A025_RIO VERDE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:47.561+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:47.731+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A026_MINEIROS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:50.533+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:50.738+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A027_PARAUNA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:53.603+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:53.801+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A028_IPORA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:55.869+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:56.071+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A029_EDEIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:32:58.584+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:32:58.786+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A031_SAO MIGUEL DO ARAGUAIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:00.540+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:00.727+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A032_MONTE ALEGRE DE GOIAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:03.344+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:03.529+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A033_PIRES DO RIO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:06.085+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:06.258+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A034_CATALAO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:09.088+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:09.299+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A035_ITUMBIARA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:12.035+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:12.225+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A036_CRISTALINA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:14.825+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:15.001+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A037_SILVANIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:17.616+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:17.815+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_GO_A056_CRISTALINA (FAZENDA SANTA MONICA)_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:20.651+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:20.864+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A702_CAMPO GRANDE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:23.734+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:23.918+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A703_PONTA PORA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:26.545+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:26.717+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A704_TRES LAGOAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:28.066+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:28.240+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A709_IVINHEMA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:30.592+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:30.764+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A710_PARANAIBA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:32.392+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:32.577+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A717_NHUMIRIM_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:34.344+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:34.513+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A719_AQUIDAUANA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:36.051+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:36.218+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A720_COXIM_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:38.869+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:39.040+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A721_DOURADOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:40.684+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:40.837+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A722_MIRANDA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:42.766+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:42.947+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A723_PORTO MURTINHO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:44.831+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:45.035+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A724_CORUMBA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:47.764+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:47.948+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A730_CHAPADAO DO SUL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:49.359+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:49.529+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A731_MARACAJU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:50.782+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:50.964+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A732_SAO GABRIEL DO OESTE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:53.469+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:53.636+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A742_CASSILANDIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:56.278+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:56.469+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A743_RIO BRILHANTE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:33:59.265+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:33:59.463+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A749_JUTI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:01.577+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:01.749+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A750_AMAMBAI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:04.162+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:04.338+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A751_SETE QUEDAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:06.722+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:06.967+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A752_ITAQUIRAI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:09.789+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:09.993+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A754_SIDROLANDIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:12.583+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:12.750+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A756_AGUA CLARA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:15.392+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:15.574+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A757_BELA VISTA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:17.277+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:17.456+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A758_JARDIM_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:19.894+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:20.087+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A759_BATAGUASSU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:22.201+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:22.375+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A760_COSTA RICA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:25.053+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:25.263+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_A761_SONORA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:27.766+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:27.933+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_S701_ANGELICA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:30.678+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:30.868+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_S702_ARAL MOREIRA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:33.578+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:33.783+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_S703_BANDEIRANTES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:35.038+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:35.193+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_S704_BONITO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:37.841+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:38.004+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_S705_BRASILANDIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:39.305+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:39.497+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_S706_CAARAPO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:42.065+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:42.226+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_S707_CAMAPUA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:43.461+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:43.626+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_S708_FATIMA DO SUL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:44.975+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:45.135+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_S709_IGUATEMI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:47.841+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:47.993+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_S710_ITAPORA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:50.672+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:50.874+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_S711_LAGUNA CARAPA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:53.141+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:53.304+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_S712_NOVA ALVORADA DO SUL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:55.865+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:56.026+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_S713_NOVA ANDRADINA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:57.355+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:57.474+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_S714_PEDRO GOMES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:34:59.625+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:34:59.798+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_S715_RIBAS DO RIO PARDO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:02.417+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:02.584+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_S716_SANTA RITA DO PARDO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:05.535+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:05.679+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MS_S717_SELVIRIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:07.363+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:07.542+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A901_CUIABA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:10.660+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:10.874+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A902_TANGARA DA SERRA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:13.601+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:13.772+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A903_S.J. DO RIO CLARO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:16.444+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:16.614+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A904_SORRISO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:18.836+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:18.988+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A905_CAMPO NOVO DOS PARECIS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:21.093+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:21.264+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A906_GUARANTA DO NORTE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:23.526+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:23.678+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A907_RONDONOPOLIS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:26.122+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:26.297+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A908_AGUA BOA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:28.100+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:28.260+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A909_ALTO ARAGUAIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:30.966+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:31.132+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A910_APIACAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:33.271+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:33.431+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A911_SAPEZAL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:35.970+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:36.137+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A912_CAMPO VERDE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:38.599+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:38.756+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A913_COMODORO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:41.305+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:41.478+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A914_JUARA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:43.777+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:43.923+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A915_PARANATINGA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:45.373+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:45.522+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A917_SINOP_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:47.426+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:47.571+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A919_COTRIGUACU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:49.076+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:49.233+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A920_JUINA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:51.999+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:52.192+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A921_SAO FELIX  DO ARAGUAIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:54.331+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:54.493+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A922_VILA BELA DA SANTISSIMA TRINDADE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:35:57.320+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:35:57.487+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A923_PRIMAVERA DO LESTE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:00.172+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:00.328+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A924_ALTA FLORESTA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:02.365+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:02.533+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A926_CARLINDA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:05.191+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:05.357+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A927_BRASNORTE (NOVO MUNDO)_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:07.527+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:07.724+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A928_NOVA MARINGA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:10.152+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:10.325+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A929_NOVA UBIRATA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:12.653+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:12.863+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A930_GAUCHA DO NORTE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:15.095+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:15.290+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A931_SANTO ANTONIO DO LESTE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:17.463+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:17.620+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A932_GUIRATINGA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:20.347+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:20.538+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A933_ITIQUIRA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:21.778+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:21.937+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A934_ALTO TAQUARI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:24.640+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:24.807+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A935_PORTO ESTRELA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:27.537+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:27.693+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A936_SALTO DO CEU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:29.760+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:29.884+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A937_PONTES E LACERDA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:32.674+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:32.843+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A941_CACERES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:35.484+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:35.649+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A942_SAO JOSE DO XINGU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:38.499+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:38.721+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A943_SERRA NOVA DOURADA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:40.910+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:41.072+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_CO_MT_A944_ROSARIO OESTE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:42.344+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:42.506+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AC_A102_PARQUE ESTADUAL CHANDLESS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:45.232+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:45.408+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AC_A104_RIO BRANCO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:46.885+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:47.041+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AC_A108_CRUZEIRO DO SUL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:48.991+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:49.168+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AC_A136_PORTO WALTER_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:50.852+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:51.013+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AC_A137_MARECHAL THAUMATURGO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:52.559+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:52.730+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AC_A138_FEIJO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:55.476+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:55.645+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AC_A140_EPITACIOLANDIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:36:57.302+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:36:57.466+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A101_MANAUS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:00.199+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:00.362+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A109_EIRUNEPE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:02.136+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:02.293+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A110_BOCA DO ACRE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:03.596+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:03.755+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A111_LABREA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:06.521+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:06.713+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A112_HUMAITA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:08.803+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:08.999+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A113_APUI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:10.651+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:10.821+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A117_COARI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:12.168+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:12.332+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A119_MANACAPURU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:14.484+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:14.650+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A120_AUTAZES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:17.306+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:17.472+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A121_ITACOATIARA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:19.753+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:19.930+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A122_MAUES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:21.810+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:22.015+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A123_PARINTINS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:24.708+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:24.900+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A124_URUCARA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:26.338+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:26.460+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A125_RIO URUBU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:28.569+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:28.707+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A126_PRESIDENTE FIGUEIREDO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:31.054+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:31.222+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A128_BARCELOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:32.512+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:32.625+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A133_MANICORE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:33.876+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:34.030+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A134_S. G. DA CACHOEIRA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:36.565+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:36.752+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AM_A144_NOVO ARIPUANA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:38.115+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:38.269+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AP_A242_OIAPOQUE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:39.518+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:39.667+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AP_A244_PORTO GRANDE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:42.447+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:42.642+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AP_A249_MACAPA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:45.431+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:45.603+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_AP_A251_ITAUBAL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:46.812+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:46.959+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_AL_A303_MACEIO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:48.880+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:49.032+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_AL_A323_PAO DE ACUCAR_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:51.228+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:51.399+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_AL_A327_PALMEIRA DOS INDIOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:53.865+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:54.031+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_AL_A353_ARAPIRACA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:55.479+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:55.643+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_AL_A355_CORURIPE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:37:58.363+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:37:58.548+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_AL_A356_SAO LUIS DO QUITUNDE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:01.019+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:01.195+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_AL_A371_PIRANHAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:03.151+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:03.308+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A401_SALVADOR_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:06.122+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:06.341+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A402_BARREIRAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:09.085+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:09.245+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A404_LUIZ EDUARDO MAGALHAES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:11.819+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:11.984+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A405_CARAVELAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:14.237+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:14.367+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A406_CRUZ DAS ALMAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:16.685+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:16.845+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A407_ITIRUCU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:19.600+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:19.761+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A408_ITABERABA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:22.349+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:22.538+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A410_ILHEUS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:24.210+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:24.382+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A412_MACAJUBA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:27.043+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:27.231+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A413_FEIRA DE SANTANA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:29.878+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:30.098+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A414_VITORIA DA CONQUISTA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:32.932+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:33.088+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A415_SANTA RITA DE CASSIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:34.425+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:34.556+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A416_CORRENTINA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:37.439+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:37.647+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A418_BOM JESUS DA LAPA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:40.231+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:40.395+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A422_ABROLHOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:42.603+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:42.783+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A423_REMANSO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:45.476+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:45.649+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A424_IRECE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:48.398+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:48.578+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A425_LENCOIS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:51.248+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:51.433+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A426_GUANAMBI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:54.261+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:54.427+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A427_PORTO SEGURO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:56.763+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:56.919+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A428_SENHOR DO BONFIM_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:38:59.824+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:38:59.990+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A429_BARRA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:02.674+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:02.856+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A430_PIATA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:05.609+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:05.853+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A431_CONDE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:08.683+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:08.845+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A432_BURITIRAMA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:10.666+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:10.824+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A433_BRUMADO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:13.463+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:13.627+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A434_AMARGOSA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:16.299+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:16.446+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A435_UAUA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:19.155+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:19.327+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A436_QUEIMADAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:21.568+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:21.747+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A437_UNA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:24.426+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:24.592+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A438_MARAU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:27.046+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:27.202+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A439_IBOTIRAMA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:29.816+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:30.014+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A440_JACOBINA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:32.453+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:32.658+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A441_SERRINHA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:35.231+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:35.402+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A442_EUCLIDES DA CUNHA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:38.151+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:38.311+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A443_DELFINO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:40.750+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:40.909+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A444_VALENCA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:43.786+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:43.955+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A445_IPIAU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:46.616+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:46.777+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A446_ITAPETINGA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:49.408+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:49.570+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A447_BELMONTE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:52.161+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:52.326+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A448_CURACA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:54.898+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:55.059+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A449_PILAO ARCADO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:39:57.623+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:39:57.778+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A450_JEREMOABO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:00.363+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:00.519+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A452_FORMOSO DO RIO PRETO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:02.809+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:02.986+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A455_ITAMARAJU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:05.287+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:05.431+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A456_SALVADOR (RADIO FAROL)_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:08.110+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:08.279+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_BA_A458_RIBEIRA DO AMPARO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:10.435+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:10.587+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_CE_A305_FORTALEZA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:13.395+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:13.555+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_CE_A306_SOBRAL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:16.182+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:16.365+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_CE_A314_GUARAMIRANGA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:18.026+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:18.159+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_CE_A315_BARBALHA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:20.898+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:21.054+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_CE_A319_IGUATU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:23.451+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:23.625+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_CE_A324_TAUA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:25.888+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:26.042+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_CE_A325_QUIXERAMOBIM_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:27.649+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:27.859+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_CE_A332_MORADA NOVA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:30.786+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:30.979+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_CE_A339_JAGUARUANA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:33.793+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:33.969+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_CE_A342_CRATEUS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:36.651+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:36.817+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_CE_A347_CAMPOS SALES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:38.304+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:38.488+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_CE_A358_JAGUARIBE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:40.515+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:40.685+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_CE_A359_ITAPIPOCA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:42.021+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:42.176+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_CE_A360_ACARAU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:43.817+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:43.996+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_CE_A368_TIANGUA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:46.972+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:47.143+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_CE_A369_QUIXADA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:48.453+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:48.619+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_MA_A203_SAO LUIS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:51.523+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:51.652+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_MA_A204_BALSAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:53.660+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:53.823+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_MA_A205_CAROLINA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:56.657+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:56.820+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_MA_A206_CHAPADINHA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:40:58.425+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:40:58.554+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_MA_A207_GRAJAU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:01.106+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:01.243+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_MA_A217_FAROL de SANTANA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:02.478+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:02.640+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_MA_A218_PREGUICAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:04.257+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:04.446+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_MA_A219_TURIACU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:06.058+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:06.207+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_MA_A220_BACABAL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:09.163+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:09.333+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_MA_A221_BARRA DO CORDA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:11.934+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:12.099+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_MA_A222_COLINAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:14.816+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:14.981+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_MA_A223_ALTO PARNAIBA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:17.716+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:17.853+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_MA_A224_ESTREITO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:20.652+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:20.840+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_MA_A225_IMPERATRIZ_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:23.570+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:23.738+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_MA_A237_CAXIAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:25.217+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:25.372+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_MA_A238_BURITICUPU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:26.975+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:27.098+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_MA_A255_ZE DOCA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:30.076+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:30.274+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PB_A310_AREIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:32.986+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:33.153+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PB_A313_CAMPINA GRANDE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:35.833+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:35.993+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PB_A320_JOAO PESSOA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:38.243+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:38.395+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PB_A321_PATOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:41.161+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:41.322+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PB_A333_SAO GONCALO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:44.122+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:44.275+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PB_A334_MONTEIRO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:46.869+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:47.034+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PB_A348_CABACEIRAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:49.626+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:49.812+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PB_A352_CAMARATUBA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:51.072+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:51.247+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PB_A373_ITAPORANGA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:52.914+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:53.114+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PE_A301_RECIFE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:55.955+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:56.114+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PE_A307_PETROLINA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:41:58.781+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:41:58.935+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PE_A309_ARCO VERDE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:01.291+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:01.444+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PE_A322_GARANHUNS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:03.996+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:04.199+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PE_A328_SURUBIM_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:06.601+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:06.761+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PE_A329_CABROBO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:09.340+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:09.511+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PE_A341_CARUARU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:12.095+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:12.249+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PE_A349_IBIMIRIM_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:14.875+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:15.031+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PE_A350_SERRA TALHADA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:17.842+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:17.983+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PE_A351_FLORESTA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:20.620+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:20.787+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PE_A357_PALMARES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:23.417+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:23.578+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PE_A366_OURICURI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:25.868+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:26.017+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PE_A370_SALGUEIRO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:27.753+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:27.961+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A308_PARNAIBA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:30.854+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:31.018+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A311_FLORIANO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:32.650+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:32.816+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A312_TERESINA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:34.892+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:35.045+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A326_BOM JESUS DO PIAUI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:37.444+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:37.600+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A330_PAULISTANA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:40.434+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:40.622+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A331_SAO JOAO DO PIAUI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:42.367+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:42.529+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A335_PIRIPIRI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:45.260+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:45.398+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A336_ALVORADA DO GURGUEIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:48.030+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:48.188+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A337_CARACOL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:50.726+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:50.880+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A343_PICOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:53.120+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:53.273+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A345_SAO RAIMUNDO NONATO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:55.239+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:55.372+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A346_URUCUI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:57.996+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:42:58.123+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A354_OEIRAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:42:59.866+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:00.016+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A361_CASTELO DO PIAUI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:01.319+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:01.483+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A363_VALENCA DO PIAUI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:04.394+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:04.605+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A364_GILBUES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:06.546+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:06.708+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A365_CANTO DO BURITI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:09.370+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:09.545+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A374_CORRENTE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:11.535+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:11.693+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A375_BAIXA GRANDE DO RIBEIRO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:14.350+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:14.556+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A376_CAMPO MAIOR_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:16.784+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:16.944+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_PI_A377_ANGICAL DO PIAUI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:19.612+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:19.787+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_RN_A302_ARQ.SAO PEDRO E SAO PAULO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:21.368+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:21.528+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_RN_A304_NATAL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:24.182+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:24.334+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_RN_A316_CAICO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:26.499+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:26.662+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_RN_A317_MACAU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:28.983+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:29.140+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_RN_A318_MOSSORO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:30.654+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:30.809+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_RN_A340_APODI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:33.321+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:33.493+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_RN_A344_CALCANHAR_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:34.686+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:34.849+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_RN_A367_SANTA CRUZ_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:36.044+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:36.214+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_RN_A372_IPANGUACU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:38.529+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:38.697+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_SE_A409_ARACAJU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:41.804+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:41.961+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_SE_A417_ITABAIANINHA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:43.697+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:43.876+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_SE_A419_POCO VERDE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:46.393+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:46.568+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_SE_A420_CARIRA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:49.097+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:49.255+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_SE_A421_BREJO GRANDE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:51.413+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:51.573+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_SE_A451_ITABAIANA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:53.268+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:53.432+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_NE_SE_A453_NOSSA SENHORA DA GLORIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:56.039+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:56.208+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A201_BELEM_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:43:58.936+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:43:59.127+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A202_CASTANHAL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:01.893+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:02.068+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A209_MEDICILANDIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:04.797+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:04.975+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A210_PACAJA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:06.700+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:06.845+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A211_PLACAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:08.385+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:08.540+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A212_PARAGOMINAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:10.846+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:11.025+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A213_TOME ACU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:14.009+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:14.228+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A214_RONDON DO PARA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:17.129+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:17.286+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A215_SALINOPOLIS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:19.083+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:19.241+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A216_SAO FELIX DO XINGU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:21.219+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:21.366+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A226_BRAGANCA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:23.901+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:24.079+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A227_SOURE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:25.586+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:25.746+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A228_BREVES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:27.527+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:27.683+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A229_TUCURUI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:30.432+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:30.566+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A230_SERRA DOS CARAJAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:31.822+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:31.968+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A231_ITAITUBA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:34.348+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:34.473+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A232_OBIDOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:37.141+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:37.340+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A233_SANTANA DO ARAGUAIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:40.029+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:40.208+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A234_TUCUMA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:42.406+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:42.555+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A235_NOVO REPARTIMENTO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:45.087+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:45.245+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A236_CAMETA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:47.632+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:47.790+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A239_MONTE ALEGRE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:50.123+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:50.275+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A240_MARABA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:52.582+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:52.738+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A241_CONCEICAO DO ARAGUAIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:55.268+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:55.421+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A246_MINA DO PALITO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:57.444+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:44:57.586+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A247_XINGUARA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:44:59.907+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:00.086+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A248_CAPITAO POCO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:02.895+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:03.110+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A250_SANTAREM_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:04.389+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:04.537+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A252_DOM ELISEU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:07.182+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:07.332+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A253_ALTAMIRA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:08.813+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:08.968+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_PA_A254_REDENCAO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:11.368+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:11.543+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_RO_A925_PORTO VELHO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:12.846+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:13.000+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_RO_A938_VILHENA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:15.813+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:16.006+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_RO_A939_CACOAL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:18.943+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:19.111+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_RO_A940_ARIQUEMES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:20.938+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:21.075+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_RR_A135_BOA VISTA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:23.530+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:23.692+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A009_PALMAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:26.403+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:26.558+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A010_PARANA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:29.259+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:29.429+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A018_PEIXE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:31.859+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:32.022+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A019_GURUPI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:33.693+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:33.838+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A020_PEDRO AFONSO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:36.551+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:36.717+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A021_ARAGUAINA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:38.568+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:38.763+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A038_DIANOPOLIS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:41.564+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:41.717+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A039_FORMOSO DO ARAGUAIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:44.317+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:44.438+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A040_MATEIROS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:46.361+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:46.519+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A041_MARIANOPOLIS DO TO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:49.294+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:49.468+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A043_CAMPOS LINDOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:51.753+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:51.900+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A044_ARAGUATINS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:53.779+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:53.924+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A048_SANTA FE DO ARAGUAIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:56.506+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:56.662+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A049_COLINAS DO TOCANTINS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:45:59.458+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:45:59.611+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A050_RIO SONO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:02.402+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:02.606+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A051_PIUM_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:04.892+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:05.053+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A052_SANTA ROSA DO TOCANTINS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:07.563+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:07.719+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A053_ALMAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:10.115+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:10.296+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A054_ARAGUACU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:12.843+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:12.990+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_N_TO_A055_LAGOA DA CONFUSAO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:15.948+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:16.078+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_ES_A612_VITORIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:18.268+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:18.418+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_ES_A613_SANTA TERESA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:20.808+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:20.971+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_ES_A614_LINHARES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:23.945+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:24.126+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_ES_A615_ALFREDO CHAVES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:26.538+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:26.741+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_ES_A616_SAO MATEUS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:29.665+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:29.817+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_ES_A617_ALEGRE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:31.668+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:31.808+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_ES_A622_PRES. KENNEDY_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:33.960+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:34.110+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_ES_A623_NOVA VENECIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:36.518+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:36.689+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_ES_A631_ECOPORANGA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:38.811+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:38.964+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_ES_A632_MARILANDIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:41.616+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:41.770+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_ES_A633_VENDA NOVA DO IMIGRANTE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:43.974+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:44.147+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_ES_A634_VILA VELHA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:46.906+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:47.075+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_ES_A657_AFONSO CLAUDIO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:48.713+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:48.880+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A502_BARBACENA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:51.567+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:51.722+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A505_ARAXA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:54.527+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:54.690+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A506_MONTES CLAROS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:46:57.499+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:46:57.626+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A507_UBERLANDIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:00.243+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:00.395+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A508_ALMENARA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:02.646+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:02.796+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A509_MONTE VERDE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:05.327+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:05.491+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A510_VICOSA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:08.209+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:08.457+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A511_TIMOTEO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:11.178+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:11.339+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A512_ITUIUTABA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:12.822+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:12.983+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A513_OURO BRANCO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:15.823+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:16.012+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A514_SAO JOAO DEL REI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:18.381+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:18.533+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A515_VARGINHA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:21.344+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:21.496+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A516_PASSOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:23.795+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:23.944+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A517_MURIAE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:26.694+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:26.852+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A518_JUIZ DE FORA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:29.514+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:29.694+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A519_CAMPINA VERDE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:32.632+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:32.807+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A520_CONCEICAO DAS ALAGOAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:35.626+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:35.780+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A521_PAMPULHA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:38.555+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:38.721+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A522_SERRA DOS AIMORES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:41.449+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:41.603+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A523_PATROCINIO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:44.466+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:44.617+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A524_FORMIGA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:47.212+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:47.365+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A525_SACRAMENTO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:50.062+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:50.229+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A526_MONTALVANIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:52.819+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:52.969+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A527_TEOFILO OTONI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:55.762+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:55.915+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A528_TRES MARIAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:47:58.470+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:47:58.614+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A529_PASSA QUATRO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:01.399+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:01.603+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A530_CALDAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:04.046+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:04.193+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A531_MARIA DA FE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:06.996+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:07.145+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A532_GOVERNADOR VALADARES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:09.851+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:10.009+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A533_GUANHAES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:12.832+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:12.990+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A534_AIMORES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:14.584+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:14.726+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A535_FLORESTAL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:17.386+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:17.546+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A536_DORES DO INDAIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:20.232+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:20.391+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A537_DIAMANTINA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:23.007+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:23.160+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A538_CURVELO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:25.936+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:26.095+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A539_MOCAMBINHO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:28.921+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:29.103+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A540_MANTENA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:31.942+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:32.124+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A541_CAPELINHA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:34.899+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:35.078+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A542_UNAI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:38.141+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:38.318+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A543_ESPINOSA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:39.900+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:40.079+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A544_BURITIS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:43.265+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:43.444+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A545_PIRAPORA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:46.331+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:46.515+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A546_GUARDA-MOR_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:49.495+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:49.639+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A547_SAO ROMAO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:51.677+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:51.824+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A548_CHAPADA GAUCHA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:54.758+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:54.916+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A549_AGUAS VERMELHAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:48:57.384+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:48:57.537+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A550_ITAOBIM_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:00.269+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:00.440+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A551_RIO PARDO DE MINAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:03.139+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:03.291+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A552_SALINAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:05.679+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:05.843+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A553_JOAO PINHEIRO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:08.468+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:08.618+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A554_CARATINGA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:10.479+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:10.625+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A555_IBIRITE (ROLA MOCA)_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:13.396+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:13.576+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A556_MANHUACU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:15.977+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:16.138+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A557_CORONEL PACHECO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:19.047+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:19.222+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A559_JANUARIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:21.939+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:22.113+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A561_SAO SEBASTIAO DO PARAISO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:24.911+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:25.082+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A562_PATOS DE MINAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:27.381+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:27.568+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A563_JANAUBA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:30.118+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:30.280+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A564_DIVINOPOLIS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:32.939+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:33.093+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A565_BAMBUI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:35.765+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:35.955+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A566_ARACUAI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:38.604+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:38.789+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A567_MACHADO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:41.681+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:41.877+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A568_UBERABA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:44.602+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:44.750+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A569_SETE LAGOAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:47.299+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:47.454+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A570_OLIVEIRA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:50.188+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:50.358+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_A571_PARACATU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:53.198+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:53.373+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_MG_F501_BELO HORIZONTE - CERCADINHO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:56.139+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:56.308+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A601_SEROPEDICA-ECOLOGIA AGRICOLA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:49:59.187+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:49:59.365+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A602_RIO DE JANEIRO-MARAMBAIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:02.171+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:02.334+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A603_DUQUE DE CAXIAS - XEREM_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:04.969+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:05.141+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A604_CAMBUCI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:07.508+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:07.661+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A606_ARRAIAL DO CABO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:10.525+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:10.682+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A607_CAMPOS DOS GOYTACAZES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:13.644+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:13.816+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A608_MACAE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:16.731+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:16.890+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A609_RESENDE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:19.691+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:19.857+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A610_PICO DO COUTO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:21.280+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:21.437+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A611_VALENCA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:22.750+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:22.898+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A618_TERESOPOLIS-PARQUE NACIONAL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:25.616+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:25.774+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A619_PARATI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:28.727+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:28.879+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A620_CAMPOS DOS GOYTACAZES - SAO TOME_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:31.476+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:31.630+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A621_RIO DE JANEIRO - VILA MILITAR_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:34.296+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:34.459+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A624_NOVA FRIBURGO - SALINAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:37.191+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:37.364+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A625_TRES RIOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:40.395+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:40.567+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A626_RIO CLARO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:43.147+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:43.300+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A627_NITEROI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:46.317+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:46.483+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A628_ANGRA DOS REIS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:48.348+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:48.512+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A629_CARMO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:51.304+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:51.472+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A630_SANTA MARIA MADALENA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:54.457+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:54.624+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A635_ITATIAIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:50:57.347+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:50:57.525+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A636_RIO DE JANEIRO - JACAREPAGUA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:00.412+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:00.598+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A652_RIO DE JANEIRO - FORTE DE COPACABANA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:03.321+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:03.472+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A659_SILVA JARDIM_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:06.018+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:06.169+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_RJ_A667_SAQUAREMA - SAMPAIO CORREIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:08.577+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:08.731+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:11.565+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:11.758+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A705_BAURU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:14.629+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:14.801+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A706_CAMPOS DO JORDAO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:17.065+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:17.218+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A707_PRESIDENTE PRUDENTE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:19.927+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:20.082+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A708_FRANCA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:22.925+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:23.165+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A711_SAO CARLOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:26.013+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:26.172+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A712_IGUAPE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:28.932+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:29.109+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A713_SOROCABA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:31.677+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:31.825+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A714_ITAPEVA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:34.428+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:34.570+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A715_SAO MIGUEL ARCANJO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:37.584+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:37.775+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A716_OURINHOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:40.016+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:40.168+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A718_RANCHARIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:42.816+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:42.979+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A725_AVARE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:45.015+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:45.143+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A726_PIRACICABA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:47.051+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:47.206+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A727_LINS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:50.057+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:50.212+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A728_TAUBATE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:52.829+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:52.983+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A729_VOTUPORANGA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:55.558+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:55.711+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A733_JALES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:51:57.977+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:51:58.156+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A734_VALPARAISO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:00.859+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:01.027+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A735_JOSE BONIFACIO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:02.854+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:03.074+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A736_ARIRANHA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:04.998+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:05.173+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A737_IBITINGA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:07.827+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:08.003+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A738_CASA BRANCA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:09.975+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:10.133+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A739_ITAPIRA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:12.017+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:12.202+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A740_SAO LUIS DO PARAITINGA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:14.901+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:15.051+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A741_BARRA BONITA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:17.148+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:17.314+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A744_BRAGANCA PAULISTA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:20.033+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:20.190+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A746_BARRA DO TURVO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:21.416+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:21.566+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A747_PRADOPOLIS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:24.432+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:24.607+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A748_BARRETOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:27.235+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:27.460+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A753_ITUVERAVA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:29.981+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:30.140+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A755_BARUERI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:32.784+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:32.951+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A762_DRACENA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:35.516+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:35.732+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A763_MARILIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:38.302+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:38.452+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A764_BEBDOURO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:40.094+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:40.235+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A765_BERTIOGA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:41.728+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:41.870+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A766_REGISTRO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:43.387+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:43.553+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A767_SAO SEBASTIAO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:45.841+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:45.987+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A768_TUPA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:48.771+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:48.921+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A769_CACHOEIRA PAULISTA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:51.300+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:51.450+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A770_SAO SIMAO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:54.139+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:54.311+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_A771_SAO PAULO - INTERLAGOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:57.025+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:52:57.208+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_SE_SP_C891_CRIOSFERA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:52:59.934+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:00.092+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A807_CURITIBA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:02.544+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:02.695+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A818_IVAI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:05.354+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:05.507+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A819_CASTRO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:08.155+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:08.320+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A820_MAL. CANDIDO RONDON_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:11.122+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:11.307+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A821_JOAQUIM TAVORA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:13.992+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:14.146+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A822_NOVA TEBAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:16.085+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:16.262+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A823_INACIO MARTINS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:18.912+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:19.062+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A824_ICARAIMA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:21.189+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:21.334+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A825_GOIOERE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:23.494+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:23.658+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A835_MARINGA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:26.304+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:26.453+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A842_NOVA FATIMA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:28.457+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:28.611+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A843_DOIS VIZINHOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:31.000+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:31.149+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A846_FOZ DO IGUACU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:32.911+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:33.063+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A849_DIAMANTE DO NORTE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:35.860+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:36.020+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A850_PARANAPOEMA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:38.812+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:38.964+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A855_PLANALTO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:41.523+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:41.673+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A869_CIDADE GAUCHA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:44.422+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:44.577+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A871_JAPIRA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:47.438+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:47.593+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A872_VENTANIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:48.862+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:49.001+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A873_MORRETES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:51.778+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:51.947+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A874_SAO MATEUS DO SUL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:54.749+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:54.915+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A875_GENERAL CARNEIRO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:53:57.753+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:53:57.935+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_A876_CLEVELANDIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:00.568+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:00.717+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_B803_CAMPINA DA LAGOA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:02.191+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:02.342+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_B804_LARANJEIRAS DO SUL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:04.986+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:05.178+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_PR_B806_COLOMBO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:07.740+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:07.894+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A801_PORTO ALEGRE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:11.130+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:11.295+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A802_RIO GRANDE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:14.076+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:14.230+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A803_SANTA MARIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:16.856+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:17.038+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A804_SANTANA DO LIVRAMENTO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:19.459+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:19.616+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A805_SANTO AUGUSTO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:22.787+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:23.040+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A808_TORRES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:25.753+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:25.919+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A809_URUGUAIANA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:28.643+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:28.817+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A810_SANTA ROSA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:31.482+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:31.637+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A811_CANGUCU_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:33.504+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:33.653+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A812_CACAPAVA DO SUL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:36.431+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:36.591+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A813_RIO PARDO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:39.379+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:39.540+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A826_ALEGRETE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:42.316+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:42.459+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A827_BAGE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:45.375+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:45.536+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A828_ERECHIM_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:48.478+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:48.645+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A829_SAO JOSE DOS AUSENTES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:51.362+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:51.528+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A830_SAO BORJA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:54.107+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:54.256+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A831_QUARAI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:54:57.215+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:54:57.381+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A832_SAO GABRIEL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:00.437+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:00.588+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A833_SANTIAGO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:02.984+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:03.136+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A834_TRAMANDAI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:05.700+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:05.850+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A836_JAGUARAO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:08.745+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:08.921+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A837_SOLEDADE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:11.493+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:11.672+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A838_CAMAQUA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:14.538+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:14.700+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A839_PASSO FUNDO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:17.458+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:17.607+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A840_BENTO GONCALVES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:20.239+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:20.402+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A844_LAGOA VERMELHA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:23.340+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:23.568+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A852_SAO LUIZ GONZAGA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:26.729+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:26.926+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A853_CRUZ ALTA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:29.847+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:30.029+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A854_FREDERICO WESTPHALEN_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:32.871+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:33.035+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A856_PALMEIRA DAS MISSOES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:35.852+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:36.016+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A878_MOSTARDAS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:38.040+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:38.203+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A879_CANELA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:40.856+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:41.029+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A880_VACARIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:43.630+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:43.787+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A881_DOM PEDRITO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:46.312+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:46.470+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A882_TEUTONIA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:49.287+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:49.445+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A883_IBIRUBA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:52.060+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:52.207+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A884_CAMPO BOM_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:54.655+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:54.808+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A886_TUPANCIRETA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:55:57.550+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:55:57.748+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A887_CAPAO DO LEAO (PELOTAS)_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:00.307+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:00.458+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A889_SAO VICENTE DO SUL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:02.884+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:03.036+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A893_ENCRUZILHADA DO SUL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:05.816+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:05.992+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A894_SERAFINA CORREA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:08.704+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:08.856+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A897_CAMBARA DO SUL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:11.692+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:11.843+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_RS_A899_Santa Vitoria do Palmar - Barra do Chui_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:14.764+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:14.917+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A806_FLORIANOPOLIS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:17.869+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:18.063+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A814_URUSSANGA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:20.774+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:20.926+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A815_SAO JOAQUIM_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:23.776+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:23.929+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A816_NOVO HORIZONTE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:25.830+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:25.985+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A817_INDAIAL_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:28.848+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:29.014+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A841_JOACABA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:31.605+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:31.772+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A845_BOM JARDIM DA SERRA - MORRO DA IGREJA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:34.637+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:34.879+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A848_DIONISIO CERQUEIRA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:37.703+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:37.907+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A851_ITAPOA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:40.710+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:40.915+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A857_SAO MIGUEL DO OESTE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:42.971+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:43.128+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A858_XANXERE_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:45.878+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:46.044+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A859_CACADOR_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:48.795+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:48.946+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A860_CURITIBANOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:51.459+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:51.632+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A861_RIO DO CAMPO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:53.580+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:53.762+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A862_RIO NEGRINHO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:56.342+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:56.511+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A863_ITUPORANGA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:56:59.173+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:56:59.328+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A864_MAJOR VIEIRA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:57:01.887+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:57:02.042+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A865_LAGES_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:57:04.043+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:57:04.198+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A866_Laguna  - Farol de Santa Marta_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:57:06.769+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:57:06.917+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A867_ARARANGUA_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:57:09.412+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:57:09.574+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A868_ITAJAI_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:57:12.093+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:57:12.255+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A870_RANCHO QUEIMADO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:57:13.960+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:57:14.118+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A895_CHAPECO_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:57:16.816+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:57:16.969+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: INMET_S_SC_A898_CAMPOS NOVOS_01-01-2020_A_31-12-2020.CSV
+[2024-08-11T15:57:19.578+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2020-12
+[2024-08-11T15:57:19.836+0000] {logging_mixin.py:137} INFO - Tempo de execução de process_csv_files: 1530.1421 segundos
+[2024-08-11T15:57:19.836+0000] {dag_inmet.py:104} INFO - Processamento concluído com sucesso.
+[2024-08-11T15:57:20.324+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-08-11T15:57:20.351+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=dag_inmet, task_id=process_data, execution_date=20240811T152958, start_date=20240811T153147, end_date=20240811T155720
+[2024-08-11T15:57:20.429+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-08-11T15:57:20.451+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

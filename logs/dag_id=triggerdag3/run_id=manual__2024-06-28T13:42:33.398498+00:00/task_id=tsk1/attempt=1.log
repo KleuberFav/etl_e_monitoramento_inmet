@@ -1,0 +1,33 @@
+[2024-06-28T13:42:34.049+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: triggerdag3.tsk1 manual__2024-06-28T13:42:33.398498+00:00 [queued]>
+[2024-06-28T13:42:34.059+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: triggerdag3.tsk1 manual__2024-06-28T13:42:33.398498+00:00 [queued]>
+[2024-06-28T13:42:34.060+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-28T13:42:34.060+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-06-28T13:42:34.060+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-28T13:42:34.073+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): tsk1> on 2024-06-28 13:42:33.398498+00:00
+[2024-06-28T13:42:34.082+0000] {standard_task_runner.py:55} INFO - Started process 161 to run task
+[2024-06-28T13:42:34.084+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'triggerdag3', 'tsk1', 'manual__2024-06-28T13:42:33.398498+00:00', '--job-id', '229', '--raw', '--subdir', 'DAGS_FOLDER/triggerdag3.py', '--cfg-path', '/tmp/tmptes7hg9j']
+[2024-06-28T13:42:34.085+0000] {standard_task_runner.py:83} INFO - Job 229: Subtask tsk1
+[2024-06-28T13:42:34.144+0000] {task_command.py:388} INFO - Running <TaskInstance: triggerdag3.tsk1 manual__2024-06-28T13:42:33.398498+00:00 [running]> on host 72ef4cc59fa0
+[2024-06-28T13:42:34.220+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=triggerdag3
+AIRFLOW_CTX_TASK_ID=tsk1
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-28T13:42:33.398498+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-06-28T13:42:33.398498+00:00
+[2024-06-28T13:42:34.221+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2024-06-28T13:42:34.221+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'exit 1']
+[2024-06-28T13:42:34.234+0000] {subprocess.py:86} INFO - Output:
+[2024-06-28T13:42:34.235+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-06-28T13:42:34.244+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-06-28T13:42:34.248+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=triggerdag3, task_id=tsk1, execution_date=20240628T134233, start_date=20240628T134234, end_date=20240628T134234
+[2024-06-28T13:42:34.261+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 229 for task tsk1 (Bash command failed. The command returned a non-zero exit code 1.; 161)
+[2024-06-28T13:42:34.296+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-06-28T13:42:34.337+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

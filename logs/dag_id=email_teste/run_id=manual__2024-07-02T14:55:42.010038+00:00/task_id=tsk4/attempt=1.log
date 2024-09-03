@@ -1,0 +1,34 @@
+[2024-07-02T14:55:46.755+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: email_teste.tsk4 manual__2024-07-02T14:55:42.010038+00:00 [queued]>
+[2024-07-02T14:55:46.764+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: email_teste.tsk4 manual__2024-07-02T14:55:42.010038+00:00 [queued]>
+[2024-07-02T14:55:46.764+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-02T14:55:46.764+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-07-02T14:55:46.764+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-02T14:55:46.776+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): tsk4> on 2024-07-02 14:55:42.010038+00:00
+[2024-07-02T14:55:46.781+0000] {standard_task_runner.py:55} INFO - Started process 169 to run task
+[2024-07-02T14:55:46.783+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'email_teste', 'tsk4', 'manual__2024-07-02T14:55:42.010038+00:00', '--job-id', '323', '--raw', '--subdir', 'DAGS_FOLDER/email.py', '--cfg-path', '/tmp/tmp_3p4t3y3']
+[2024-07-02T14:55:46.784+0000] {standard_task_runner.py:83} INFO - Job 323: Subtask tsk4
+[2024-07-02T14:55:46.827+0000] {task_command.py:388} INFO - Running <TaskInstance: email_teste.tsk4 manual__2024-07-02T14:55:42.010038+00:00 [running]> on host b67cb9d86963
+[2024-07-02T14:55:46.884+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=testeskleuber@gmail.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=email_teste
+AIRFLOW_CTX_TASK_ID=tsk4
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-02T14:55:42.010038+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-02T14:55:42.010038+00:00
+[2024-07-02T14:55:46.884+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2024-07-02T14:55:46.885+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'exit 1']
+[2024-07-02T14:55:46.895+0000] {subprocess.py:86} INFO - Output:
+[2024-07-02T14:55:46.897+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-07-02T14:55:46.905+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-07-02T14:55:46.908+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=email_teste, task_id=tsk4, execution_date=20240702T145542, start_date=20240702T145546, end_date=20240702T145546
+[2024-07-02T14:55:46.918+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 323 for task tsk4 (Bash command failed. The command returned a non-zero exit code 1.; 169)
+[2024-07-02T14:55:46.955+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-07-02T14:55:46.977+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

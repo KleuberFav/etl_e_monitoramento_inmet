@@ -1,0 +1,47 @@
+[2024-08-28T20:11:53.434+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_gold_ts.send_email_with_results manual__2024-08-28T20:10:13.954481+00:00 [queued]>
+[2024-08-28T20:11:53.444+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_gold_ts.send_email_with_results manual__2024-08-28T20:10:13.954481+00:00 [queued]>
+[2024-08-28T20:11:53.444+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-28T20:11:53.444+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-28T20:11:53.444+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-28T20:11:53.455+0000] {taskinstance.py:1300} INFO - Executing <Task(EmailOperator): send_email_with_results> on 2024-08-28 20:10:13.954481+00:00
+[2024-08-28T20:11:53.464+0000] {standard_task_runner.py:55} INFO - Started process 7287 to run task
+[2024-08-28T20:11:53.466+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_gold_ts', 'send_email_with_results', 'manual__2024-08-28T20:10:13.954481+00:00', '--job-id', '12528', '--raw', '--subdir', 'DAGS_FOLDER/dag_ts_inmet.py', '--cfg-path', '/tmp/tmpk5rdfhwp']
+[2024-08-28T20:11:53.468+0000] {standard_task_runner.py:83} INFO - Job 12528: Subtask send_email_with_results
+[2024-08-28T20:11:53.523+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_gold_ts.send_email_with_results manual__2024-08-28T20:10:13.954481+00:00 [running]> on host 50af263b1053
+[2024-08-28T20:11:53.586+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_gold_ts
+AIRFLOW_CTX_TASK_ID=send_email_with_results
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-28T20:10:13.954481+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-28T20:10:13.954481+00:00
+[2024-08-28T20:11:53.587+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/email/message.py", line 356, in set_charset
+    cte(self)
+TypeError: 'str' object is not callable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/email.py", line 87, in execute
+    custom_headers=self.custom_headers,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 91, in send_email
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 149, in send_email_smtp
+    custom_headers=custom_headers,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 201, in build_mime_message
+    mime_text = MIMEText(html_content, "html", mime_charset)
+  File "/usr/local/lib/python3.7/email/mime/text.py", line 42, in __init__
+    self.set_payload(_text, _charset)
+  File "/usr/local/lib/python3.7/email/message.py", line 321, in set_payload
+    self.set_charset(charset)
+  File "/usr/local/lib/python3.7/email/message.py", line 364, in set_charset
+    payload = payload.encode('ascii', 'surrogateescape')
+AttributeError: 'function' object has no attribute 'encode'
+[2024-08-28T20:11:53.596+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_gold_ts, task_id=send_email_with_results, execution_date=20240828T201013, start_date=20240828T201153, end_date=20240828T201153
+[2024-08-28T20:11:53.609+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 12528 for task send_email_with_results ('function' object has no attribute 'encode'; 7287)
+[2024-08-28T20:11:53.638+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-08-28T20:11:53.656+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

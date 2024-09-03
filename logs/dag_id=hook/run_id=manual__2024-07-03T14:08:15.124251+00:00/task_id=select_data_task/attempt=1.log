@@ -1,0 +1,26 @@
+[2024-07-03T14:08:17.555+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: hook.select_data_task manual__2024-07-03T14:08:15.124251+00:00 [queued]>
+[2024-07-03T14:08:17.562+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: hook.select_data_task manual__2024-07-03T14:08:15.124251+00:00 [queued]>
+[2024-07-03T14:08:17.563+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-03T14:08:17.563+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-07-03T14:08:17.563+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-03T14:08:17.573+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): select_data_task> on 2024-07-03 14:08:15.124251+00:00
+[2024-07-03T14:08:17.578+0000] {standard_task_runner.py:55} INFO - Started process 7764 to run task
+[2024-07-03T14:08:17.579+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'hook', 'select_data_task', 'manual__2024-07-03T14:08:15.124251+00:00', '--job-id', '773', '--raw', '--subdir', 'DAGS_FOLDER/hooks.py', '--cfg-path', '/tmp/tmpag45315o']
+[2024-07-03T14:08:17.580+0000] {standard_task_runner.py:83} INFO - Job 773: Subtask select_data_task
+[2024-07-03T14:08:17.633+0000] {task_command.py:388} INFO - Running <TaskInstance: hook.select_data_task manual__2024-07-03T14:08:15.124251+00:00 [running]> on host 6932124ae65a
+[2024-07-03T14:08:17.687+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hook
+AIRFLOW_CTX_TASK_ID=select_data_task
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-03T14:08:15.124251+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-03T14:08:15.124251+00:00
+[2024-07-03T14:08:17.694+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2024-07-03T14:08:17.697+0000] {sql.py:375} INFO - Running statement: select * from teste2, parameters: None
+[2024-07-03T14:08:17.697+0000] {sql.py:384} INFO - Rows affected: 1
+[2024-07-03T14:08:17.708+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-07-03T14:08:17.716+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=hook, task_id=select_data_task, execution_date=20240703T140815, start_date=20240703T140817, end_date=20240703T140817
+[2024-07-03T14:08:17.752+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-07-03T14:08:17.775+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

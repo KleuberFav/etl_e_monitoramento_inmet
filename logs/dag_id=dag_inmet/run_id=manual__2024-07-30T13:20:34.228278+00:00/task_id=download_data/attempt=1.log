@@ -1,0 +1,48 @@
+[2024-07-30T13:20:40.162+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.download_data manual__2024-07-30T13:20:34.228278+00:00 [queued]>
+[2024-07-30T13:20:40.168+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.download_data manual__2024-07-30T13:20:34.228278+00:00 [queued]>
+[2024-07-30T13:20:40.169+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-30T13:20:40.169+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-07-30T13:20:40.169+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-30T13:20:40.179+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): download_data> on 2024-07-30 13:20:34.228278+00:00
+[2024-07-30T13:20:40.183+0000] {standard_task_runner.py:55} INFO - Started process 250 to run task
+[2024-07-30T13:20:40.183+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-07-30T13:20:40.186+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'download_data', 'manual__2024-07-30T13:20:34.228278+00:00', '--job-id', '2296', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmp4o7h4aht']
+[2024-07-30T13:20:40.187+0000] {standard_task_runner.py:83} INFO - Job 2296: Subtask download_data
+[2024-07-30T13:20:40.224+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.download_data manual__2024-07-30T13:20:34.228278+00:00 [running]> on host b19a2fac4a90
+[2024-07-30T13:20:40.269+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=download_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-30T13:20:34.228278+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-30T13:20:34.228278+00:00
+[2024-07-30T13:20:40.803+0000] {clientserver.py:505} INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+[2024-07-30T13:20:40.804+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-07-30T13:20:40.804+0000] {java_gateway.py:1052} INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 507, in send_command
+    "Error while sending", e, proto.ERROR_ON_SEND)
+py4j.protocol.Py4JNetworkError: Error while sending
+[2024-07-30T13:20:40.806+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2024-07-30T13:20:41.653+0000] {logging_mixin.py:137} INFO - Tempo de execução de download_data: 1.3827 segundos
+[2024-07-30T13:20:51.022+0000] {logging_mixin.py:137} INFO - Arquivo salvo como /opt/***/data/bronze/2024.zip
+[2024-07-30T13:20:51.024+0000] {logging_mixin.py:137} INFO - Tempo de execução de download_and_save_file: 9.3716 segundos
+[2024-07-30T13:20:51.025+0000] {python.py:177} INFO - Done. Returned value was: /opt/***/data/bronze/2024.zip
+[2024-07-30T13:20:51.045+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=dag_inmet, task_id=download_data, execution_date=20240730T132034, start_date=20240730T132040, end_date=20240730T132051
+[2024-07-30T13:20:51.087+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-07-30T13:20:51.101+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

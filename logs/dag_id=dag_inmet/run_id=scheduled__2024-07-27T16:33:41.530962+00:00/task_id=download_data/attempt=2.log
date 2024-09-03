@@ -1,0 +1,26 @@
+[2024-07-28T16:40:23.444+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.download_data scheduled__2024-07-27T16:33:41.530962+00:00 [queued]>
+[2024-07-28T16:40:23.451+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.download_data scheduled__2024-07-27T16:33:41.530962+00:00 [queued]>
+[2024-07-28T16:40:23.451+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-28T16:40:23.451+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2024-07-28T16:40:23.451+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-28T16:40:23.462+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): download_data> on 2024-07-27 16:33:41.530962+00:00
+[2024-07-28T16:40:23.466+0000] {standard_task_runner.py:55} INFO - Started process 2049 to run task
+[2024-07-28T16:40:23.468+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'download_data', 'scheduled__2024-07-27T16:33:41.530962+00:00', '--job-id', '2069', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmp_6gl_uyy']
+[2024-07-28T16:40:23.469+0000] {standard_task_runner.py:83} INFO - Job 2069: Subtask download_data
+[2024-07-28T16:40:23.677+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.download_data scheduled__2024-07-27T16:33:41.530962+00:00 [running]> on host b2928957dd8b
+[2024-07-28T16:40:23.728+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=download_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-27T16:33:41.530962+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-07-27T16:33:41.530962+00:00
+[2024-07-28T16:40:24.753+0000] {logging_mixin.py:137} INFO - Tempo de execução de download_data: 1.0247 segundos
+[2024-07-28T16:40:38.968+0000] {logging_mixin.py:137} INFO - Arquivo salvo como /opt/***/data/bronze/2024.zip
+[2024-07-28T16:40:38.971+0000] {logging_mixin.py:137} INFO - Tempo de execução de download_and_save_file: 14.2172 segundos
+[2024-07-28T16:40:38.972+0000] {python.py:177} INFO - Done. Returned value was: /opt/***/data/bronze/2024.zip
+[2024-07-28T16:40:38.988+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=dag_inmet, task_id=download_data, execution_date=20240727T163341, start_date=20240728T164023, end_date=20240728T164038
+[2024-07-28T16:40:39.030+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-07-28T16:40:39.138+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

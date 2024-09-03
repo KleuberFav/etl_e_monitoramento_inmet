@@ -1,0 +1,35 @@
+[2024-07-10T15:21:08.169+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: windturbine.group_check_tempo.check_temp_branc manual__2024-07-10T15:21:04.761230+00:00 [queued]>
+[2024-07-10T15:21:08.179+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: windturbine.group_check_tempo.check_temp_branc manual__2024-07-10T15:21:04.761230+00:00 [queued]>
+[2024-07-10T15:21:08.179+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-10T15:21:08.179+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-07-10T15:21:08.179+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-10T15:21:08.192+0000] {taskinstance.py:1300} INFO - Executing <Task(BranchPythonOperator): group_check_tempo.check_temp_branc> on 2024-07-10 15:21:04.761230+00:00
+[2024-07-10T15:21:08.201+0000] {standard_task_runner.py:55} INFO - Started process 1466 to run task
+[2024-07-10T15:21:08.204+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'windturbine', 'group_check_tempo.check_temp_branc', 'manual__2024-07-10T15:21:04.761230+00:00', '--job-id', '809', '--raw', '--subdir', 'DAGS_FOLDER/windturbine.py', '--cfg-path', '/tmp/tmpkx14s1cl']
+[2024-07-10T15:21:08.205+0000] {standard_task_runner.py:83} INFO - Job 809: Subtask group_check_tempo.check_temp_branc
+[2024-07-10T15:21:08.254+0000] {task_command.py:388} INFO - Running <TaskInstance: windturbine.group_check_tempo.check_temp_branc manual__2024-07-10T15:21:04.761230+00:00 [running]> on host 2051c12a5a3c
+[2024-07-10T15:21:08.309+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=testeskleuber@gmail.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=windturbine
+AIRFLOW_CTX_TASK_ID=group_check_tempo.check_temp_branc
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-10T15:21:04.761230+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-10T15:21:04.761230+00:00
+[2024-07-10T15:21:08.318+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 210, in execute
+    branch = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/windturbine.py", line 111, in avalia_temp
+    number = float( context['ti'].xcom_pull(task_ids='get_data', key="temperature"))
+TypeError: float() argument must be a string or a number, not 'NoneType'
+[2024-07-10T15:21:08.323+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=windturbine, task_id=group_check_tempo.check_temp_branc, execution_date=20240710T152104, start_date=20240710T152108, end_date=20240710T152108
+[2024-07-10T15:21:08.333+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 809 for task group_check_tempo.check_temp_branc (float() argument must be a string or a number, not 'NoneType'; 1466)
+[2024-07-10T15:21:08.375+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-07-10T15:21:08.397+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

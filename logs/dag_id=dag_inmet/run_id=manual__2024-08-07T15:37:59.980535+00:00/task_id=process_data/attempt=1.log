@@ -1,0 +1,156 @@
+[2024-08-07T15:40:11.503+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-08-07T15:37:59.980535+00:00 [queued]>
+[2024-08-07T15:40:11.512+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.process_data manual__2024-08-07T15:37:59.980535+00:00 [queued]>
+[2024-08-07T15:40:11.513+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-07T15:40:11.513+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-07T15:40:11.513+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-07T15:40:11.524+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_data> on 2024-08-07 15:37:59.980535+00:00
+[2024-08-07T15:40:11.530+0000] {standard_task_runner.py:55} INFO - Started process 50760 to run task
+[2024-08-07T15:40:11.532+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'process_data', 'manual__2024-08-07T15:37:59.980535+00:00', '--job-id', '5185', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmp55cjmz0j']
+[2024-08-07T15:40:11.533+0000] {standard_task_runner.py:83} INFO - Job 5185: Subtask process_data
+[2024-08-07T15:40:11.575+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.process_data manual__2024-08-07T15:37:59.980535+00:00 [running]> on host a5a662cb3589
+[2024-08-07T15:40:11.625+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=process_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-07T15:37:59.980535+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-07T15:37:59.980535+00:00
+[2024-08-07T15:40:13.931+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/pyspark/context.py:317: FutureWarning: Python 3.7 support is deprecated in Spark 3.4.
+  warnings.warn("Python 3.7 support is deprecated in Spark 3.4.", FutureWarning)
+
+[2024-08-07T15:40:14.041+0000] {dag_inmet.py:95} INFO - SparkSession criado com sucesso.
+[2024-08-07T15:40:14.044+0000] {logging_mixin.py:137} INFO - O arquivo 2005/ não é um arquivo CSV válido para o período atual. Ignorando...
+[2024-08-07T15:40:14.049+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_CO_DF_A001_BRASILIA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:40:20.859+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:40:21.944+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_CO_GO_A002_GOIANIA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:40:25.157+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:40:25.466+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_CO_GO_A003_MORRINHOS_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:40:28.993+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:40:29.243+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_CO_MS_A702_CAMPO GRANDE_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:40:32.191+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:40:32.433+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_CO_MS_A703_PONTA PORA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:40:35.838+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:40:36.078+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_CO_MS_A704_TRES LAGOAS_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:40:39.100+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:40:39.366+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_CO_MS_A709_IVINHEMA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:40:42.712+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:40:42.904+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_CO_MT_A901_CUIABA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:40:45.725+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:40:45.941+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_CO_MT_A902_TANGARA DA SERRA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:40:48.793+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:40:48.976+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_CO_MT_A903_S.J. DO RIO CLARO_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:40:52.213+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:40:52.411+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_CO_MT_A904_SORRISO_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:40:55.161+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:40:55.345+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_CO_MT_A905_CAMPO NOVO DOS PARECIS_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:40:58.709+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:40:58.866+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_CO_MT_A906_GUARANTA DO NORTE_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:02.448+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:02.716+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_CO_MT_A907_RONDONOPOLIS_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:05.726+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:05.914+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_AL_A303_MACEIO_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:08.764+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:08.919+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_BA_A401_SALVADOR_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:11.893+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:12.081+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_BA_A402_BARREIRAS_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:15.889+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:16.075+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_BA_A404_LUIZ EDUARDO MAGALHAES_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:19.490+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:19.656+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_BA_A405_CARAVELAS_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:22.975+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:23.155+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_BA_A406_CRUZ DAS ALMAS_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:26.167+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:26.364+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_BA_A407_ITIRUCU_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:29.410+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:29.572+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_BA_A408_ITABERABA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:32.411+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:32.588+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_BA_A410_ILHEUS_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:35.854+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:36.018+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_BA_A412_MACAJUBA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:38.981+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:39.159+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_CE_A305_FORTALEZA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:42.055+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:42.217+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_CE_A306_SOBRAL_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:45.131+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:45.291+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_MA_A203_SAO LUIS_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:48.346+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:48.522+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_PB_A310_AREIA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:51.542+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:51.709+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_PE_A301_RECIFE_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:54.677+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:54.820+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_PE_A307_PETROLINA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:41:57.651+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:41:57.800+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_PE_A309_ARCO VERDE_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:00.771+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:00.911+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_PI_A308_PARNAIBA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:04.019+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:04.157+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_PI_A311_FLORIANO_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:07.193+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:07.329+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_PI_A312_TERESINA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:10.498+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:10.632+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_RN_A302_ARQ.SAO PEDRO E SAO PAULO_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:14.258+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:14.415+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_RN_A304_NATAL_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:17.736+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:17.871+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_NE_SE_A409_ARACAJU_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:20.856+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:21.024+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_N_AM_A101_MANAUS_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:24.537+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:24.677+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_N_PA_A201_BELEM_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:27.786+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:27.930+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_N_PA_A202_CASTANHAL_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:30.781+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:30.919+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_N_TO_A009_PALMAS_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:33.697+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:33.835+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_N_TO_A010_PARANA_04-03-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:36.239+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_SE_MG_A502_BARBACENA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:39.022+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:39.176+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_SE_MG_A505_ARAXA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:41.952+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:42.105+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_SE_MG_A506_MONTES CLAROS_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:44.859+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:45.060+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_SE_MG_A507_UBERLANDIA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:48.072+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:48.222+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_SE_MG_A508_ALMENARA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:51.047+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:51.190+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_SE_MG_A509_MONTE VERDE_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:54.055+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:54.231+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_SE_MG_A510_VICOSA_15-09-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:55.228+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_SE_RJ_A601_ECOLOGIA AGRICOLA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:42:58.060+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:42:58.215+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_SE_RJ_A602_MARAMBAIA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:43:01.189+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:43:01.331+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_SE_RJ_A603_XEREM_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:43:04.462+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:43:04.598+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_SE_RJ_A604_CAMBUCI_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:43:07.572+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:43:07.727+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_SE_SP_A705_BAURU_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:43:10.695+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:43:10.845+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_SE_SP_A706_CAMPOS DO JORDAO_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:43:14.513+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:43:14.651+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_SE_SP_A707_PRESIDENTE PRUDENTE_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:43:17.527+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:43:17.675+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_SE_SP_A708_FRANCA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:43:20.488+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:43:20.626+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_S_PR_A807_CURITIBA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:43:24.065+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:43:24.202+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_S_RS_A801_PORTO ALEGRE_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:43:27.299+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:43:27.472+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_S_RS_A802_RIO GRANDE_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:43:30.661+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:43:30.801+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_S_RS_A803_SANTA MARIA_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:43:33.886+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:43:34.075+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_S_RS_A804_SANTANA DO LIVRAMENTO_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:43:36.905+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:43:37.038+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_S_RS_A805_SANTO AUGUSTO_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:43:40.250+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:43:40.380+0000] {logging_mixin.py:137} INFO - Arquivo CSV encontrado: 2005/INMET_S_SC_A806_FLORIANOPOLIS_01-01-2005_A_31-12-2005.CSV
+[2024-08-07T15:43:43.578+0000] {logging_mixin.py:137} INFO - Escrevendo Safra 2005-01
+[2024-08-07T15:43:43.730+0000] {logging_mixin.py:137} INFO - Tempo de execução de process_csv_files: 209.6892 segundos
+[2024-08-07T15:43:43.731+0000] {dag_inmet.py:99} INFO - Processamento concluído com sucesso.
+[2024-08-07T15:43:43.798+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-08-07T15:43:43.805+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=dag_inmet, task_id=process_data, execution_date=20240807T153759, start_date=20240807T154011, end_date=20240807T154343
+[2024-08-07T15:43:43.833+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-08-07T15:43:43.854+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

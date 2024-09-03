@@ -1,0 +1,37 @@
+[2024-08-01T23:06:21.953+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.monitoramento_task manual__2024-08-01T22:52:21.162843+00:00 [queued]>
+[2024-08-01T23:06:21.961+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.monitoramento_task manual__2024-08-01T22:52:21.162843+00:00 [queued]>
+[2024-08-01T23:06:21.961+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-01T23:06:21.961+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-01T23:06:21.961+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-01T23:06:21.971+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): monitoramento_task> on 2024-08-01 22:52:21.162843+00:00
+[2024-08-01T23:06:21.977+0000] {standard_task_runner.py:55} INFO - Started process 3933 to run task
+[2024-08-01T23:06:21.979+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'monitoramento_task', 'manual__2024-08-01T22:52:21.162843+00:00', '--job-id', '3513', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmps85neffm']
+[2024-08-01T23:06:21.980+0000] {standard_task_runner.py:83} INFO - Job 3513: Subtask monitoramento_task
+[2024-08-01T23:06:22.018+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.monitoramento_task manual__2024-08-01T22:52:21.162843+00:00 [running]> on host 87a8f1646fc1
+[2024-08-01T23:06:22.065+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=monitoramento_task
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-01T22:52:21.162843+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-01T22:52:21.162843+00:00
+[2024-08-01T23:06:24.121+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/pyspark/context.py:317: FutureWarning: Python 3.7 support is deprecated in Spark 3.4.
+  warnings.warn("Python 3.7 support is deprecated in Spark 3.4.", FutureWarning)
+
+[2024-08-01T23:06:24.211+0000] {dag_inmet.py:102} INFO - SparkSession criado com sucesso.
+[2024-08-01T23:06:24.211+0000] {dag_inmet.py:110} ERROR - Erro no monitoramento: 'Monitoramento' object has no attribute 'execute_monitoramento'
+[2024-08-01T23:06:24.626+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_inmet.py", line 105, in task_monitoramento
+    results = monitoramento.execute_monitoramento(spark=spark)
+AttributeError: 'Monitoramento' object has no attribute 'execute_monitoramento'
+[2024-08-01T23:06:24.638+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_inmet, task_id=monitoramento_task, execution_date=20240801T225221, start_date=20240801T230621, end_date=20240801T230624
+[2024-08-01T23:06:24.651+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 3513 for task monitoramento_task ('Monitoramento' object has no attribute 'execute_monitoramento'; 3933)
+[2024-08-01T23:06:24.677+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-08-01T23:06:24.697+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

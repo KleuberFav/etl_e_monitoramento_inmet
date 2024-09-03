@@ -1,0 +1,53 @@
+[2024-08-21T17:36:09.449+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_gold_ts.process_gold_ts manual__2024-08-21T17:35:10.021702+00:00 [queued]>
+[2024-08-21T17:36:09.456+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_gold_ts.process_gold_ts manual__2024-08-21T17:35:10.021702+00:00 [queued]>
+[2024-08-21T17:36:09.456+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-21T17:36:09.456+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-21T17:36:09.456+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-21T17:36:09.468+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_gold_ts> on 2024-08-21 17:35:10.021702+00:00
+[2024-08-21T17:36:09.473+0000] {standard_task_runner.py:55} INFO - Started process 540 to run task
+[2024-08-21T17:36:09.475+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_gold_ts', 'process_gold_ts', 'manual__2024-08-21T17:35:10.021702+00:00', '--job-id', '10151', '--raw', '--subdir', 'DAGS_FOLDER/dag_ts_inmet.py', '--cfg-path', '/tmp/tmp_70tsgj4']
+[2024-08-21T17:36:09.476+0000] {standard_task_runner.py:83} INFO - Job 10151: Subtask process_gold_ts
+[2024-08-21T17:36:09.519+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_gold_ts.process_gold_ts manual__2024-08-21T17:35:10.021702+00:00 [running]> on host 0672a1a8122f
+[2024-08-21T17:36:09.571+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_gold_ts
+AIRFLOW_CTX_TASK_ID=process_gold_ts
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-21T17:35:10.021702+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-21T17:35:10.021702+00:00
+[2024-08-21T17:36:11.745+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/pyspark/context.py:317: FutureWarning: Python 3.7 support is deprecated in Spark 3.4.
+  warnings.warn("Python 3.7 support is deprecated in Spark 3.4.", FutureWarning)
+
+[2024-08-21T17:36:16.707+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_ts_inmet.py", line 44, in run_gold_ts
+    gold_ts.ts_gold(spark)
+  File "/opt/airflow/plugins/gold_ts_plugin.py", line 12, in wrapper
+    resultado = metodo(*args, **kwargs)
+  File "/opt/airflow/plugins/gold_ts_plugin.py", line 92, in ts_gold
+    df3.sort_index(inplace=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/frame.py", line 6402, in sort_index
+    key,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 4545, in sort_index
+    target, level, ascending, kind, na_position, sort_remaining, key
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/sorting.py", line 92, in get_indexer_indexer
+    target, kind=kind, ascending=ascending, na_position=na_position
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/sorting.py", line 391, in nargsort
+    return items.argsort(ascending=ascending, kind=kind, na_position=na_position)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/base.py", line 633, in argsort
+    mask=np.asarray(self.isna()),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/sorting.py", line 403, in nargsort
+    indexer = non_nan_idx[non_nans.argsort(kind=kind)]
+TypeError: '<' not supported between instances of 'str' and 'Timestamp'
+[2024-08-21T17:36:16.717+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_gold_ts, task_id=process_gold_ts, execution_date=20240821T173510, start_date=20240821T173609, end_date=20240821T173616
+[2024-08-21T17:36:16.727+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 10151 for task process_gold_ts ('<' not supported between instances of 'str' and 'Timestamp'; 540)
+[2024-08-21T17:36:16.749+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-08-21T17:36:16.762+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

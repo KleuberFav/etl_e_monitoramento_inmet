@@ -1,0 +1,34 @@
+[2024-07-10T15:22:58.657+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: windturbine.group_check_tempo.check_temp_branc manual__2024-07-10T15:22:55.520756+00:00 [queued]>
+[2024-07-10T15:22:58.667+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: windturbine.group_check_tempo.check_temp_branc manual__2024-07-10T15:22:55.520756+00:00 [queued]>
+[2024-07-10T15:22:58.667+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-10T15:22:58.667+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-07-10T15:22:58.668+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-10T15:22:58.685+0000] {taskinstance.py:1300} INFO - Executing <Task(BranchPythonOperator): group_check_tempo.check_temp_branc> on 2024-07-10 15:22:55.520756+00:00
+[2024-07-10T15:22:58.694+0000] {standard_task_runner.py:55} INFO - Started process 1671 to run task
+[2024-07-10T15:22:58.696+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'windturbine', 'group_check_tempo.check_temp_branc', 'manual__2024-07-10T15:22:55.520756+00:00', '--job-id', '815', '--raw', '--subdir', 'DAGS_FOLDER/windturbine.py', '--cfg-path', '/tmp/tmprka48as4']
+[2024-07-10T15:22:58.698+0000] {standard_task_runner.py:83} INFO - Job 815: Subtask group_check_tempo.check_temp_branc
+[2024-07-10T15:22:58.749+0000] {task_command.py:388} INFO - Running <TaskInstance: windturbine.group_check_tempo.check_temp_branc manual__2024-07-10T15:22:55.520756+00:00 [running]> on host 2051c12a5a3c
+[2024-07-10T15:22:58.824+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=testeskleuber@gmail.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=windturbine
+AIRFLOW_CTX_TASK_ID=group_check_tempo.check_temp_branc
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-10T15:22:55.520756+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-10T15:22:55.520756+00:00
+[2024-07-10T15:22:58.833+0000] {python.py:177} INFO - Done. Returned value was: group_check_temp.send_email_normal
+[2024-07-10T15:22:58.833+0000] {python.py:211} INFO - Branch callable return group_check_temp.send_email_normal
+[2024-07-10T15:22:58.833+0000] {skipmixin.py:155} INFO - Following branch group_check_temp.send_email_normal
+[2024-07-10T15:22:58.843+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 212, in execute
+    self.skip_all_except(context["ti"], branch)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/skipmixin.py", line 186, in skip_all_except
+    "'branch_task_ids' must contain only valid task_ids. "
+airflow.exceptions.AirflowException: 'branch_task_ids' must contain only valid task_ids. Invalid tasks found: {'group_check_temp.send_email_normal'}.
+[2024-07-10T15:22:58.846+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=windturbine, task_id=group_check_tempo.check_temp_branc, execution_date=20240710T152255, start_date=20240710T152258, end_date=20240710T152258
+[2024-07-10T15:22:58.857+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 815 for task group_check_tempo.check_temp_branc ('branch_task_ids' must contain only valid task_ids. Invalid tasks found: {'group_check_temp.send_email_normal'}.; 1671)
+[2024-07-10T15:22:58.868+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-07-10T15:22:58.894+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

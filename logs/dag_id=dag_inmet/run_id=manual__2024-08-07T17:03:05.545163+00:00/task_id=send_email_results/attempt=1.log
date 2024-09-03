@@ -1,0 +1,50 @@
+[2024-08-07T17:33:28.782+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.send_email_results manual__2024-08-07T17:03:05.545163+00:00 [queued]>
+[2024-08-07T17:33:28.795+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.send_email_results manual__2024-08-07T17:03:05.545163+00:00 [queued]>
+[2024-08-07T17:33:28.795+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-07T17:33:28.796+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-07T17:33:28.796+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-07T17:33:28.812+0000] {taskinstance.py:1300} INFO - Executing <Task(EmailOperator): send_email_results> on 2024-08-07 17:03:05.545163+00:00
+[2024-08-07T17:33:28.820+0000] {standard_task_runner.py:55} INFO - Started process 93573 to run task
+[2024-08-07T17:33:28.823+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'send_email_results', 'manual__2024-08-07T17:03:05.545163+00:00', '--job-id', '5303', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmpdwztwdvp']
+[2024-08-07T17:33:28.825+0000] {standard_task_runner.py:83} INFO - Job 5303: Subtask send_email_results
+[2024-08-07T17:33:28.889+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.send_email_results manual__2024-08-07T17:03:05.545163+00:00 [running]> on host a5a662cb3589
+[2024-08-07T17:33:29.027+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_inmet
+AIRFLOW_CTX_TASK_ID=send_email_results
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-07T17:03:05.545163+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-07T17:03:05.545163+00:00
+[2024-08-07T17:33:29.037+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/email.py:152: RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+  send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+
+[2024-08-07T17:33:29.037+0000] {email.py:268} INFO - Email alerting: attempt 1
+[2024-08-07T17:33:29.038+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/email.py", line 87, in execute
+    custom_headers=self.custom_headers,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 91, in send_email
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 152, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 270, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/email.py", line 317, in _get_smtp_connection
+    else smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/local/lib/python3.7/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/lib/python3.7/smtplib.py", line 336, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/lib/python3.7/smtplib.py", line 307, in _get_socket
+    self.source_address)
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+[2024-08-07T17:33:29.044+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_inmet, task_id=send_email_results, execution_date=20240807T170305, start_date=20240807T173328, end_date=20240807T173329
+[2024-08-07T17:33:29.054+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 5303 for task send_email_results ([Errno -3] Temporary failure in name resolution; 93573)
+[2024-08-07T17:33:29.075+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-08-07T17:33:29.090+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,54 @@
+[2024-08-06T19:10:20.936+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.send_email_results manual__2024-08-06T18:41:36.354448+00:00 [queued]>
+[2024-08-06T19:10:20.946+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_inmet.send_email_results manual__2024-08-06T18:41:36.354448+00:00 [queued]>
+[2024-08-06T19:10:20.946+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-06T19:10:20.946+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-06T19:10:20.946+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-06T19:10:20.956+0000] {taskinstance.py:1300} INFO - Executing <Task(EmailOperator): send_email_results> on 2024-08-06 18:41:36.354448+00:00
+[2024-08-06T19:10:20.963+0000] {standard_task_runner.py:55} INFO - Started process 182142 to run task
+[2024-08-06T19:10:20.965+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_inmet', 'send_email_results', 'manual__2024-08-06T18:41:36.354448+00:00', '--job-id', '4651', '--raw', '--subdir', 'DAGS_FOLDER/dag_inmet.py', '--cfg-path', '/tmp/tmpvci48q8a']
+[2024-08-06T19:10:20.966+0000] {standard_task_runner.py:83} INFO - Job 4651: Subtask send_email_results
+[2024-08-06T19:10:21.008+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_inmet.send_email_results manual__2024-08-06T18:41:36.354448+00:00 [running]> on host 0165c32c74c8
+[2024-08-06T19:10:21.041+0000] {abstractoperator.py:613} ERROR - Exception rendering Jinja template for task 'send_email_results', field 'html_content'. Template: "\n    <h3>ELT do INMET realizado com sucesso</h3>\n    <p>Dag: inmet</p>\n    <ul>\n        <li>Região: {{ task_instance.xcom_pull(task_ids='monitoramento_task')['qtd_regiao'] }}</li>\n        <li>UF: {{ task_instance.xcom_pull(task_ids='monitoramento_task')['qtd_uf'] }}</li>\n        <li>Volumetria da Safra: {{ task_instance.xcom_pull(task_ids='monitoramento_task')['vol_safra'] }}</li>\n        <li>Volumetria Esperada: {{ task_instance.xcom_pull(task_ids='monitoramento_task')['vol_esperada'] }}</li>\n        <li>Quantidade de Estações: {{ task_instance.xcom_pull(task_ids='monitoramento_task')['qtd_estacao'] }}</li>\n    </ul>\n    <h4>Tempos de execução:</h4>\n    <ul>\n        <li>Download Data: Início: {{ task_instance.xcom_pull(task_ids='download_data', key='start_time') | timestamp_custom('%Y-%m-%d %H:%M:%S') }} \n        Fim: {{ task_instance.xcom_pull(task_ids='download_data', key='end_time') | timestamp_custom('%Y-%m-%d %H:%M:%S') }} \n        Duração: {{ task_instance.xcom_pull(task_ids='download_data', key='duration') | round(2) }} segundos</li>\n        \n        <li>Process Data: Início: {{ task_instance.xcom_pull(task_ids='process_data', key='start_time') | timestamp_custom('%Y-%m-%d %H:%M:%S') }} \n        Fim: {{ task_instance.xcom_pull(task_ids='process_data', key='end_time') | timestamp_custom('%Y-%m-%d %H:%M:%S') }} \n        Duração: {{ task_instance.xcom_pull(task_ids='process_data', key='duration') | round(2) }} segundos</li>\n        \n        <li>Monitoramento: Início: {{ task_instance.xcom_pull(task_ids='monitoramento_task', key='start_time') | timestamp_custom('%Y-%m-%d %H:%M:%S') }} \n        Fim: {{ task_instance.xcom_pull(task_ids='monitoramento_task', key='end_time') | timestamp_custom('%Y-%m-%d %H:%M:%S') }} \n        Duração: {{ task_instance.xcom_pull(task_ids='monitoramento_task', key='duration') | round(2) }} segundos</li>\n        \n        <li>Total da DAG: Início: {{ dag_run.start_date.strftime('%Y-%m-%d %H:%M:%S') }} \n        Fim: {{ dag_run.end_date.strftime('%Y-%m-%d %H:%M:%S') }} \n        Duração: {{ (dag_run.end_date - dag_run.start_date).total_seconds() | round(2) }} segundos</li>\n    </ul>\n    "
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 606, in _do_render_template_fields
+    seen_oids,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 659, in render_template
+    template = jinja_env.from_string(value)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 1105, in from_string
+    return cls.from_code(self, self.compile(source), gs, None)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<unknown>", line 13, in template
+jinja2.exceptions.TemplateAssertionError: No filter named 'timestamp_custom'.
+[2024-08-06T19:10:21.042+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1374, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1493, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 2115, in render_templates
+    original_task.render_template_fields(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1179, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 75, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 606, in _do_render_template_fields
+    seen_oids,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 659, in render_template
+    template = jinja_env.from_string(value)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 1105, in from_string
+    return cls.from_code(self, self.compile(source), gs, None)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<unknown>", line 13, in template
+jinja2.exceptions.TemplateAssertionError: No filter named 'timestamp_custom'.
+[2024-08-06T19:10:21.048+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_inmet, task_id=send_email_results, execution_date=20240806T184136, start_date=20240806T191020, end_date=20240806T191021
+[2024-08-06T19:10:21.057+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 4651 for task send_email_results (No filter named 'timestamp_custom'.; 182142)
+[2024-08-06T19:10:21.096+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-08-06T19:10:21.111+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

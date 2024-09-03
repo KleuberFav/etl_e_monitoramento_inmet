@@ -1,0 +1,32 @@
+[2024-08-28T15:28:07.829+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-28T15:28:01.786576+00:00 [queued]>
+[2024-08-28T15:28:07.836+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-28T15:28:01.786576+00:00 [queued]>
+[2024-08-28T15:28:07.836+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-28T15:28:07.836+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-28T15:28:07.837+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-28T15:28:07.846+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): run_sarima_forecast> on 2024-08-28 15:28:01.786576+00:00
+[2024-08-28T15:28:07.853+0000] {standard_task_runner.py:55} INFO - Started process 20610 to run task
+[2024-08-28T15:28:07.854+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'sarima_forecast_dag', 'run_sarima_forecast', 'manual__2024-08-28T15:28:01.786576+00:00', '--job-id', '12176', '--raw', '--subdir', 'DAGS_FOLDER/dag_forecast_ts_rainfall.py', '--cfg-path', '/tmp/tmpdhcp3nhn']
+[2024-08-28T15:28:07.856+0000] {standard_task_runner.py:83} INFO - Job 12176: Subtask run_sarima_forecast
+[2024-08-28T15:28:07.898+0000] {task_command.py:388} INFO - Running <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-28T15:28:01.786576+00:00 [running]> on host 4958d38180c6
+[2024-08-28T15:28:07.949+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=sarima_forecast_dag
+AIRFLOW_CTX_TASK_ID=run_sarima_forecast
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-28T15:28:01.786576+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-28T15:28:01.786576+00:00
+[2024-08-28T15:28:08.190+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_forecast_ts_rainfall.py", line 20, in run_sarima_forecast
+    previsoes_df = sarima_plugin.forecast(n_periods=1)
+TypeError: forecast() got an unexpected keyword argument 'n_periods'
+[2024-08-28T15:28:08.196+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=sarima_forecast_dag, task_id=run_sarima_forecast, execution_date=20240828T152801, start_date=20240828T152807, end_date=20240828T152808
+[2024-08-28T15:28:08.211+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 12176 for task run_sarima_forecast (forecast() got an unexpected keyword argument 'n_periods'; 20610)
+[2024-08-28T15:28:08.226+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-08-28T15:28:08.244+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

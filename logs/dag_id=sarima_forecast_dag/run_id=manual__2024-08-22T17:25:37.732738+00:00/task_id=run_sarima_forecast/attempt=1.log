@@ -1,0 +1,26 @@
+[2024-08-22T17:26:08.827+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-22T17:25:37.732738+00:00 [queued]>
+[2024-08-22T17:26:08.835+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-22T17:25:37.732738+00:00 [queued]>
+[2024-08-22T17:26:08.835+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-22T17:26:08.835+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-22T17:26:08.835+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-22T17:26:08.846+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): run_sarima_forecast> on 2024-08-22 17:25:37.732738+00:00
+[2024-08-22T17:26:08.852+0000] {standard_task_runner.py:55} INFO - Started process 1344 to run task
+[2024-08-22T17:26:08.854+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'sarima_forecast_dag', 'run_sarima_forecast', 'manual__2024-08-22T17:25:37.732738+00:00', '--job-id', '11139', '--raw', '--subdir', 'DAGS_FOLDER/dag_forecast_ts_rainfall.py', '--cfg-path', '/tmp/tmp75twx7lw']
+[2024-08-22T17:26:08.855+0000] {standard_task_runner.py:83} INFO - Job 11139: Subtask run_sarima_forecast
+[2024-08-22T17:26:08.897+0000] {task_command.py:388} INFO - Running <TaskInstance: sarima_forecast_dag.run_sarima_forecast manual__2024-08-22T17:25:37.732738+00:00 [running]> on host 679c6b71c751
+[2024-08-22T17:26:08.952+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=sarima_forecast_dag
+AIRFLOW_CTX_TASK_ID=run_sarima_forecast
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-22T17:25:37.732738+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-22T17:25:37.732738+00:00
+[2024-08-22T17:26:09.186+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/statsmodels/tsa/statespace/sarimax.py:868: UserWarning: Too few observations to estimate starting parameters for seasonal ARMA. All parameters except for variances will be set to zeros.
+  ' zeros.' % warning_description)
+
+[2024-08-22T17:26:09.239+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-08-22T17:26:09.256+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=sarima_forecast_dag, task_id=run_sarima_forecast, execution_date=20240822T172537, start_date=20240822T172608, end_date=20240822T172609
+[2024-08-22T17:26:09.306+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-08-22T17:26:09.321+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

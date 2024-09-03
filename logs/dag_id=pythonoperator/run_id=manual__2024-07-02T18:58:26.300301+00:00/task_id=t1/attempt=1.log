@@ -1,0 +1,44 @@
+[2024-07-02T18:58:28.379+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: pythonoperator.t1 manual__2024-07-02T18:58:26.300301+00:00 [queued]>
+[2024-07-02T18:58:28.389+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: pythonoperator.t1 manual__2024-07-02T18:58:26.300301+00:00 [queued]>
+[2024-07-02T18:58:28.390+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-02T18:58:28.390+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-07-02T18:58:28.390+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-02T18:58:28.404+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): t1> on 2024-07-02 18:58:26.300301+00:00
+[2024-07-02T18:58:28.410+0000] {standard_task_runner.py:55} INFO - Started process 121 to run task
+[2024-07-02T18:58:28.412+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'pythonoperator', 't1', 'manual__2024-07-02T18:58:26.300301+00:00', '--job-id', '722', '--raw', '--subdir', 'DAGS_FOLDER/pythonoperator.py', '--cfg-path', '/tmp/tmpl51z34x0']
+[2024-07-02T18:58:28.414+0000] {standard_task_runner.py:83} INFO - Job 722: Subtask t1
+[2024-07-02T18:58:28.473+0000] {task_command.py:388} INFO - Running <TaskInstance: pythonoperator.t1 manual__2024-07-02T18:58:26.300301+00:00 [running]> on host 041d72070b97
+[2024-07-02T18:58:28.541+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pythonoperator
+AIRFLOW_CTX_TASK_ID=t1
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-02T18:58:26.300301+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-07-02T18:58:26.300301+00:00
+[2024-07-02T18:58:28.552+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/pythonoperator.py", line 24, in data_cleaner
+    dataset.iloc[(dataset['Idade']<0) | (dataset['Idade']>120), 'Idade'] = mediana
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexing.py", line 723, in __setitem__
+    iloc._setitem_with_indexer(indexer, value, self.name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexing.py", line 1730, in _setitem_with_indexer
+    self._setitem_with_indexer_split_path(indexer, value, name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexing.py", line 1817, in _setitem_with_indexer_split_path
+    self._setitem_single_column(loc, value, pi)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexing.py", line 1898, in _setitem_single_column
+    ser = self.obj._ixs(loc, axis=1)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/frame.py", line 3394, in _ixs
+    label = self.columns[i]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 4604, in __getitem__
+    return getitem(key)
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+[2024-07-02T18:58:28.561+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=pythonoperator, task_id=t1, execution_date=20240702T185826, start_date=20240702T185828, end_date=20240702T185828
+[2024-07-02T18:58:28.572+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 722 for task t1 (only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices; 121)
+[2024-07-02T18:58:28.584+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-07-02T18:58:28.599+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

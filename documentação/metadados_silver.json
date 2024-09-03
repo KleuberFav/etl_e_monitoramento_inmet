@@ -1,0 +1,120 @@
+{
+    "columns": {
+      "PK_RAINFALL": {
+        "type": "string",
+        "description": "Chave Primária"
+      },
+      "DATE_YYYYMMDD": {
+        "type": "date",
+        "description": "Data em formato YYYY-MM-DD"
+      },
+      "HORA": {
+        "type": "string",
+        "description": "Hora no formato UTC"
+      },
+      "UF": {
+        "type": "string",
+        "description": "UF da estação monitorada"
+      },
+      "ESTACAO": {
+        "type": "string",
+        "description": "Estação monitorada"
+      },
+      "CODIGO": {
+        "type": "string",
+        "description": "Código da estação monitorada"
+      },
+      "DATA_FUNDACAO": {
+        "type": "string",
+        "description": "Data de fundação da estação monitorada"
+      },
+      "AAAAMM": {
+        "type": "string",
+        "description": "Safra do monitoramento"
+      },
+      "year_month": {
+        "type": "string",
+        "description": "Ano e Mês do monitoramento"
+      },
+      "LATITUDE": {
+        "type": "decimal",
+        "description": "Latitude da Estação monitorada"
+      },
+      "LONGITUDE": {
+        "type": "decimal",
+        "description": "Longitude da Estação monitorada"
+      },
+      "ALTITUDE": {
+        "type": "decimal",
+        "description": "Altitude em metros da Estação monitorada"
+      },
+      "PRECIPITACAO": {
+        "type": "decimal",
+        "description": "Precipitação total no horário em milímetros"
+      },
+      "PA_ESTACAO": {
+        "type": "decimal",
+        "description": "Pressão Atmosférica ao nível da estação"
+      },
+      "PA_MAX_ANT": {
+        "type": "decimal",
+        "description": "Pressão Atmosférica máxima na hora anterior ao nível da estação"
+      },
+      "PA_MIN_ANT": {
+        "type": "decimal",
+        "description": "Pressão Atmosférica mínima na hora anterior ao nível da estação"
+      },
+      "RADIACAO_GLOBAL": {
+        "type": "decimal",
+        "description": "Radiação global em KJ/m²"
+      },
+      "TEMPERATURA_AR": {
+        "type": "decimal",
+        "description": "Temperatura do ar no horário - Bulbo seco °C"
+      },
+      "TEMPERATURA_ORVALHO": {
+        "type": "decimal",
+        "description": "Temperatura do ar no horário - Orvalho °C"
+      },
+      "TEMPERATURA_MAX_ANT": {
+        "type": "decimal",
+        "description": "Temperatura máxima do ar na hora anterior - Bulbo seco °C"
+      },
+      "TEMPERATURA_MIN_ANT": {
+        "type": "decimal",
+        "description": "Temperatura mínima do ar na hora anterior - Bulbo seco °C"
+      },
+      "TEMPERATURA_MAX_ORVALHO_ANT": {
+        "type": "decimal",
+        "description": "Temperatura máxima do ar na hora anterior - Orvalho °C"
+      },
+      "TEMPERATURA_MIN_ORVALHO_ANT": {
+        "type": "decimal",
+        "description": "Temperatura mínima do ar na hora anterior - Orvalho °C"
+      },
+      "UMIDADE_REL_MAX_ANT": {
+        "type": "decimal",
+        "description": "Umidade relativa do ar máxima na hora anterior"
+      },
+      "UMIDADE_REL_MIN_ANT": {
+        "type": "decimal",
+        "description": "Umidade relativa do ar mínima na hora anterior"
+      },
+      "UMIDADE_REL_AR": {
+        "type": "decimal",
+        "description": "Umidade relativa do ar mínima no horário"
+      },
+      "VENTO_DIRECAO_HORARIA": {
+        "type": "decimal",
+        "description": "Direção do Vento no horário"
+      },
+      "VENTO_RAJADA_MAX": {
+        "type": "decimal",
+        "description": "Rajada máxima do vento no horário - m/s"
+      },
+      "VENTO_VELOCIDADE_HORARIA": {
+        "type": "decimal",
+        "description": "Velocidade máxima do vento no horário - m/s"
+      }
+    }
+  }

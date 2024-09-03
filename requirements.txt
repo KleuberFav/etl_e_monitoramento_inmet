@@ -1,0 +1,11 @@
+apache-airflow
+beautifulsoup4
+chardet
+pandas==1.3.5
+pyspark
+pyyaml
+requests
+matplotlib
+statsmodels
+joblib
+scikit-learn

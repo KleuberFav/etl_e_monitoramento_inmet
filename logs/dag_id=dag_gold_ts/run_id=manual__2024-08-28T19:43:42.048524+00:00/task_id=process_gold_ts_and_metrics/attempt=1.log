@@ -1,0 +1,82 @@
+[2024-08-28T19:44:47.066+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_gold_ts.process_gold_ts_and_metrics manual__2024-08-28T19:43:42.048524+00:00 [queued]>
+[2024-08-28T19:44:47.073+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: dag_gold_ts.process_gold_ts_and_metrics manual__2024-08-28T19:43:42.048524+00:00 [queued]>
+[2024-08-28T19:44:47.073+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-28T19:44:47.073+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2024-08-28T19:44:47.074+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-28T19:44:47.085+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_gold_ts_and_metrics> on 2024-08-28 19:43:42.048524+00:00
+[2024-08-28T19:44:47.093+0000] {standard_task_runner.py:55} INFO - Started process 3360 to run task
+[2024-08-28T19:44:47.095+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_gold_ts', 'process_gold_ts_and_metrics', 'manual__2024-08-28T19:43:42.048524+00:00', '--job-id', '12493', '--raw', '--subdir', 'DAGS_FOLDER/dag_ts_inmet.py', '--cfg-path', '/tmp/tmpnaxqktod']
+[2024-08-28T19:44:47.097+0000] {standard_task_runner.py:83} INFO - Job 12493: Subtask process_gold_ts_and_metrics
+[2024-08-28T19:44:47.141+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_gold_ts.process_gold_ts_and_metrics manual__2024-08-28T19:43:42.048524+00:00 [running]> on host 50af263b1053
+[2024-08-28T19:44:47.194+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_gold_ts
+AIRFLOW_CTX_TASK_ID=process_gold_ts_and_metrics
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-28T19:43:42.048524+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-28T19:43:42.048524+00:00
+[2024-08-28T19:44:49.421+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/pyspark/context.py:317: FutureWarning: Python 3.7 support is deprecated in Spark 3.4.
+  warnings.warn("Python 3.7 support is deprecated in Spark 3.4.", FutureWarning)
+
+[2024-08-28T19:44:54.640+0000] {gold_ts_plugin.py:101} INFO - colunas de predicions_df:           DATA  PRECIPITACAO_MENSAL
+0   2024-01-01           285.536807
+1   2024-02-01           384.252075
+2   2024-03-01           434.379743
+3   2024-04-01           401.968085
+4   2024-05-01           390.633770
+5   2024-06-01           138.833631
+6   2024-07-01            80.982760
+7   2024-08-01           115.007697
+8   2024-09-01           129.823392
+9   2024-10-01           170.538220
+10  2024-11-01           285.214351
+11  2024-12-01           216.501133
+12  2025-01-01           268.782407
+13  2025-02-01           334.141955
+14  2025-03-01           438.050031
+15  2025-04-01           375.386065
+16  2025-05-01           369.218655
+17  2025-06-01           134.716366
+18  2025-07-01            62.005022
+19  2025-08-01            87.331687
+20  2025-09-01           101.676449
+21  2025-10-01           112.259698
+22  2025-11-01           226.561661
+23  2025-12-01           215.033140
+24  2026-01-01           254.767379
+25  2026-02-01           307.558344
+26  2026-03-01           432.622948
+27  2026-04-01           305.234943
+28  2026-05-01           321.287741
+29  2026-06-01           119.034258
+30  2026-07-01            32.562067
+31  2026-08-01            24.349780
+32  2026-09-01            38.410174
+33  2026-10-01            36.648514
+34  2026-11-01           131.134135
+35  2026-12-01           175.793017
+[2024-08-28T19:44:54.642+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_ts_inmet.py", line 36, in run_gold_ts_and_calculate_metrics
+    pdf, predictions_df = gold_ts.ts_gold(spark)
+  File "/opt/airflow/plugins/gold_ts_plugin.py", line 15, in wrapper
+    resultado = metodo(*args, **kwargs)
+  File "/opt/airflow/plugins/gold_ts_plugin.py", line 108, in ts_gold
+    predictions_df = predictions_df[['Forecast']]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/frame.py", line 3464, in __getitem__
+    indexer = self.loc._get_listlike_indexer(key, axis=1)[1]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexing.py", line 1314, in _get_listlike_indexer
+    self._validate_read_indexer(keyarr, indexer, axis)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexing.py", line 1374, in _validate_read_indexer
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['Forecast'], dtype='object')] are in the [columns]"
+[2024-08-28T19:44:54.654+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=dag_gold_ts, task_id=process_gold_ts_and_metrics, execution_date=20240828T194342, start_date=20240828T194447, end_date=20240828T194454
+[2024-08-28T19:44:54.671+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 12493 for task process_gold_ts_and_metrics ("None of [Index(['Forecast'], dtype='object')] are in the [columns]"; 3360)
+[2024-08-28T19:44:54.685+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-08-28T19:44:54.710+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

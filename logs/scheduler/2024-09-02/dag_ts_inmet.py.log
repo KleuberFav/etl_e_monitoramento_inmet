@@ -1,0 +1,112 @@
+[2024-09-02T23:52:48.493+0000] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:52:48.493+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ts_inmet.py for tasks to queue
+[2024-09-02T23:52:48.494+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:52:48.494+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:52:48.520+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_gold_ts']) retrieved from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:52:48.566+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:52:48.565+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-09-02T23:52:48.598+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:52:48.598+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_gold_ts to 2024-08-29T22:00:00+00:00, run_after=2024-09-29T22:00:00+00:00
+[2024-09-02T23:52:48.617+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ts_inmet.py took 0.127 seconds
+[2024-09-02T23:52:57.393+0000] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:52:57.394+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ts_inmet.py for tasks to queue
+[2024-09-02T23:52:57.394+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:52:57.394+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:52:57.419+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_gold_ts']) retrieved from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:52:57.454+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:52:57.453+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-09-02T23:52:57.481+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:52:57.481+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_gold_ts to 2024-08-29T22:00:00+00:00, run_after=2024-09-29T22:00:00+00:00
+[2024-09-02T23:52:57.499+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ts_inmet.py took 0.109 seconds
+[2024-09-02T23:53:08.345+0000] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:08.346+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ts_inmet.py for tasks to queue
+[2024-09-02T23:53:08.347+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:08.347+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:08.373+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_gold_ts']) retrieved from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:08.408+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:08.408+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-09-02T23:53:08.441+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:08.441+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_gold_ts to 2024-08-29T22:00:00+00:00, run_after=2024-09-29T22:00:00+00:00
+[2024-09-02T23:53:08.460+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ts_inmet.py took 0.117 seconds
+[2024-09-02T23:53:17.543+0000] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:17.544+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ts_inmet.py for tasks to queue
+[2024-09-02T23:53:17.545+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:17.544+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:17.569+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_gold_ts']) retrieved from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:17.607+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:17.606+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-09-02T23:53:17.637+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:17.637+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_gold_ts to 2024-08-29T22:00:00+00:00, run_after=2024-09-29T22:00:00+00:00
+[2024-09-02T23:53:17.653+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ts_inmet.py took 0.113 seconds
+[2024-09-02T23:53:25.624+0000] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:25.625+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ts_inmet.py for tasks to queue
+[2024-09-02T23:53:25.625+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:25.625+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:25.654+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_gold_ts']) retrieved from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:25.704+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:25.704+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-09-02T23:53:25.749+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:25.749+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_gold_ts to 2024-08-29T22:00:00+00:00, run_after=2024-09-29T22:00:00+00:00
+[2024-09-02T23:53:25.765+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ts_inmet.py took 0.143 seconds
+[2024-09-02T23:53:34.040+0000] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:34.041+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ts_inmet.py for tasks to queue
+[2024-09-02T23:53:34.041+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:34.041+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:34.065+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_gold_ts']) retrieved from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:34.098+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:34.097+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-09-02T23:53:34.124+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:34.124+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_gold_ts to 2024-08-29T22:00:00+00:00, run_after=2024-09-29T22:00:00+00:00
+[2024-09-02T23:53:34.139+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ts_inmet.py took 0.101 seconds
+[2024-09-02T23:53:42.740+0000] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:42.740+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ts_inmet.py for tasks to queue
+[2024-09-02T23:53:42.741+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:42.741+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:42.763+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_gold_ts']) retrieved from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:42.792+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:42.792+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-09-02T23:53:42.816+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:42.816+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_gold_ts to 2024-08-29T22:00:00+00:00, run_after=2024-09-29T22:00:00+00:00
+[2024-09-02T23:53:42.830+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ts_inmet.py took 0.092 seconds
+[2024-09-02T23:53:52.341+0000] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:52.342+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ts_inmet.py for tasks to queue
+[2024-09-02T23:53:52.343+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:52.342+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:52.365+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_gold_ts']) retrieved from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:53:52.393+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:52.393+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-09-02T23:53:52.417+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:53:52.416+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_gold_ts to 2024-08-29T22:00:00+00:00, run_after=2024-09-29T22:00:00+00:00
+[2024-09-02T23:53:52.430+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ts_inmet.py took 0.091 seconds
+[2024-09-02T23:54:03.578+0000] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:54:03.579+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ts_inmet.py for tasks to queue
+[2024-09-02T23:54:03.579+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:54:03.579+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:54:03.604+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_gold_ts']) retrieved from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:54:03.634+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:54:03.634+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-09-02T23:54:03.660+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:54:03.659+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_gold_ts to 2024-08-29T22:00:00+00:00, run_after=2024-09-29T22:00:00+00:00
+[2024-09-02T23:54:03.674+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ts_inmet.py took 0.099 seconds
+[2024-09-02T23:54:17.847+0000] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:54:17.848+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ts_inmet.py for tasks to queue
+[2024-09-02T23:54:17.848+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:54:17.848+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:54:17.871+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_gold_ts']) retrieved from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:54:17.898+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:54:17.898+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-09-02T23:54:17.922+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:54:17.922+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_gold_ts to 2024-08-29T22:00:00+00:00, run_after=2024-09-29T22:00:00+00:00
+[2024-09-02T23:54:17.935+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ts_inmet.py took 0.090 seconds
+[2024-09-02T23:54:38.730+0000] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:54:38.731+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ts_inmet.py for tasks to queue
+[2024-09-02T23:54:38.732+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:54:38.731+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:54:38.754+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_gold_ts']) retrieved from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:54:38.782+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:54:38.782+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-09-02T23:54:38.805+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:54:38.805+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_gold_ts to 2024-08-29T22:00:00+00:00, run_after=2024-09-29T22:00:00+00:00
+[2024-09-02T23:54:38.818+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ts_inmet.py took 0.090 seconds
+[2024-09-02T23:55:11.934+0000] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:55:11.935+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ts_inmet.py for tasks to queue
+[2024-09-02T23:55:11.935+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:55:11.935+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:55:11.960+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_gold_ts']) retrieved from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:55:11.992+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:55:11.992+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-09-02T23:55:12.018+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:55:12.018+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_gold_ts to 2024-08-29T22:00:00+00:00, run_after=2024-09-29T22:00:00+00:00
+[2024-09-02T23:55:12.034+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ts_inmet.py took 0.102 seconds
+[2024-09-02T23:56:10.828+0000] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:56:10.828+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ts_inmet.py for tasks to queue
+[2024-09-02T23:56:10.829+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:56:10.829+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:56:10.851+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_gold_ts']) retrieved from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:56:10.879+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:56:10.879+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-09-02T23:56:10.903+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:56:10.903+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_gold_ts to 2024-08-29T22:00:00+00:00, run_after=2024-09-29T22:00:00+00:00
+[2024-09-02T23:56:10.917+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ts_inmet.py took 0.092 seconds
+[2024-09-02T23:57:18.857+0000] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:57:18.858+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ts_inmet.py for tasks to queue
+[2024-09-02T23:57:18.858+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:57:18.858+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:57:18.881+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_gold_ts']) retrieved from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:57:18.909+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:57:18.909+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-09-02T23:57:18.937+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:57:18.937+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_gold_ts to 2024-08-29T22:00:00+00:00, run_after=2024-09-29T22:00:00+00:00
+[2024-09-02T23:57:18.954+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ts_inmet.py took 0.099 seconds
+[2024-09-02T23:58:27.978+0000] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:58:27.979+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ts_inmet.py for tasks to queue
+[2024-09-02T23:58:27.980+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:58:27.980+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:58:28.005+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_gold_ts']) retrieved from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:58:28.039+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:58:28.039+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-09-02T23:58:28.071+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:58:28.071+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_gold_ts to 2024-08-29T22:00:00+00:00, run_after=2024-09-29T22:00:00+00:00
+[2024-09-02T23:58:28.089+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ts_inmet.py took 0.113 seconds
+[2024-09-02T23:59:38.117+0000] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:59:38.118+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_ts_inmet.py for tasks to queue
+[2024-09-02T23:59:38.118+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:59:38.118+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:59:38.147+0000] {processor.py:753} INFO - DAG(s) dict_keys(['dag_gold_ts']) retrieved from /opt/airflow/dags/dag_ts_inmet.py
+[2024-09-02T23:59:38.184+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:59:38.184+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-09-02T23:59:38.215+0000] {logging_mixin.py:137} INFO - [2024-09-02T23:59:38.214+0000] {dag.py:3441} INFO - Setting next_dagrun for dag_gold_ts to 2024-08-29T22:00:00+00:00, run_after=2024-09-29T22:00:00+00:00
+[2024-09-02T23:59:38.232+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_ts_inmet.py took 0.118 seconds
