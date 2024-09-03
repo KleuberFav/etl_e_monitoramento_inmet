@@ -204,7 +204,7 @@ send_email_alert = EmailOperator(
 # Tarefa de envio de email com as informações da safra
 send_email_results_task = EmailOperator(
     task_id='send_email_results',  # Nome diferente e único
-    to=['kleuber94@gmail.com','vferreiramesquita@gmail.com'],
+    to=['seuemail@email.com'],
     subject=f'Airflow Advise - INMET safra: {safra}',
     html_content='''<h3>ELT do INMET realizado com sucesso</h3>
         <p>Dag: inmet</p>

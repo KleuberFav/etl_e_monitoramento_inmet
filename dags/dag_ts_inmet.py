@@ -73,7 +73,7 @@ process_gold_ts_and_metrics = PythonOperator(
 # Tarefa para enviar email de alerta em caso de falha
 send_email_alert = EmailOperator(
     task_id='send_email_alert',
-    to=['kleuber94@gmail.com', 'vferreiramesquita@gmail.com'],
+    to=['seuemail@email.com'],
     subject='Airflow Alert',
     html_content='''
     <h3>Alerta de ELT de Times Series do INMET com erro.</h3>
