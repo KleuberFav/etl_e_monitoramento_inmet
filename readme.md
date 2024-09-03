@@ -23,6 +23,9 @@ A fonte dos dados está no site do [INMET](https://portal.inmet.gov.br/dadoshist
 - **Silver**: Camada de dados limpos e transformados.
 - **Gold**: Camada de dados agregados e prontos para análise.
 
+<img src="https://github.com/KleuberFav/etl_e_monitoramento_inmet/blob/master/artefatos/arquitetura_lakehouse.png?raw=true" width="3000"/>
+
+
 ### Gerenciamento de Processos com Airflow
 
 O Airflow foi utilizado para fazer o gerenciamento dos processos de ETL (Extração, Transformação e Carga). Foram criadas duas DAGs:
@@ -30,6 +33,8 @@ O Airflow foi utilizado para fazer o gerenciamento dos processos de ETL (Extraç
 ### DAGs
 
 #### 1. [dag_inmet](https://github.com/KleuberFav/etl_e_monitoramento_inmet/blob/master/dags/dag_inmet.py)
+
+<img src="https://github.com/KleuberFav/etl_e_monitoramento_inmet/blob/master/artefatos/dag_inmet.png?raw=true" width="1000"/>
 
 Esta DAG foi utilizada para gerenciar o fluxo de trabalho no Lake, incluindo:
 
@@ -49,10 +54,16 @@ Esta DAG foi utilizada para gerenciar o fluxo de trabalho no Lake, incluindo:
   - Plugin usado: [monitoramento_plugin](https://github.com/KleuberFav/etl_e_monitoramento_inmet/blob/master/plugins/monitoramento_plugin.py).
 
 - **Notificações**:
-  - Se o processo for realizado com sucesso, todas as informações relevantes são enviadas por email.
+  - Se o processo for realizado com sucesso, todas as informações relevantes são enviadas por email. 
   - Em caso de erro, um email de alerta é enviado.
 
+<img src="https://github.com/KleuberFav/etl_e_monitoramento_inmet/blob/master/artefatos/etl_sucesso.png?raw=true" width="500"/>
+
+<img src="https://github.com/KleuberFav/etl_e_monitoramento_inmet/blob/master/artefatos/alert_etl_erro.png?raw=true" width="500"/>
+
 #### 2. [dag_ts_inmet](https://github.com/KleuberFav/etl_e_monitoramento_inmet/blob/master/dags/dag_ts_inmet.py)
+
+<img src="https://github.com/KleuberFav/etl_e_monitoramento_inmet/blob/master/artefatos/dag_gold_ts.png?raw=true" width="1000"/>
 
 Esta DAG foi utilizada para gerenciar a ingestão na camada Gold. Nesse caso, a camada gold é uma tabela contendo os registros históricos mensais de precipitação em ml, na estação de Belém-PA. Inclui:
 
