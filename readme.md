@@ -1,4 +1,4 @@
-# # Projeto de Extração de Dados Meteorológicos do INMET gerenciados pelo Airflow
+# Projeto de Extração de Dados Meteorológicos do INMET gerenciados pelo Airflow
 
 Repositório com códigos para extração, tratamento e carga de dados meteorológicos do INMET em um LakeHouse
 
