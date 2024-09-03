@@ -86,7 +86,7 @@ send_email_alert = EmailOperator(
 # Tarefa para enviar email com resultados em caso de sucesso
 send_email_results_task = EmailOperator(
     task_id='send_email_results',
-    to=['kleuber94@gmail.com', 'vferreiramesquita@gmail.com'],
+    to=['seuemail@email.com'],
     subject=f'Airflow Advise - INMET - Gold Times Series safra: - {AAAAMM}',
     html_content='''
     <h3>ELT de Time Series do INMET realizado com sucesso</h3>

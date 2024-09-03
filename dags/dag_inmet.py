@@ -191,7 +191,7 @@ monitoramento_task = PythonOperator(
 # tarefa de envio de email em caso de falha
 send_email_alert = EmailOperator(
     task_id='send_email_alert',
-    to=['kleuber94@gmail.com','vferreiramesquita@gmail.com'],
+    to=['seuemail@email.com'],
     subject='Airflow Alert',
     html_content='''
     <h3>Alerta de ELT do INMET com erro. </h3>
