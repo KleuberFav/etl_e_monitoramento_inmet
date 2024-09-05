@@ -4,6 +4,7 @@ Repositório com códigos para extração, tratamento e carga de dados meteorol�
 
 ## Índice
 - [Sobre](#sobre)
+- [Dados](#dados)
 - [Instalação](#instalação)
 - [Autor](#autor)
 
@@ -81,6 +82,47 @@ Esta DAG foi utilizada para gerenciar a ingestão na camada Gold. Nesse caso, a 
 <img src="https://github.com/KleuberFav/etl_e_monitoramento_inmet/blob/master/artefatos/ts_sucesso.png?raw=true" width="1000"/>
 
 <img src="https://github.com/KleuberFav/etl_e_monitoramento_inmet/blob/master/artefatos/ts_erro.png?raw=true" width="1000"/>
+
+## Dados
+
+Os dados meteorológicos extraídos do INMET são transformados e armazenados na camada Silver do Lake. A seguir estão as colunas utilizadas no processo de transformação:
+
+# Tabela Comparativa: Metadados Bronze e Silver
+
+| Coluna Bronze                                            | Tipo Bronze   | Descrição Bronze                                                   | Coluna Silver                    | Tipo Silver   | Descrição Silver                                                         |
+|----------------------------------------------------------|---------------|--------------------------------------------------------------------|----------------------------------|---------------|-------------------------------------------------------------------------|
+| YYYY-MM-DD                                               | date          | Data em formato YYYY-MM-DD                                         | DATE_YYYYMMDD                    | string          | Data em formato YYYY-MM-DD                                              |
+| HORA (UTC)                                               | string        | Hora no formato UTC                                                | HORA                             | string        | Hora no formato UTC                                                     |
+| REGIÃO                                                   | string        | Região da estação monitorada                                       | N/A                              | N/A           | N/A                                                                     |
+| UF                                                       | string        | UF da estação monitorada                                           | UF                                | string        | UF da estação monitorada                                                |
+| ESTACAO                                                  | string        | Estação monitorada                                                 | ESTACAO                          | string        | Estação monitorada                                                      |
+| CODIGO                                                   | string        | Código da estação monitorada                                       | CODIGO                           | string        | Código da estação monitorada                                            |
+| DATA_FUNDACAO                                            | string        | Data de fundação da estação monitorada                             | DATA_FUNDACAO                    | string        | Data de fundação da estação monitorada                                  |
+| LATITUDE                                                 | string       | Latitude da Estação monitorada                                     | LATITUDE                         | decimal       | Latitude da Estação monitorada                                          |
+| LONGITUDE                                                | string       | Longitude da Estação monitorada                                    | LONGITUDE                        | decimal       | Longitude da Estação monitorada                                         |
+| ALTITUDE                                                 | string       | Altitude em metros da Estação monitorada                           | ALTITUDE                         | decimal       | Altitude em metros da Estação monitorada                                |
+| PRECIPITAÇAO TOTAL, HORÁRIO (mm)                         | string       | Precipitação total no horário em milímetros                        | PRECIPITACAO                     | decimal       | Precipitação total no horário em milímetros                             |
+| PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO, HORARIA (mB)    | string       | Pressão Atmosférica ao nível da estação                            | PA_ESTACAO                       | decimal       | Pressão Atmosférica ao nível da estação                                 |
+| PRESSAO ATMOSFERICA MAX NA HORA ANT (AUT) (mB)           | string       | Pressão Atmosférica máxima na hora anterior ao nível da estação    | PA_MAX_ANT                       | decimal       | Pressão Atmosférica máxima na hora anterior ao nível da estação         |
+| PRESSAO ATMOSFERICA MINNA HORA ANT (AUT) (mB)            | string       | Pressão Atmosférica mínima na hora anterior ao nível da estação    | PA_MIN_ANT                       | decimal       | Pressão Atmosférica mínima na hora anterior ao nível da estação         |
+| RADIACAO GLOBAL (KJ/m²)                                  | string       | Radiação global em KJ/m²                                           | RADIACAO_GLOBAL                  | decimal       | Radiação global em KJ/m²                                                |
+| TEMPERATURA DO AR - BULBO SECO, HORARIA (°C)             | string       | Temperatura do ar no horário - Bulbo seco °C                       | TEMPERATURA_AR                   | decimal       | Temperatura do ar no horário - Bulbo seco °C                            |
+| TEMPERATURA DO PONTO DE ORVALHO (°C)                     | string       | Temperatura do ar no horário - Orvalho °C                          | TEMPERATURA_ORVALHO              | decimal       | Temperatura do ar no horário - Orvalho °C                               |
+| TEMPERATURA MÁXIMA NA HORA ANT (AUT) (°C)                | string       | Temperatura máxima do ar na hora anterior - Bulbo seco °C          | TEMPERATURA_MAX_ANT              | decimal       | Temperatura máxima do ar na hora anterior - Bulbo seco °C               |
+| TEMPERATURA MÍNIMA NA HORA ANT (AUT) (°C)                | string       | Temperatura mínima do ar na hora anterior - Bulbo seco °C          | TEMPERATURA_MIN_ANT              | decimal       | Temperatura mínima do ar na hora anterior - Bulbo seco °C               |
+| TEMPERATURA ORVALHO MAX NA HORA ANT (AUT) (°C)           | string       | Temperatura máxima do ar na hora anterior - Orvalho °C             | TEMPERATURA_MAX_ORVALHO_ANT      | decimal       | Temperatura máxima do ar na hora anterior - Orvalho °C                  |
+| TEMPERATURA ORVALHO MINNA HORA ANT (AUT) (°C)            | string       | Temperatura mínima do ar na hora anterior - Orvalho °C             | TEMPERATURA_MIN_ORVALHO_ANT      | decimal       | Temperatura mínima do ar na hora anterior - Orvalho °C                  |
+| UMIDADE REL MAX NA HORA ANT (AUT) (%)                    | string       | Umidade relativa do ar máxima na hora anterior                     | UMIDADE_REL_MAX_ANT              | decimal       | Umidade relativa do ar máxima na hora anterior                          |
+| UMIDADE REL MINNA HORA ANT (AUT) (%)                     | string       | Umidade relativa do ar mínima na hora anterior                     | UMIDADE_REL_MIN_ANT              | decimal       | Umidade relativa do ar mínima na hora anterior                          |
+| UMIDADE RELATIVA DO AR, HORARIA (%)                      | string       | Umidade relativa do ar mínima no horário                           | UMIDADE_REL_AR                   | decimal       | Umidade relativa do ar mínima no horário                                |
+| VENTO, DIREÇAO HORARIA (gr) (° (gr))                     | string       | Direção do Vento no horário                                        | VENTO_DIRECAO_HORARIA            | decimal       | Direção do Vento no horário                                             |
+| VENTO, RAJADA MAXIMA (m/s)                               | string       | Rajada máxima do vento no horário - m/s                            | VENTO_RAJADA_MAX                 | decimal       | Rajada máxima do vento no horário - m/s                                 |
+| VENTO, VELOCIDADE HORARIA (m/s)` IS NULL OR `VENTO, VELOCIDADE HORARIA (m/s) | decimal | Velocidade máxima do vento no horário - m/s                       | VENTO_VELOCIDADE_HORARIA         | decimal       | Velocidade máxima do vento no horário - m/s                             |
+| N/A                                                      | N/A           | N/A                                                                | PK_RAINFALL                      | string        | Chave Primária (AAAAMM+HORA+UF+CODIGO)                                                          |
+| N/A                                                      | N/A           | N/A                                                                | AAAAMM                           | string        | Safra do monitoramento                                                  |
+| N/A                                                      | N/A           | N/A                                                                | year_month                       | string        | Ano e Mês do monitoramento                                              |
+
+
 
 ## Instalação
 

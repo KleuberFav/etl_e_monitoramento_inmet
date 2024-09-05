@@ -1,0 +1,112 @@
+{
+    "columns": {
+      "YYYY-MM-DD": {
+        "type": "date",
+        "description": "Data em formato YYYY-MM-DD"
+      },
+      "HORA (UTC)": {
+        "type": "string",
+        "description": "Hora no formato UTC"
+      },
+      "REGIÃO": {
+        "type": "string",
+        "description": "Região da estação monitorada"
+      },
+      "UF": {
+        "type": "string",
+        "description": "UF da estação monitorada"
+      },
+      "ESTACAO": {
+        "type": "string",
+        "description": "Estação monitorada"
+      },
+      "CODIGO": {
+        "type": "string",
+        "description": "Código da estação monitorada"
+      },
+      "DATA_FUNDACAO": {
+        "type": "string",
+        "description": "Data de fundação da estação monitorada"
+      },
+      "LATITUDE": {
+        "type": "string",
+        "description": "Latitude da Estação monitorada"
+      },
+      "LONGITUDE": {
+        "type": "string",
+        "description": "Longitude da Estação monitorada"
+      },
+      "ALTITUDE": {
+        "type": "string",
+        "description": "Altitude em metros da Estação monitorada"
+      },
+      "PRECIPITAÇAO TOTAL, HORÁRIO (mm)": {
+        "type": "string",
+        "description": "Precipitação total no horário em milímetros"
+      },
+      "PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO, HORARIA (mB)": {
+        "type": "string",
+        "description": "Pressão Atmosférica ao nível da estação"
+      },
+      "PRESSAO ATMOSFERICA MAX NA HORA ANT (AUT) (mB)": {
+        "type": "string",
+        "description": "Pressão Atmosférica máxima na hora anterior ao nível da estação"
+      },
+      "PRESSAO ATMOSFERICA MINNA HORA ANT (AUT) (mB)": {
+        "type": "string",
+        "description": "Pressão Atmosférica mínima na hora anterior ao nível da estação"
+      },
+      "RADIACAO GLOBAL (KJ/m²)": {
+        "type": "string",
+        "description": "Radiação global em KJ/m²"
+      },
+      "TEMPERATURA DO AR - BULBO SECO, HORARIA (°C)": {
+        "type": "string",
+        "description": "Temperatura do ar no horário - Bulbo seco °C"
+      },
+      "TEMPERATURA DO PONTO DE ORVALHO (°C)": {
+        "type": "string",
+        "description": "Temperatura do ar no horário - Orvalho °C"
+      },
+      "TEMPERATURA MÁXIMA NA HORA ANT (AUT) (°C)": {
+        "type": "string",
+        "description": "Temperatura máxima do ar na hora anterior - Bulbo seco °C"
+      },
+      "TEMPERATURA MÍNIMA NA HORA ANT (AUT) (°C)": {
+        "type": "string",
+        "description": "Temperatura mínima do ar na hora anterior - Bulbo seco °C"
+      },
+      "TEMPERATURA ORVALHO MAX NA HORA ANT (AUT) (°C)": {
+        "type": "string",
+        "description": "Temperatura máxima do ar na hora anterior - Orvalho °C"
+      },
+      "TEMPERATURA ORVALHO MINNA HORA ANT (AUT) (°C)": {
+        "type": "string",
+        "description": "Temperatura mínima do ar na hora anterior - Orvalho °C"
+      },
+      "UMIDADE REL MAX NA HORA ANT (AUT) (%)": {
+        "type": "string",
+        "description": "Umidade relativa do ar máxima na hora anterior"
+      },
+      "UMIDADE REL MINNA HORA ANT (AUT) (%)": {
+        "type": "string",
+        "description": "Umidade relativa do ar mínima na hora anterior"
+      },
+      "UMIDADE RELATIVA DO AR, HORARIA (%)": {
+        "type": "string",
+        "description": "Umidade relativa do ar mínima no horário"
+      },
+      "VENTO, DIREÇAO HORARIA (gr) (° (gr))": {
+        "type": "string",
+        "description": "Direção do Vento no horário"
+      },
+      "VENTO, RAJADA MAXIMA (m/s)": {
+        "type": "string",
+        "description": "Rajada máxima do vento no horário - m/s"
+      },
+      "VENTO, VELOCIDADE HORARIA (m/s)` IS NULL OR `VENTO, VELOCIDADE HORARIA (m/s)": {
+        "type": "string",
+        "description": "Velocidade máxima do vento no horário - m/s"
+      }
+    }
+  }
