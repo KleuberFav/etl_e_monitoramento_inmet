@@ -26,12 +26,15 @@ class MetricsMonitor:
         self.y_pred = y_pred
     
     def calculate_metrics(self):
-        # Calcular RMSE
-        rmse = np.sqrt(mean_squared_error(self.y_true, self.y_pred))
-        # Calcular MAPE
-        mape = round(np.mean(np.abs((self.y_true - self.y_pred) / self.y_true)) * 100,2)
-        # Calcular MAE
-        mae = mean_absolute_error(self.y_true, self.y_pred)
+        # Considera apenas o último registro
+        y_true_last = self.y_true[-1]
+        y_pred_last = self.y_pred[-1]
+        
+        # Calcula as métricas usando apenas o último registro
+        rmse = np.sqrt(mean_squared_error([y_true_last], [y_pred_last]))
+        mape = round(np.mean(np.abs((np.array([y_true_last]) - np.array([y_pred_last])) / np.array([y_true_last]))) * 100, 2)
+        mae = mean_absolute_error([y_true_last], [y_pred_last])
+        
         return {'RMSE': rmse, 'MAPE': mape, 'MAE': mae}
 
 # Classe Gold
@@ -68,8 +71,8 @@ class Gold_ts:
         MM = self.config['dates']['MM']
         
         pasta_silver = self.config['directories']['silver_rainfall']  # diretório para ler os dados
-        caminho_silver = f'EXTRACT_YEAR={AAAA}/EXTRACT_MONTH={MM}'
-        pasta_silver = os.path.join(pasta_silver, caminho_silver) 
+        # caminho_silver = f'EXTRACT_YEAR={AAAA}/EXTRACT_MONTH={MM}'
+        # pasta_silver = os.path.join(pasta_silver, caminho_silver) 
 
         df = spark.read.parquet(pasta_silver)
         df.createOrReplaceTempView("rainfall_view")
